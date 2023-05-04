@@ -114,33 +114,37 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(259, 286);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(171, 48);
             this.button1.TabIndex = 8;
             this.button1.Text = "Create Account";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Exit
             // 
             this.Exit.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Exit.Image = global::VotingSystem.Properties.Resources.icons8_close_32__1_;
             this.Exit.Location = new System.Drawing.Point(642, 0);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(24, 23);
             this.Exit.TabIndex = 9;
-            this.Exit.Text = "X";
             this.Exit.Click += new System.EventHandler(this.label5_Click);
             // 
             // Minimize
             // 
             this.Minimize.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Minimize.Image = global::VotingSystem.Properties.Resources.icons8_subtract_32__1_;
             this.Minimize.Location = new System.Drawing.Point(612, 0);
             this.Minimize.Name = "Minimize";
             this.Minimize.Size = new System.Drawing.Size(24, 23);
             this.Minimize.TabIndex = 10;
-            this.Minimize.Text = "-";
             this.Minimize.Click += new System.EventHandler(this.Minimize_Click);
             // 
             // label5
@@ -158,6 +162,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(665, 450);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Minimize);
@@ -175,6 +180,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

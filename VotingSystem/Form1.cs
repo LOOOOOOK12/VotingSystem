@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace VotingSystem
 {
-    public partial class Form1 : Form
+    public partial class FRM_Login : Form
     {
-        public Form1()
+        public FRM_Login()
         {
             InitializeComponent();
         }
@@ -30,9 +30,9 @@ namespace VotingSystem
         private void logInbtn_Click(object sender, EventArgs e)
         {
            
-            Form3 f3 = new Form3();
+            FRM_Home f3 = new FRM_Home();
             this.Hide();
-            f3.Show();
+            f3.ShowDialog();
             
         }
 
@@ -41,6 +41,11 @@ namespace VotingSystem
             Form2 f2 = new Form2();
             Hide();
             f2.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

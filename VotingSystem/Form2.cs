@@ -12,7 +12,7 @@ namespace VotingSystem
 {
     public partial class Form2 : Form
     {
-        Form1 f1 = new Form1();
+        FRM_Login f1 = new FRM_Login();
         public Form2()
         {
             InitializeComponent();
@@ -44,6 +44,11 @@ namespace VotingSystem
         {
             Hide();
             f1.Show();
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
