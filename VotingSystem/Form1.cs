@@ -12,6 +12,9 @@ namespace VotingSystem
 {
     public partial class FRM_Login : Form
     {
+
+       
+
         public FRM_Login()
         {
             InitializeComponent();
@@ -29,10 +32,19 @@ namespace VotingSystem
 
         private void logInbtn_Click(object sender, EventArgs e)
         {
-           
-            FRM_Home f3 = new FRM_Home();
-            this.Hide();
-            f3.ShowDialog();
+
+            string admin = userNametxtbx.Text;
+            string password = Password_txtbx.Text;
+
+            if (admin == "admin" && password == "admin")
+            {
+                FRM_Home f3 = new FRM_Home();
+                this.Hide();
+                f3.ShowDialog();
+            }
+            else {
+                MessageBox.Show("incorrect username or password"); 
+            }
             
         }
 
@@ -44,6 +56,16 @@ namespace VotingSystem
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FRM_Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userNametxtbx_TextChanged(object sender, EventArgs e)
         {
 
         }

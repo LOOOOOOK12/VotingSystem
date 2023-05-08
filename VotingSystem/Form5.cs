@@ -26,5 +26,20 @@ namespace VotingSystem
         {
             Close();
         }
+
+        private void AddPosition_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Position_LB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Back_btn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

@@ -31,5 +31,21 @@ namespace VotingSystem
         {
            
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void AddPartylist_btn_Click(object sender, EventArgs e)
+        {
+            AddingPartyList_FRM AddPL = new AddingPartyList_FRM();
+            AddPL.ShowDialog();
+        }
+
+        private void listViewPartylist_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
