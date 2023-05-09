@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace VotingSystem
 {
-    public partial class item : UserControl
+    public partial class Form7 : Form
     {
-        public item()
+        public Form7()
         {
             InitializeComponent();
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void btn_cancel_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
         }
     }
 }

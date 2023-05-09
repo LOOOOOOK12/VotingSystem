@@ -34,8 +34,8 @@
             this.AddPartylist_txtbx = new System.Windows.Forms.TextBox();
             this.addPL_btn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.btn_logo = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -116,6 +116,19 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // btn_logo
+            // 
+            this.btn_logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
+            this.btn_logo.FlatAppearance.BorderSize = 0;
+            this.btn_logo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_logo.ForeColor = System.Drawing.Color.White;
+            this.btn_logo.Location = new System.Drawing.Point(150, 177);
+            this.btn_logo.Name = "btn_logo";
+            this.btn_logo.Size = new System.Drawing.Size(100, 23);
+            this.btn_logo.TabIndex = 6;
+            this.btn_logo.Text = "Insert Logo";
+            this.btn_logo.UseVisualStyleBackColor = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::VotingSystem.Properties.Resources.icons8_male_user_96;
@@ -125,25 +138,12 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(150, 177);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Insert Logo";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // AddingPartyList_FRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(399, 319);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_logo);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.addPL_btn);
@@ -170,6 +170,6 @@
         private System.Windows.Forms.Button addPL_btn;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_logo;
     }
 }
