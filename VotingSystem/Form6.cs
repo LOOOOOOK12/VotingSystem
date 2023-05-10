@@ -51,5 +51,15 @@ namespace VotingSystem
         {
             this.Hide();
         }
+
+        private void btn_logo_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opendlg = new OpenFileDialog();
+            if (opendlg.ShowDialog() == DialogResult.OK) 
+            {
+                Image image = Image.FromFile(opendlg.FileName);
+                pb_logo.Image = image;
+            }
+        }
     }
 }

@@ -35,9 +35,9 @@
             this.addPL_btn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btn_logo = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pb_logo = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -128,15 +128,17 @@
             this.btn_logo.TabIndex = 6;
             this.btn_logo.Text = "Insert Logo";
             this.btn_logo.UseVisualStyleBackColor = false;
+            this.btn_logo.Click += new System.EventHandler(this.btn_logo_Click);
             // 
-            // pictureBox1
+            // pb_logo
             // 
-            this.pictureBox1.Image = global::VotingSystem.Properties.Resources.icons8_male_user_96;
-            this.pictureBox1.Location = new System.Drawing.Point(150, 76);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 95);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.pb_logo.Image = global::VotingSystem.Properties.Resources.icons8_male_user_96;
+            this.pb_logo.Location = new System.Drawing.Point(150, 76);
+            this.pb_logo.Name = "pb_logo";
+            this.pb_logo.Size = new System.Drawing.Size(100, 95);
+            this.pb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_logo.TabIndex = 5;
+            this.pb_logo.TabStop = false;
             // 
             // AddingPartyList_FRM
             // 
@@ -144,7 +146,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(399, 319);
             this.Controls.Add(this.btn_logo);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pb_logo);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.addPL_btn);
             this.Controls.Add(this.AddPartylist_txtbx);
@@ -155,7 +157,7 @@
             this.Text = "STI Voting System";
             this.Load += new System.EventHandler(this.AddingPartyList_FRM_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,7 +171,7 @@
         private System.Windows.Forms.TextBox AddPartylist_txtbx;
         private System.Windows.Forms.Button addPL_btn;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pb_logo;
         private System.Windows.Forms.Button btn_logo;
     }
 }
