@@ -39,7 +39,7 @@ namespace VotingSystem
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "INSERT INTO Partylist VALUES('" + AddPartylist_txtbx.Text + "')";
+            cmd.CommandText = "INSERT INTO Partylist (PartylistName) VALUES('"+AddPartylist_txtbx.Text +"')";
             cmd.ExecuteNonQuery();
             con.Close();
 

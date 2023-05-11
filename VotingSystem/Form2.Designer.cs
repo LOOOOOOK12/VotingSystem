@@ -34,8 +34,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtb_Password = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.Exit = new System.Windows.Forms.Label();
-            this.Minimize = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtb_Firstname = new System.Windows.Forms.TextBox();
             this.txtb_Lastname = new System.Windows.Forms.TextBox();
@@ -106,26 +104,6 @@
             this.button1.Text = "Create Account";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // Exit
-            // 
-            this.Exit.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Exit.Image = global::VotingSystem.Properties.Resources.icons8_close_32__1_;
-            this.Exit.Location = new System.Drawing.Point(642, 0);
-            this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(24, 23);
-            this.Exit.TabIndex = 9;
-            this.Exit.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // Minimize
-            // 
-            this.Minimize.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Minimize.Image = global::VotingSystem.Properties.Resources.icons8_subtract_32__1_;
-            this.Minimize.Location = new System.Drawing.Point(612, 0);
-            this.Minimize.Name = "Minimize";
-            this.Minimize.Size = new System.Drawing.Size(24, 23);
-            this.Minimize.TabIndex = 10;
-            this.Minimize.Click += new System.EventHandler(this.Minimize_Click);
             // 
             // label5
             // 
@@ -342,8 +320,6 @@
             this.Controls.Add(this.txtb_Lastname);
             this.Controls.Add(this.txtb_Firstname);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.Minimize);
-            this.Controls.Add(this.Exit);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtb_Password);
             this.Controls.Add(this.label2);
@@ -366,8 +342,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtb_Password;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label Exit;
-        private System.Windows.Forms.Label Minimize;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtb_Firstname;
         private System.Windows.Forms.TextBox txtb_Lastname;

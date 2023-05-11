@@ -68,15 +68,7 @@ namespace VotingSystem
 
             MessageBox.Show("Create Account Successfull!");
 
-            //if (txtb_Password.Text == txtb_Cpassword.Text)
-            //{
-            //    Hide();
-            //    f1.Show();
-            //}
-            //else 
-            //{
-            //    MessageBox.Show("Please Confirm password");
-            //}
+           
 
             Hide();
             f1.Show();

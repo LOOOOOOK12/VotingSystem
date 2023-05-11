@@ -36,22 +36,7 @@ namespace VotingSystem
         private void logInbtn_Click(object sender, EventArgs e)
         {
 
-            //if admin will log in
-            //string admin = userNametxtbx.Text;
-            //string password = Password_txtbx.Text;
-
-            //if (admin == "admin" && password == "admin")
-            //{
-            //    FRM_Home f3 = new FRM_Home();
-            //    this.Hide();
-            //    f3.ShowDialog();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("incorrect username or password");
-            //}
-
-            //if voters will log in
+            //Log in ng admin
             string admin = userNametxtbx.Text;
             string password = Password_txtbx.Text;
 
@@ -61,6 +46,8 @@ namespace VotingSystem
                 this.Hide();
                 f3.ShowDialog();
             }
+
+            //log in ng voters
             else
             {
                 string connectionString = @"Data Source=DESKTOP-SM9NF9V;Initial Catalog=DB_VotingSystem;Integrated Security=True";
@@ -84,6 +71,7 @@ namespace VotingSystem
             }
         }
 
+        //pang gawa ng account
             private void label4_Click(object sender, EventArgs e)
         {
             Form2 f2 = new Form2();

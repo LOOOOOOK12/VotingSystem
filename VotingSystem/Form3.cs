@@ -27,10 +27,7 @@ namespace VotingSystem
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        
 
         private void exit_btn_Paint(object sender, PaintEventArgs e)
         {
@@ -59,6 +56,18 @@ namespace VotingSystem
         private void Voters_btn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Logout_btn_Click(object sender, EventArgs e)
+        {
+           DialogResult result = MessageBox.Show("Log out","You want to Log out?",MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                FRM_Login FL = new FRM_Login();
+                Hide();
+                FL.Show();
+            }
+           
         }
     }
 }

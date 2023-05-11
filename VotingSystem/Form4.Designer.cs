@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Partylist));
             this.panel1 = new System.Windows.Forms.Panel();
             this.Back_btn = new System.Windows.Forms.Button();
             this.Refresh_btn = new System.Windows.Forms.Button();
             this.AddPartylist_btn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.Minimize_btn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -50,8 +47,6 @@
             this.panel1.Controls.Add(this.AddPartylist_btn);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.Minimize_btn);
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -118,36 +113,6 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Manage Partylist Information";
             // 
-            // Minimize_btn
-            // 
-            this.Minimize_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Minimize_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Minimize_btn.FlatAppearance.BorderSize = 0;
-            this.Minimize_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Minimize_btn.Image = ((System.Drawing.Image)(resources.GetObject("Minimize_btn.Image")));
-            this.Minimize_btn.Location = new System.Drawing.Point(771, 0);
-            this.Minimize_btn.Name = "Minimize_btn";
-            this.Minimize_btn.Size = new System.Drawing.Size(29, 27);
-            this.Minimize_btn.TabIndex = 3;
-            this.Minimize_btn.Text = " ";
-            this.Minimize_btn.UseVisualStyleBackColor = true;
-            this.Minimize_btn.Click += new System.EventHandler(this.Minimize_btn_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::VotingSystem.Properties.Resources.icons8_close_32;
-            this.button1.Location = new System.Drawing.Point(803, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(29, 27);
-            this.button1.TabIndex = 2;
-            this.button1.Text = " ";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 101);
@@ -175,8 +140,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button Minimize_btn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button AddPartylist_btn;
