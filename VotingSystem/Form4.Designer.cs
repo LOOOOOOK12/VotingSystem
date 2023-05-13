@@ -28,16 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.AddPartylist_btn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Back_btn = new System.Windows.Forms.Button();
             this.Refresh_btn = new System.Windows.Forms.Button();
-            this.AddPartylist_btn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 101);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(811, 397);
+            this.flowLayoutPanel1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(117, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(451, 38);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Manage Partylist Information";
+            // 
+            // AddPartylist_btn
+            // 
+            this.AddPartylist_btn.BackColor = System.Drawing.Color.Yellow;
+            this.AddPartylist_btn.FlatAppearance.BorderSize = 0;
+            this.AddPartylist_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddPartylist_btn.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddPartylist_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
+            this.AddPartylist_btn.Location = new System.Drawing.Point(123, 50);
+            this.AddPartylist_btn.Name = "AddPartylist_btn";
+            this.AddPartylist_btn.Size = new System.Drawing.Size(118, 36);
+            this.AddPartylist_btn.TabIndex = 6;
+            this.AddPartylist_btn.Text = "Add Partylist";
+            this.AddPartylist_btn.UseVisualStyleBackColor = false;
+            this.AddPartylist_btn.Click += new System.EventHandler(this.AddPartylist_btn_Click);
             // 
             // panel1
             // 
@@ -78,21 +110,6 @@
             this.Refresh_btn.Text = " ";
             this.Refresh_btn.UseVisualStyleBackColor = true;
             // 
-            // AddPartylist_btn
-            // 
-            this.AddPartylist_btn.BackColor = System.Drawing.Color.Yellow;
-            this.AddPartylist_btn.FlatAppearance.BorderSize = 0;
-            this.AddPartylist_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddPartylist_btn.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddPartylist_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
-            this.AddPartylist_btn.Location = new System.Drawing.Point(123, 50);
-            this.AddPartylist_btn.Name = "AddPartylist_btn";
-            this.AddPartylist_btn.Size = new System.Drawing.Size(118, 36);
-            this.AddPartylist_btn.TabIndex = 6;
-            this.AddPartylist_btn.Text = "Add Partylist";
-            this.AddPartylist_btn.UseVisualStyleBackColor = false;
-            this.AddPartylist_btn.Click += new System.EventHandler(this.AddPartylist_btn_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::VotingSystem.Properties.Resources.icons8_user_account_96;
@@ -102,23 +119,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(117, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(451, 38);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Manage Partylist Information";
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 101);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(811, 397);
-            this.flowLayoutPanel1.TabIndex = 1;
             // 
             // FRM_Partylist
             // 
@@ -138,13 +138,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button AddPartylist_btn;
         private System.Windows.Forms.Button Refresh_btn;
         private System.Windows.Forms.Button Back_btn;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

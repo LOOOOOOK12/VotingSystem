@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace VotingSystem
 {
-    public partial class UserControl1 : UserControl
+    public partial class UC_Partylist : UserControl
     {
-        public UserControl1()
+        public UC_Partylist()
         {
             InitializeComponent();
         }

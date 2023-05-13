@@ -69,5 +69,15 @@ namespace VotingSystem
             }
            
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FRM_ManageCandidates FMC = new FRM_ManageCandidates();
+            FMC.Owner = this;
+            FMC.ShowDialog();
+
+
+
+        }
     }
 }

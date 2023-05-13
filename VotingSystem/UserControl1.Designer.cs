@@ -1,6 +1,6 @@
 ﻿namespace VotingSystem
 {
-    partial class UserControl1
+    partial class UC_Partylist
     {
         /// <summary> 
         /// Required designer variable.
@@ -118,7 +118,7 @@
             this.panel2.Size = new System.Drawing.Size(583, 3);
             this.panel2.TabIndex = 21;
             // 
-            // UserControl1
+            // UC_Partylist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -130,7 +130,7 @@
             this.Controls.Add(this.PartylistName_lbl);
             this.Controls.Add(this.lbl_PartylistName);
             this.Controls.Add(this.lbl_partylistID);
-            this.Name = "UserControl1";
+            this.Name = "UC_Partylist";
             this.Size = new System.Drawing.Size(583, 131);
             ((System.ComponentModel.ISupportInitialize)(this.PB_PLlogo)).EndInit();
             this.ResumeLayout(false);

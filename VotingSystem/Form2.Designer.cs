@@ -114,6 +114,7 @@
             this.label5.Size = new System.Drawing.Size(142, 16);
             this.label5.TabIndex = 11;
             this.label5.Text = "Already have an acconut?";
+            this.label5.Click += new System.EventHandler(this.label5_Click_2);
             // 
             // txtb_Firstname
             // 
