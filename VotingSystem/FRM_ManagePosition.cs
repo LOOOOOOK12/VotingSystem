@@ -29,7 +29,7 @@ namespace VotingSystem
 
         private void AddPosition_btn_Click(object sender, EventArgs e)
         {
-            Form7 addPos = new Form7();
+            FRM_AddPosition addPos = new FRM_AddPosition();
             addPos.ShowDialog();
         }
 

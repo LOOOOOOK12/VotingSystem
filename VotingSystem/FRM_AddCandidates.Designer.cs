@@ -54,6 +54,8 @@
             this.partylistTableAdapter = new VotingSystem.DB_VotingSystemDataSetTableAdapters.PartylistTableAdapter();
             this.button2 = new System.Windows.Forms.Button();
             this.addPL_btn = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.partylistBindingSource)).BeginInit();
@@ -253,7 +255,7 @@
             this.CB_partylistNames.FormattingEnabled = true;
             this.CB_partylistNames.Location = new System.Drawing.Point(147, 229);
             this.CB_partylistNames.Name = "CB_partylistNames";
-            this.CB_partylistNames.Size = new System.Drawing.Size(179, 21);
+            this.CB_partylistNames.Size = new System.Drawing.Size(168, 21);
             this.CB_partylistNames.TabIndex = 24;
             this.CB_partylistNames.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -306,11 +308,31 @@
             this.addPL_btn.Text = "Add Partylist";
             this.addPL_btn.UseVisualStyleBackColor = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(326, 209);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 17);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "Positions:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(329, 229);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(168, 21);
+            this.comboBox1.TabIndex = 28;
+            // 
             // FRM_AddCandidates
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(658, 393);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.addPL_btn);
             this.Controls.Add(this.CB_partylistNames);
@@ -371,5 +393,7 @@
         private DB_VotingSystemDataSetTableAdapters.PartylistTableAdapter partylistTableAdapter;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button addPL_btn;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

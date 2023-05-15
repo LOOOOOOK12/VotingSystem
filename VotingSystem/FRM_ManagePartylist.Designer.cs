@@ -35,12 +35,15 @@
             this.Back_btn = new System.Windows.Forms.Button();
             this.Refresh_btn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.UC_Partylist1 = new VotingSystem.UC_Partylist();
+            this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.Controls.Add(this.UC_Partylist1);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 101);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(811, 397);
@@ -120,6 +123,13 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
+            // UC_Partylist1
+            // 
+            this.UC_Partylist1.Location = new System.Drawing.Point(3, 3);
+            this.UC_Partylist1.Name = "UC_Partylist1";
+            this.UC_Partylist1.Size = new System.Drawing.Size(808, 131);
+            this.UC_Partylist1.TabIndex = 0;
+            // 
             // FRM_Partylist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -131,6 +141,7 @@
             this.Name = "FRM_Partylist";
             this.Text = "STI Voting System";
             this.Load += new System.EventHandler(this.FRM_Partylist_Load);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -145,5 +156,6 @@
         private System.Windows.Forms.Button Refresh_btn;
         private System.Windows.Forms.Button Back_btn;
         private System.Windows.Forms.Panel panel1;
+        private UC_Partylist UC_Partylist1;
     }
 }

@@ -11,11 +11,11 @@ using System.Data.SqlClient;
 
 namespace VotingSystem
 {
-    public partial class Form2 : Form
+    public partial class FRM_CreateAcc : Form
     {
         FRM_Login f1 = new FRM_Login();
         SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-SM9NF9V;Initial Catalog=DB_VotingSystem;Integrated Security=True");
-        public Form2()
+        public FRM_CreateAcc()
         {
             InitializeComponent();
 

@@ -74,7 +74,7 @@ namespace VotingSystem
         //pang gawa ng account
             private void label4_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2();
+            FRM_CreateAcc f2 = new FRM_CreateAcc();
             Hide();
             f2.Show();
         }

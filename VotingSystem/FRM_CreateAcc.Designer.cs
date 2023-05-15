@@ -1,6 +1,6 @@
 ﻿namespace VotingSystem
 {
-    partial class Form2
+    partial class FRM_CreateAcc
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_CreateAcc));
             this.label1 = new System.Windows.Forms.Label();
             this.txtb_IDnumber = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();

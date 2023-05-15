@@ -1,6 +1,6 @@
 ﻿namespace VotingSystem
 {
-    partial class Form7
+    partial class FRM_AddPosition
     {
         /// <summary>
         /// Required designer variable.
