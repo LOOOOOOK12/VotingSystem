@@ -108,7 +108,7 @@
             this.btn_addPos.Text = "Add Partylist";
             this.btn_addPos.UseVisualStyleBackColor = false;
             // 
-            // Form7
+            // FRM_AddPosition
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -119,7 +119,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form7";
+            this.Name = "FRM_AddPosition";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form7";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

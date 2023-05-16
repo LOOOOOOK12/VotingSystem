@@ -354,6 +354,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FRM_AddCandidates";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form9";
             this.Load += new System.EventHandler(this.FRM_AddCandidates_Load);
             this.panel1.ResumeLayout(false);

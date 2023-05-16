@@ -296,7 +296,7 @@
             this.Year.TabIndex = 31;
             this.Year.Text = "YY";
             // 
-            // Form2
+            // FRM_CreateAcc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -328,7 +328,8 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form2";
+            this.Name = "FRM_CreateAcc";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "STI Voting System";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);

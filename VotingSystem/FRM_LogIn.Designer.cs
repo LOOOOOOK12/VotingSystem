@@ -204,6 +204,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FRM_Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "STI Voting System";
             this.Load += new System.EventHandler(this.FRM_Login_Load);
             this.panel1.ResumeLayout(false);

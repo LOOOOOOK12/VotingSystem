@@ -58,6 +58,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\ClassBLL.cs" />
+    <Compile Include="DAL\ClassDAL.cs" />
+    <Compile Include="DAL\Connections.cs" />
     <Compile Include="DB_VotingSystemDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -154,6 +154,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddingPartyList_FRM";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "STI Voting System";
             this.Load += new System.EventHandler(this.AddingPartyList_FRM_Load);
             this.panel1.ResumeLayout(false);

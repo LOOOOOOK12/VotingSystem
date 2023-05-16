@@ -37,10 +37,10 @@ namespace VotingSystem
         {
 
             //Log in ng admin
-            string admin = userNametxtbx.Text;
+            string Idnum = userNametxtbx.Text;
             string password = Password_txtbx.Text;
 
-            if (admin == "admin" && password == "admin")
+            if (Idnum == "admin" && password == "admin")
             {
                 FRM_Home f3 = new FRM_Home();
                 this.Hide();
@@ -59,16 +59,23 @@ namespace VotingSystem
                     cmd.Parameters.AddWithValue("@Username", userNametxtbx.Text);
                     cmd.Parameters.AddWithValue("@Password", Password_txtbx.Text);
 
-                    // Execute the query using a SqlDataReader or any other method
-                    FRM_Home f3 = new FRM_Home();
-                    this.Hide();
-                    f3.ShowDialog();
+                    SqlDataReader reader = cmd.ExecuteReader();
 
-
-                    con.Close(); // Close the connection after use
-
+                    if (reader.HasRows)
+                    {
+                        // Valid login credentials
+                        FRM_Home f3 = new FRM_Home();
+                        this.Hide();
+                        f3.ShowDialog();
+                    }
+                    else
+                    {
+                        // Invalid login credentials
+                        MessageBox.Show("Invalid username or password");
+                    }
                 }
             }
+
         }
 
         //pang gawa ng account

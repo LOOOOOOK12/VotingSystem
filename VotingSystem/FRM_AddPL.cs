@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Data.SqlClient;
+using VotingSystem.BLL;
+using System.IO;
 
 namespace VotingSystem
 {
@@ -35,16 +37,30 @@ namespace VotingSystem
 
         private void addPL_btn_Click(object sender, EventArgs e)
         {
-            
+
+            byte[] imageData = ImageToByteArray(pb_logo.Image);
+
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "INSERT INTO Partylist (PartylistName) VALUES('"+AddPartylist_txtbx.Text +"')";
-            cmd.ExecuteNonQuery();
+            cmd.CommandText = "INSERT INTO Partylist (PartylistName, PartylistLogo) VALUES(@PartylistName, @PartylistLogo)";
+            cmd.Parameters.AddWithValue("@PartylistName", AddPartylist_txtbx.Text);
+            cmd.Parameters.AddWithValue("@PartylistLogo", imageData);
+            cmd.ExecuteNonQuery();         
             con.Close();
+
+
 
             MessageBox.Show("Record Succcessful");
 
+        }
+        private byte[] ImageToByteArray(Image image)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                return ms.ToArray();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -55,10 +71,18 @@ namespace VotingSystem
         private void btn_logo_Click(object sender, EventArgs e)
         {
             OpenFileDialog opendlg = new OpenFileDialog();
-            if (opendlg.ShowDialog() == DialogResult.OK) 
+            if (opendlg.ShowDialog() == DialogResult.OK)
             {
                 Image image = Image.FromFile(opendlg.FileName);
                 pb_logo.Image = image;
+            }
+        }
+
+        private Image ByteArrayToImage(byte[] byteArray)
+        {
+            using (MemoryStream ms = new MemoryStream(byteArray))
+            {
+                return Image.FromStream(ms);
             }
         }
     }

@@ -132,6 +132,7 @@
             this.Controls.Add(this.lbl_partylistID);
             this.Name = "UC_Partylist";
             this.Size = new System.Drawing.Size(808, 131);
+            this.Load += new System.EventHandler(this.UC_Partylist_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PB_PLlogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
