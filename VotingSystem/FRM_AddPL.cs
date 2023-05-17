@@ -37,21 +37,32 @@ namespace VotingSystem
 
         private void addPL_btn_Click(object sender, EventArgs e)
         {
+            ClassBLL objbll = new ClassBLL();
 
-            byte[] imageData = ImageToByteArray(pb_logo.Image);
-
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "INSERT INTO Partylist (PartylistName, PartylistLogo) VALUES(@PartylistName, @PartylistLogo)";
-            cmd.Parameters.AddWithValue("@PartylistName", AddPartylist_txtbx.Text);
-            cmd.Parameters.AddWithValue("@PartylistLogo", imageData);
-            cmd.ExecuteNonQuery();         
-            con.Close();
-
+            if (objbll.SaveItems(pb_logo.Image, AddPartylist_txtbx.Text))
+            {
+                MessageBox.Show("Record Successful!");
+            }
+            else 
+            {
+                MessageBox.Show("Record Failed!");
+            }
 
 
-            MessageBox.Show("Record Succcessful");
+            //byte[] imageData = ImageToByteArray(pb_logo.Image);
+
+            //con.Open();
+            //SqlCommand cmd = con.CreateCommand();
+            //cmd.CommandType = CommandType.Text;
+            //cmd.CommandText = "INSERT INTO Partylist (PartylistName, PartylistLogo) VALUES(@PartylistName, @PartylistLogo)";
+            //cmd.Parameters.AddWithValue("@PartylistName", AddPartylist_txtbx.Text);
+            //cmd.Parameters.AddWithValue("@PartylistLogo", imageData);
+            //cmd.ExecuteNonQuery();         
+            //con.Close();
+
+
+
+            //MessageBox.Show("Record Succcessful");
 
         }
         private byte[] ImageToByteArray(Image image)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.SqlServer.Server;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,14 +10,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VotingSystem.DAL;
 
 namespace VotingSystem
 {
     public partial class UC_Partylist : UserControl
     {
+
+        
         public UC_Partylist()
         {
+            
             InitializeComponent();
+            flowLayoutPanel1 = new FlowLayoutPanel();
         }
 
         public string PartylistID
@@ -37,50 +43,56 @@ namespace VotingSystem
             set { PB_PLlogo.Image = value; }
         }
 
-        private void RetrievePartylistData()
+        private FlowLayoutPanel flowLayoutPanel1;
+
+
+
+        private void btn_delete_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-SM9NF9V;Initial Catalog=DB_VotingSystem;Integrated Security=True");
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT PartylistID, PartylistName, Logo FROM Partylist";
-            SqlDataReader reader = cmd.ExecuteReader();
-
-            while (reader.Read())
+            DialogResult result = MessageBox.Show("Are you sure you want to delete?", "Confirmation", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
             {
-                int partylistID = reader.GetInt32(0);
-                string partylistName = reader.GetString(1);
-                byte[] logoData = (byte[])reader["Logo"];
-                Image partylistLogo = ByteArrayToImage(logoData);
+                // Delete data from the database
+                DeleteDataFromDatabase();
 
-                // Create an instance of the user control form
-                UC_Partylist partylistUserControl = new UC_Partylist();
-
-                // Set the property values in the user control form
-                partylistUserControl.PartylistID = partylistID.ToString();
-                partylistUserControl.PartylistName = partylistName;
-                partylistUserControl.PartylistLogo = partylistLogo;
-
-                // Add the user control form to your desired container (e.g., panel)
-                PartylistID_lbl.Controls.Add(partylistUserControl);
-                PartylistID_lbl.Controls.Add(partylistUserControl);
-                PartylistID_lbl.Controls.Add(partylistUserControl);
+                // Remove the user control from the FlowLayoutPanel
+                flowLayoutPanel1.Controls.Remove(this);
             }
-
-            con.Close();
+            
         }
 
-        private Image ByteArrayToImage(byte[] byteArray)
+        private void DeleteDataFromDatabase()
         {
-            using (MemoryStream ms = new MemoryStream(byteArray))
+            // Establish the database connection and execute the delete operation
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-SM9NF9V;Initial Catalog=DB_VotingSystem;Integrated Security=True"))
             {
-                return Image.FromStream(ms);
+                connection.Open();
+                string query = "DELETE FROM Partylist WHERE Partylist_ID = @Partylist_ID"; // Update with appropriate table and column names
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Partylist_ID", PartylistID);
+                command.ExecuteNonQuery();
             }
         }
 
-        private void UC_Partylist_Load(object sender, EventArgs e)
+        private void UpdateDataFromDatabase() 
         {
-            RetrievePartylistData();
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-SM9NF9V;Initial Catalog=DB_VotingSystem;Integrated Security=True"))
+            {
+                connection.Open();
+                string query = "DELETE FROM Partylist WHERE Partylist_ID = @Partylist_ID"; // Update with appropriate table and column names
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Partylist_ID", PartylistID);
+                command.ExecuteNonQuery();
+            }
         }
+
+        private void btn_edit_Click(object sender, EventArgs e)
+        {
+            FRM_EditPartylist FRM_EditPL = new FRM_EditPartylist();
+            FRM_EditPL.ShowDialog();
+        }
+
+
+
     }
 }

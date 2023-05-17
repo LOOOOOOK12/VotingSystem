@@ -13,7 +13,9 @@ namespace VotingSystem.DAL
 {
     internal class ClassDAL
     {
-       
+
+
+       //PANG ADD
         public bool AddItemsToTable(Image img, string Partylistname) 
         { 
             Connection con = new Connection();
@@ -33,6 +35,7 @@ namespace VotingSystem.DAL
                     //converting image to binary to store to database
                     MemoryStream ms = new MemoryStream();
                     img.Save(ms, img.RawFormat);
+                    // set to binary format image to parameter
                     cmd.Parameters.AddWithValue("@PartylistLogo", ms.ToArray());
 
                     cmd.ExecuteNonQuery();
@@ -44,6 +47,8 @@ namespace VotingSystem.DAL
                 throw;
             }
         }
+
+        //PANG VIEW
         public DataTable ReadItemsTable()
         {
             Connection con = new Connection();

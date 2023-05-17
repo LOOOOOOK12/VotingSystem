@@ -60,7 +60,7 @@ namespace VotingSystem
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "INSERT INTO Register VALUES('"+txtb_Firstname.Text+"','"+txtb_Lastname.Text+"', '"+txtb_MiddleName.Text+"', '"+Course.SelectedItem.ToString()+"', " +
+            cmd.CommandText = "INSERT INTO Voters VALUES('"+txtb_Firstname.Text+"','"+txtb_Lastname.Text+"', '"+txtb_MiddleName.Text+"', '"+Course.SelectedItem.ToString()+"', " +
            "'" + Cyear.SelectedItem.ToString() + "','" + Age.Text + "','" + txtb_IDnumber.Text + "','" + txtb_Password.Text + "'," +
            "'" + Date.SelectedItem.ToString() + "','" + Month.SelectedItem.ToString() + "','" + Year.SelectedItem.ToString() + "')";
             cmd.ExecuteNonQuery();

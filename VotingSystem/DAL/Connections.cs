@@ -10,6 +10,6 @@ namespace VotingSystem.DAL
 {
     internal class Connection
     {
-        public SqlConnection connect = new SqlConnection(@"Data Source = DESKTOP - SM9NF9V; Initial Catalog = DB_VotingSystem; Integrated Security = True");
+        public SqlConnection connect = new SqlConnection("Data Source=DESKTOP-SM9NF9V;Initial Catalog=DB_VotingSystem;Integrated Security=True");
     }
 }

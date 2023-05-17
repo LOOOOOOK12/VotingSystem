@@ -54,7 +54,7 @@ namespace VotingSystem
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     con.Open();
-                    string query = "SELECT * FROM Register WHERE IDnumber = @Username AND password = @Password";
+                    string query = "SELECT * FROM Voters WHERE IDnumber = @Username AND password = @Password";
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@Username", userNametxtbx.Text);
                     cmd.Parameters.AddWithValue("@Password", Password_txtbx.Text);
