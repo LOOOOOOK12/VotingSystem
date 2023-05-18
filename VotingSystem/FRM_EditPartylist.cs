@@ -36,15 +36,15 @@ namespace VotingSystem
 
         private void addPL_btn_Click(object sender, EventArgs e)
         {
-            string UpdatedPLLogo = pb_logo.Text;
-            string UpdatedPlName = textBox2.Text;
-            // ... and so on
+            //string UpdatedPLLogo = pb_logo.Text;
+            //string UpdatedPlName = textBox2.Text;
+            //// ... and so on
 
-            // Insert the new data into the database
-            InsertDataIntoDatabase(newData1, newData2);
+            //// Insert the new data into the database
+            //InsertDataIntoDatabase(newData1, newData2);
 
-            // Update the labels in the previous user control
-            UpdatePreviousUserControlLabels(newData1, newData2);
+            //// Update the labels in the previous user control
+            //UpdatePreviousUserControlLabels(newData1, newData2);
         }
 
         private byte[] ImageToByteArray(Image image)

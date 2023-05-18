@@ -49,21 +49,6 @@ namespace VotingSystem
             }
 
 
-            //byte[] imageData = ImageToByteArray(pb_logo.Image);
-
-            //con.Open();
-            //SqlCommand cmd = con.CreateCommand();
-            //cmd.CommandType = CommandType.Text;
-            //cmd.CommandText = "INSERT INTO Partylist (PartylistName, PartylistLogo) VALUES(@PartylistName, @PartylistLogo)";
-            //cmd.Parameters.AddWithValue("@PartylistName", AddPartylist_txtbx.Text);
-            //cmd.Parameters.AddWithValue("@PartylistLogo", imageData);
-            //cmd.ExecuteNonQuery();         
-            //con.Close();
-
-
-
-            //MessageBox.Show("Record Succcessful");
-
         }
         private byte[] ImageToByteArray(Image image)
         {

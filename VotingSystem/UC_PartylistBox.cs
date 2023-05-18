@@ -58,7 +58,7 @@ namespace VotingSystem
                 // Remove the user control from the FlowLayoutPanel
                 flowLayoutPanel1.Controls.Remove(this);
             }
-            
+
         }
 
         private void DeleteDataFromDatabase()
@@ -92,7 +92,9 @@ namespace VotingSystem
             FRM_EditPL.ShowDialog();
         }
 
+        private void UC_Partylist_Load(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }

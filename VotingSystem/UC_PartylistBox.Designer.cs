@@ -28,40 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_delete = new System.Windows.Forms.Button();
-            this.btn_edit = new System.Windows.Forms.Button();
             this.PartylistID_lbl = new System.Windows.Forms.Label();
             this.PartylistName_lbl = new System.Windows.Forms.Label();
             this.lbl_PartylistName = new System.Windows.Forms.Label();
             this.lbl_partylistID = new System.Windows.Forms.Label();
-            this.PB_PLlogo = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.PB_PLlogo = new System.Windows.Forms.PictureBox();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_edit = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.PB_PLlogo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_delete
-            // 
-            this.btn_delete.FlatAppearance.BorderSize = 0;
-            this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_delete.Image = global::VotingSystem.Properties.Resources.icons8_trash_can_64;
-            this.btn_delete.Location = new System.Drawing.Point(689, 35);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(68, 62);
-            this.btn_delete.TabIndex = 19;
-            this.btn_delete.UseVisualStyleBackColor = true;
-            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
-            // 
-            // btn_edit
-            // 
-            this.btn_edit.FlatAppearance.BorderSize = 0;
-            this.btn_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_edit.Image = global::VotingSystem.Properties.Resources.icons8_pencil_64__1_;
-            this.btn_edit.Location = new System.Drawing.Point(615, 35);
-            this.btn_edit.Name = "btn_edit";
-            this.btn_edit.Size = new System.Drawing.Size(68, 62);
-            this.btn_edit.TabIndex = 18;
-            this.btn_edit.UseVisualStyleBackColor = true;
-            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
             // PartylistID_lbl
             // 
@@ -101,6 +78,14 @@
             this.lbl_partylistID.TabIndex = 13;
             this.lbl_partylistID.Text = "Partylist ID:";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel2.Location = new System.Drawing.Point(0, 128);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(781, 3);
+            this.panel2.TabIndex = 21;
+            // 
             // PB_PLlogo
             // 
             this.PB_PLlogo.BackColor = System.Drawing.Color.Transparent;
@@ -112,19 +97,43 @@
             this.PB_PLlogo.TabIndex = 12;
             this.PB_PLlogo.TabStop = false;
             // 
-            // panel2
+            // btn_delete
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 128);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(781, 3);
-            this.panel2.TabIndex = 21;
+            this.btn_delete.FlatAppearance.BorderSize = 0;
+            this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_delete.Image = global::VotingSystem.Properties.Resources.icons8_trash_can_64;
+            this.btn_delete.Location = new System.Drawing.Point(689, 35);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(68, 62);
+            this.btn_delete.TabIndex = 19;
+            this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
+            // 
+            // btn_edit
+            // 
+            this.btn_edit.FlatAppearance.BorderSize = 0;
+            this.btn_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_edit.Image = global::VotingSystem.Properties.Resources.icons8_pencil_64__1_;
+            this.btn_edit.Location = new System.Drawing.Point(615, 35);
+            this.btn_edit.Name = "btn_edit";
+            this.btn_edit.Size = new System.Drawing.Size(68, 62);
+            this.btn_edit.TabIndex = 18;
+            this.btn_edit.UseVisualStyleBackColor = true;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.Location = new System.Drawing.Point(778, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(3, 130);
+            this.panel1.TabIndex = 22;
             // 
             // UC_Partylist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.PB_PLlogo);
             this.Controls.Add(this.btn_delete);
@@ -135,6 +144,7 @@
             this.Controls.Add(this.lbl_partylistID);
             this.Name = "UC_Partylist";
             this.Size = new System.Drawing.Size(781, 131);
+            this.Load += new System.EventHandler(this.UC_Partylist_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PB_PLlogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -151,5 +161,6 @@
         private System.Windows.Forms.Label lbl_partylistID;
         private System.Windows.Forms.PictureBox PB_PLlogo;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
     }
 }

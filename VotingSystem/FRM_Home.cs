@@ -48,9 +48,7 @@ namespace VotingSystem
 
         private void Position_btn_Click(object sender, EventArgs e)
         {
-            FRM_Position PL = new FRM_Position();
-            PL.Owner = this;
-            PL.ShowDialog();
+            
         }
 
         private void Voters_btn_Click(object sender, EventArgs e)

@@ -35,7 +35,6 @@
             this.Logout_btn = new System.Windows.Forms.Button();
             this.Election_btn = new System.Windows.Forms.Button();
             this.Voters_btn = new System.Windows.Forms.Button();
-            this.Position_btn = new System.Windows.Forms.Button();
             this.Partylist_btn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -54,7 +53,6 @@
             this.panel1.Controls.Add(this.Logout_btn);
             this.panel1.Controls.Add(this.Election_btn);
             this.panel1.Controls.Add(this.Voters_btn);
-            this.panel1.Controls.Add(this.Position_btn);
             this.panel1.Controls.Add(this.Partylist_btn);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -106,7 +104,7 @@
             this.Logout_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
             this.Logout_btn.Image = ((System.Drawing.Image)(resources.GetObject("Logout_btn.Image")));
             this.Logout_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Logout_btn.Location = new System.Drawing.Point(0, 387);
+            this.Logout_btn.Location = new System.Drawing.Point(0, 343);
             this.Logout_btn.Name = "Logout_btn";
             this.Logout_btn.Size = new System.Drawing.Size(180, 38);
             this.Logout_btn.TabIndex = 8;
@@ -123,7 +121,7 @@
             this.Election_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
             this.Election_btn.Image = ((System.Drawing.Image)(resources.GetObject("Election_btn.Image")));
             this.Election_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Election_btn.Location = new System.Drawing.Point(0, 343);
+            this.Election_btn.Location = new System.Drawing.Point(0, 299);
             this.Election_btn.Name = "Election_btn";
             this.Election_btn.Size = new System.Drawing.Size(180, 38);
             this.Election_btn.TabIndex = 7;
@@ -139,30 +137,13 @@
             this.Voters_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
             this.Voters_btn.Image = ((System.Drawing.Image)(resources.GetObject("Voters_btn.Image")));
             this.Voters_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Voters_btn.Location = new System.Drawing.Point(0, 299);
+            this.Voters_btn.Location = new System.Drawing.Point(0, 255);
             this.Voters_btn.Name = "Voters_btn";
             this.Voters_btn.Size = new System.Drawing.Size(180, 38);
             this.Voters_btn.TabIndex = 6;
             this.Voters_btn.Text = "Voters";
             this.Voters_btn.UseVisualStyleBackColor = true;
             this.Voters_btn.Click += new System.EventHandler(this.Voters_btn_Click);
-            // 
-            // Position_btn
-            // 
-            this.Position_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Position_btn.FlatAppearance.BorderSize = 0;
-            this.Position_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Position_btn.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Position_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
-            this.Position_btn.Image = ((System.Drawing.Image)(resources.GetObject("Position_btn.Image")));
-            this.Position_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Position_btn.Location = new System.Drawing.Point(0, 255);
-            this.Position_btn.Name = "Position_btn";
-            this.Position_btn.Size = new System.Drawing.Size(180, 38);
-            this.Position_btn.TabIndex = 5;
-            this.Position_btn.Text = "Position";
-            this.Position_btn.UseVisualStyleBackColor = true;
-            this.Position_btn.Click += new System.EventHandler(this.Position_btn_Click);
             // 
             // Partylist_btn
             // 
@@ -260,7 +241,6 @@
         private System.Windows.Forms.Button Logout_btn;
         private System.Windows.Forms.Button Election_btn;
         private System.Windows.Forms.Button Voters_btn;
-        private System.Windows.Forms.Button Position_btn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Minimize_btn;
         private System.Windows.Forms.Button BTN_Candidates;

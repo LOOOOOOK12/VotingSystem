@@ -100,7 +100,44 @@ namespace VotingSystem
         {
             GenerateDynamicUserControl();     
         }
-        
-      
+
+        private void BTN_Search_Click(object sender, EventArgs e)
+        {
+            string searchTerm = TXTBX_Search.Text.Trim(); // Get the search term from a text box
+
+            // Call the search method in your ClassBLL or data access class
+            ClassBLL objbll = new ClassBLL();
+            DataTable searchResults = objbll.SearchItems(searchTerm);
+
+            flowLayoutPanel1.Controls.Clear(); // Clear existing controls
+
+            if (searchResults != null && searchResults.Rows.Count > 0)
+            {
+                foreach (DataRow row in searchResults.Rows)
+                {
+                    UC_Partylist partylistItem = new UC_Partylist();
+
+                    MemoryStream ms = new MemoryStream((byte[])row["PartylistLogo"]);
+                    partylistItem.PartylistLogo = new Bitmap(ms);
+
+                    partylistItem.PartylistID = row["Partylist_ID"].ToString();
+                    partylistItem.PartylistName = row["PartylistName"].ToString();
+
+                    flowLayoutPanel1.Controls.Add(partylistItem);
+
+                    partylistItem.Click += new System.EventHandler(this.Refresh_btn_Click);
+                }
+            }
+            else
+            {
+                // Show a message or handle no search results
+                MessageBox.Show("No search results found.");
+            }
+        }
+
+        private void TXTBX_Search_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

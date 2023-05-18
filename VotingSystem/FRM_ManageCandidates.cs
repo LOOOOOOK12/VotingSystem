@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VotingSystem.BLL;
 
 namespace VotingSystem
 {
@@ -16,6 +18,54 @@ namespace VotingSystem
         {
             InitializeComponent();
         }
+        private void GenerateDynamicUserControl()
+        {
+            flowLayoutPanel2.Controls.Clear();
+
+            ClassBLL_Cadidates objBLLC = new ClassBLL_Cadidates();
+
+            DataTable dt = objBLLC.GetItems();
+
+
+            if (dt != null)
+            {
+                if (dt.Rows.Count > 0)
+                {
+                    UC_Candidate[] listitems = new UC_Candidate[dt.Rows.Count];
+
+                    for (int i = 0; i < 1; i++)
+                    {
+                        foreach (DataRow row in dt.Rows)
+                        {
+                            listitems[i] = new UC_Candidate();
+
+
+
+                            MemoryStream ms = new MemoryStream((byte[])row["CandidatePic"]);
+                            listitems[i].CandidatePic = new Bitmap(ms);
+
+                            listitems[i].Candidate_ID = row["Candidate_ID"].ToString();
+                            listitems[i].Firstname = row["Firstname"].ToString();
+                            listitems[i].Middlename = row["Middlename"].ToString();
+                            listitems[i].Lastname = row["Lastname"].ToString();
+                            listitems[i].Course = row["Course"].ToString();
+                            listitems[i].Position = row["Position"].ToString();
+
+
+                            
+
+                            flowLayoutPanel2.Controls.Add(listitems[i]);
+
+                            listitems[i].Click += new System.EventHandler(this.Refresh_btn_Click);
+
+                        }
+                    }
+                }
+            }
+        }
+
+
+
 
         private void Back_btn_Click(object sender, EventArgs e)
         {
@@ -24,8 +74,18 @@ namespace VotingSystem
 
         private void AddPartylist_btn_Click(object sender, EventArgs e)
         {
-            FRM_AddCandidates FAC = new FRM_AddCandidates();
-            FAC.ShowDialog();
+            FRM_AddCandidatesBox FRM_ACandidates = new FRM_AddCandidatesBox();
+            FRM_ACandidates.ShowDialog();
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Refresh_btn_Click(object sender, EventArgs e)
+        {
+            GenerateDynamicUserControl();
         }
     }
 }

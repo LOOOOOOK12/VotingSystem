@@ -4,41 +4,41 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
 using System.Data.SqlClient;
+using System.Data;
 using System.IO;
-using System.Security.Cryptography.X509Certificates;
 
 namespace VotingSystem.DAL
 {
-
-    //CRUD
-    internal class ClassDAL
+    internal class ClassDAL_Candidates
     {
 
-
-       //PANG ADD
-        public bool AddItemsToTable(Image img, string Partylistname) 
-        { 
+        //ADD ITEMS
+        public bool AddItemsToTable(string Firstname, string Middlename, string Lastname, string Course, string Position, Image CandidatePic ) 
+        {
             Connection con = new Connection();
-            if(ConnectionState.Closed == con.connect.State) 
+            if (ConnectionState.Closed == con.connect.State)
             {
                 con.connect.Open();
             }
 
-            string query = "INSERT INTO Partylist(PartylistName,PartylistLogo) VALUES (@PartylistName,@PartylistLogo)";
+            string query = "INSERT INTO Candidates(Firstname,Middlename,Lastname,Course,Position,CandidatePic) VALUES (@Firstname,@Middlename,@Lastname,@Course,@Position,@CandidatePic)";
 
             try
             {
                 using (SqlCommand cmd = new SqlCommand(query, con.connect))
                 {
-                    cmd.Parameters.AddWithValue("@PartylistName", Partylistname.Trim());
+                    cmd.Parameters.AddWithValue("@Firstname", Firstname.Trim());
+                    cmd.Parameters.AddWithValue("@Middlename", Middlename.Trim());
+                    cmd.Parameters.AddWithValue("@Lastname", Lastname.Trim());
+                    cmd.Parameters.AddWithValue("@Course", Course.Trim());
+                    cmd.Parameters.AddWithValue("@Position", Position.Trim());
 
                     //converting image to binary to store to database
                     MemoryStream ms = new MemoryStream();
-                    img.Save(ms, img.RawFormat);
+                    CandidatePic.Save(ms, CandidatePic.RawFormat);
                     // set to binary format image to parameter
-                    cmd.Parameters.AddWithValue("@PartylistLogo", ms.ToArray());
+                    cmd.Parameters.AddWithValue("@CandidatePic", ms.ToArray());
 
                     cmd.ExecuteNonQuery();
                 }
@@ -51,34 +51,8 @@ namespace VotingSystem.DAL
         }
 
         //PANG VIEW
+
         public DataTable ReadItemsTable()
-        {
-            Connection con = new Connection();
-            if(ConnectionState.Closed == con.connect.State) 
-            {
-                con.connect.Open();
-            }
-
-            string query = "SELECT * FROM Partylist";
-            SqlCommand cmd = new SqlCommand(query,con.connect);
-            try
-            {
-                using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
-                {
-                    DataTable dt = new DataTable();
-                    sda.Fill(dt);
-                    return dt;
-                }
-            }
-            catch
-            {
-                throw;
-            }
-
-        }
-
-        //PANG SEARCHs
-        public DataTable SearchItemsTable(string searchTerm)
         {
             Connection con = new Connection();
             if (ConnectionState.Closed == con.connect.State)
@@ -86,9 +60,35 @@ namespace VotingSystem.DAL
                 con.connect.Open();
             }
 
-            string query = "SELECT * FROM Partylist WHERE PartylistName LIKE @SearchTerm";
+            string query = "SELECT * FROM Candidates";
             SqlCommand cmd = new SqlCommand(query, con.connect);
-            cmd.Parameters.AddWithValue("@SearchTerm", "%" + searchTerm + "%");
+            try
+            {
+                using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                {
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+                    return dt;
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        //PANG SEARCH
+        public DataTable SearchItemsTable(string search)
+        {
+            Connection con = new Connection();
+            if (ConnectionState.Closed == con.connect.State)
+            {
+                con.connect.Open();
+            }
+
+            string query = "SELECT * FROM Candidates WHERE Firstname,Lastname,Position LIKE @Search";
+            SqlCommand cmd = new SqlCommand(query, con.connect);
+            cmd.Parameters.AddWithValue("@Search", "%" + search + "%");
 
             try
             {
@@ -104,5 +104,6 @@ namespace VotingSystem.DAL
                 throw;
             }
         }
+
     }
 }
