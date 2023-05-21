@@ -53,7 +53,9 @@ namespace VotingSystem
 
         private void Voters_btn_Click(object sender, EventArgs e)
         {
-
+            FRM_Voters Voters = new FRM_Voters();
+            Voters.Owner = this;
+            Voters.ShowDialog();
         }
 
         private void Logout_btn_Click(object sender, EventArgs e)
