@@ -87,5 +87,42 @@ namespace VotingSystem
         {
             GenerateDynamicUserControl();
         }
+
+        private void BTN_Search_Click(object sender, EventArgs e)
+        {
+            string searchCandidate = TXTBX_SearchCandidates.Text.Trim();
+
+
+            ClassBLL_Cadidates objBLLCandidates = new ClassBLL_Cadidates();
+            DataTable searchResult = objBLLCandidates.SearchItems(searchCandidate);
+
+            flowLayoutPanel2.Controls.Clear();
+
+            if (searchResult != null && searchResult.Rows.Count > 0)
+            {
+                foreach (DataRow row in searchResult.Rows)
+                {
+                    UC_Candidate CandidateItem = new UC_Candidate();
+
+                    MemoryStream ms = new MemoryStream((byte[])row["CandidatePic"]);
+                    CandidateItem.CandidatePic = new Bitmap(ms);
+
+                    CandidateItem.Candidate_ID = row["Candidate_ID"].ToString();
+                    CandidateItem.Firstname = row["Firstname"].ToString();
+                    CandidateItem.Lastname = row["Lastname"].ToString() ;
+
+                    flowLayoutPanel2.Controls.Add(CandidateItem);
+
+                    CandidateItem.Click += new System.EventHandler(this.Refresh_btn_Click);
+                }
+            }
+            else
+            {
+                // Show a message or handle no search results
+                MessageBox.Show("No search results found.");
+            }
+        }
     }
+    
 }
+

@@ -77,7 +77,7 @@ namespace VotingSystem.DAL
 
         }
 
-        //PANG SEARCHs
+        //PANG SEARCH
         public DataTable SearchItemsTable(string searchTerm)
         {
             Connection con = new Connection();

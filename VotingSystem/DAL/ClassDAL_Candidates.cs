@@ -86,7 +86,7 @@ namespace VotingSystem.DAL
                 con.connect.Open();
             }
 
-            string query = "SELECT * FROM Candidates WHERE Firstname,Lastname,Position LIKE @Search";
+            string query = "SELECT * FROM Candidates WHERE Firstname LIKE @Search OR Lastname LIKE @Search";
             SqlCommand cmd = new SqlCommand(query, con.connect);
             cmd.Parameters.AddWithValue("@Search", "%" + search + "%");
 

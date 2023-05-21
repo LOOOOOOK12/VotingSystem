@@ -40,12 +40,12 @@ namespace VotingSystem.BLL
             }
         }
 
-        public DataTable SearchItems(string searchTerm)
+        public DataTable SearchItems(string search)
         {
             try
             {
-                ClassDAL objDALC = new ClassDAL();
-                return objDALC.SearchItemsTable(searchTerm);
+                ClassDAL_Candidates objDALC = new ClassDAL_Candidates();
+                return objDALC.SearchItemsTable(search);
             }
             catch (Exception e)
             {
