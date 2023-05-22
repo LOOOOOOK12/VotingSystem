@@ -66,7 +66,7 @@ namespace VotingSystem
                         // Valid login credentials
                         FRM_Home f3 = new FRM_Home();
                         this.Hide();
-                        f3.ShowDialog();
+                        //f3.ShowDialog();
                     }
                     else
                     {

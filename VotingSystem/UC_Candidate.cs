@@ -110,5 +110,11 @@ namespace VotingSystem
                 }
             }
         }
+
+        private void btn_edit_Click(object sender, EventArgs e)
+        {
+            FRM_UpdateCandidates updateCandidates = new FRM_UpdateCandidates();
+            updateCandidates.ShowDialog();
+        }
     }
 }

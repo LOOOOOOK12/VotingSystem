@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_ManageCandidates));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Back_btn = new System.Windows.Forms.Button();
-            this.Refresh_btn = new System.Windows.Forms.Button();
+            this.TXTBX_SearchCandidates = new System.Windows.Forms.TextBox();
+            this.BTN_SearchCandidates = new System.Windows.Forms.Button();
             this.AddPartylist_btn = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.BTN_SearchCandidates = new System.Windows.Forms.Button();
-            this.TXTBX_SearchCandidates = new System.Windows.Forms.TextBox();
+            this.Back_btn = new System.Windows.Forms.Button();
+            this.Refresh_btn = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -57,31 +58,28 @@
             this.panel1.Size = new System.Drawing.Size(835, 95);
             this.panel1.TabIndex = 1;
             // 
-            // Back_btn
+            // TXTBX_SearchCandidates
             // 
-            this.Back_btn.FlatAppearance.BorderSize = 0;
-            this.Back_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Back_btn.Image = global::VotingSystem.Properties.Resources.icons8_left_50;
-            this.Back_btn.Location = new System.Drawing.Point(777, 50);
-            this.Back_btn.Name = "Back_btn";
-            this.Back_btn.Size = new System.Drawing.Size(46, 36);
-            this.Back_btn.TabIndex = 8;
-            this.Back_btn.Text = " ";
-            this.Back_btn.UseVisualStyleBackColor = true;
-            this.Back_btn.Click += new System.EventHandler(this.Back_btn_Click);
+            this.TXTBX_SearchCandidates.Location = new System.Drawing.Point(396, 60);
+            this.TXTBX_SearchCandidates.Name = "TXTBX_SearchCandidates";
+            this.TXTBX_SearchCandidates.Size = new System.Drawing.Size(165, 20);
+            this.TXTBX_SearchCandidates.TabIndex = 12;
+            this.TXTBX_SearchCandidates.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Refresh_btn
+            // BTN_SearchCandidates
             // 
-            this.Refresh_btn.FlatAppearance.BorderSize = 0;
-            this.Refresh_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Refresh_btn.Image = global::VotingSystem.Properties.Resources.icons8_refresh_24;
-            this.Refresh_btn.Location = new System.Drawing.Point(734, 50);
-            this.Refresh_btn.Name = "Refresh_btn";
-            this.Refresh_btn.Size = new System.Drawing.Size(37, 36);
-            this.Refresh_btn.TabIndex = 7;
-            this.Refresh_btn.Text = " ";
-            this.Refresh_btn.UseVisualStyleBackColor = true;
-            this.Refresh_btn.Click += new System.EventHandler(this.Refresh_btn_Click);
+            this.BTN_SearchCandidates.BackColor = System.Drawing.Color.Yellow;
+            this.BTN_SearchCandidates.FlatAppearance.BorderSize = 0;
+            this.BTN_SearchCandidates.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_SearchCandidates.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_SearchCandidates.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
+            this.BTN_SearchCandidates.Location = new System.Drawing.Point(272, 50);
+            this.BTN_SearchCandidates.Name = "BTN_SearchCandidates";
+            this.BTN_SearchCandidates.Size = new System.Drawing.Size(118, 36);
+            this.BTN_SearchCandidates.TabIndex = 11;
+            this.BTN_SearchCandidates.Text = "Search\r\n";
+            this.BTN_SearchCandidates.UseVisualStyleBackColor = false;
+            this.BTN_SearchCandidates.Click += new System.EventHandler(this.BTN_Search_Click);
             // 
             // AddPartylist_btn
             // 
@@ -97,16 +95,6 @@
             this.AddPartylist_btn.Text = "Add Candidates";
             this.AddPartylist_btn.UseVisualStyleBackColor = false;
             this.AddPartylist_btn.Click += new System.EventHandler(this.AddPartylist_btn_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::VotingSystem.Properties.Resources.icons8_male_user_96__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(99, 89);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -126,28 +114,41 @@
             this.flowLayoutPanel2.TabIndex = 2;
             this.flowLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
-            // BTN_SearchCandidates
+            // Back_btn
             // 
-            this.BTN_SearchCandidates.BackColor = System.Drawing.Color.Yellow;
-            this.BTN_SearchCandidates.FlatAppearance.BorderSize = 0;
-            this.BTN_SearchCandidates.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_SearchCandidates.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_SearchCandidates.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
-            this.BTN_SearchCandidates.Location = new System.Drawing.Point(272, 50);
-            this.BTN_SearchCandidates.Name = "BTN_SearchCandidates";
-            this.BTN_SearchCandidates.Size = new System.Drawing.Size(118, 36);
-            this.BTN_SearchCandidates.TabIndex = 11;
-            this.BTN_SearchCandidates.Text = "Search\r\n";
-            this.BTN_SearchCandidates.UseVisualStyleBackColor = false;
-            this.BTN_SearchCandidates.Click += new System.EventHandler(this.BTN_Search_Click);
+            this.Back_btn.FlatAppearance.BorderSize = 0;
+            this.Back_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Back_btn.Image = ((System.Drawing.Image)(resources.GetObject("Back_btn.Image")));
+            this.Back_btn.Location = new System.Drawing.Point(777, 50);
+            this.Back_btn.Name = "Back_btn";
+            this.Back_btn.Size = new System.Drawing.Size(46, 36);
+            this.Back_btn.TabIndex = 8;
+            this.Back_btn.Text = " ";
+            this.Back_btn.UseVisualStyleBackColor = true;
+            this.Back_btn.Click += new System.EventHandler(this.Back_btn_Click);
             // 
-            // TXTBX_SearchCandidates
+            // Refresh_btn
             // 
-            this.TXTBX_SearchCandidates.Location = new System.Drawing.Point(396, 60);
-            this.TXTBX_SearchCandidates.Name = "TXTBX_SearchCandidates";
-            this.TXTBX_SearchCandidates.Size = new System.Drawing.Size(165, 20);
-            this.TXTBX_SearchCandidates.TabIndex = 12;
-            this.TXTBX_SearchCandidates.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Refresh_btn.FlatAppearance.BorderSize = 0;
+            this.Refresh_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Refresh_btn.Image = ((System.Drawing.Image)(resources.GetObject("Refresh_btn.Image")));
+            this.Refresh_btn.Location = new System.Drawing.Point(734, 50);
+            this.Refresh_btn.Name = "Refresh_btn";
+            this.Refresh_btn.Size = new System.Drawing.Size(37, 36);
+            this.Refresh_btn.TabIndex = 7;
+            this.Refresh_btn.Text = " ";
+            this.Refresh_btn.UseVisualStyleBackColor = true;
+            this.Refresh_btn.Click += new System.EventHandler(this.Refresh_btn_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(99, 89);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // FRM_ManageCandidates
             // 

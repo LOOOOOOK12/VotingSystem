@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,78 +18,67 @@ namespace VotingSystem
             InitializeComponent();
         }
 
-        private void Form3_Load(object sender, EventArgs e)
-        {
-            timer1.Start();
-        }
-
-        private void Minimize_btn_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        
-
-        private void exit_btn_Paint(object sender, PaintEventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void Home_btn_Click(object sender, EventArgs e)
+        private void BTN_Home_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void Partylist_btn_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FRM_ManageCandidates FMC = new FRM_ManageCandidates();
+            FMC.Owner = this;
+            FMC.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             FRM_Partylist PT = new FRM_Partylist();
             PT.Owner = this;
             PT.ShowDialog();
         }
 
-        private void Position_btn_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Voters_btn_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
             FRM_Voters Voters = new FRM_Voters();
             Voters.Owner = this;
             Voters.ShowDialog();
         }
 
-        private void Logout_btn_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-           DialogResult result = MessageBox.Show("Log out","You want to Log out?",MessageBoxButtons.YesNo);
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Log out", "You want to Log out?", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 FRM_Login FL = new FRM_Login();
                 Hide();
                 FL.Show();
             }
-           
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BTN_Minimize_Click(object sender, EventArgs e)
         {
-            FRM_ManageCandidates FMC = new FRM_ManageCandidates();
-            FMC.Owner = this;
-            FMC.ShowDialog();
-
-
-
+            this.WindowState = FormWindowState.Minimized;
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void FRM_Home_Load(object sender, EventArgs e)
         {
-
+            timer1.Start();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            label2.Text = DateTime.Now.ToShortDateString();
-            label3.Text = DateTime.Now.ToShortTimeString();
+            Date.Text = DateTime.Now.ToShortDateString();
+            Time.Text = DateTime.Now.ToShortTimeString();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -96,11 +86,9 @@ namespace VotingSystem
 
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
+        private void label4_Click(object sender, EventArgs e)
         {
-            FRM_Voters voters = new FRM_Voters();
 
-            
         }
     }
 }

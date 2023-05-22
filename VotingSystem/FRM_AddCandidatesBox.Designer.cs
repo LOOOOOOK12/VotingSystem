@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_AddCandidatesBox));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.PB_Candidate = new System.Windows.Forms.PictureBox();
             this.BTN_InsertPhoto = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,6 +48,7 @@
             this.TXTBX_Lastname = new System.Windows.Forms.TextBox();
             this.CB_Course = new System.Windows.Forms.ComboBox();
             this.CB_Position = new System.Windows.Forms.ComboBox();
+            this.PB_Candidate = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Candidate)).BeginInit();
             this.SuspendLayout();
@@ -72,16 +73,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Add Candidates";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // PB_Candidate
-            // 
-            this.PB_Candidate.Image = global::VotingSystem.Properties.Resources.icons8_male_user_96;
-            this.PB_Candidate.Location = new System.Drawing.Point(12, 104);
-            this.PB_Candidate.Name = "PB_Candidate";
-            this.PB_Candidate.Size = new System.Drawing.Size(158, 147);
-            this.PB_Candidate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PB_Candidate.TabIndex = 2;
-            this.PB_Candidate.TabStop = false;
             // 
             // BTN_InsertPhoto
             // 
@@ -166,6 +157,7 @@
             this.CB_Partylist.Name = "CB_Partylist";
             this.CB_Partylist.Size = new System.Drawing.Size(136, 21);
             this.CB_Partylist.TabIndex = 11;
+            this.CB_Partylist.SelectedIndexChanged += new System.EventHandler(this.CB_Partylist_SelectedIndexChanged);
             // 
             // CB_Year
             // 
@@ -237,6 +229,16 @@
             this.CB_Position.Name = "CB_Position";
             this.CB_Position.Size = new System.Drawing.Size(136, 21);
             this.CB_Position.TabIndex = 19;
+            // 
+            // PB_Candidate
+            // 
+            this.PB_Candidate.Image = ((System.Drawing.Image)(resources.GetObject("PB_Candidate.Image")));
+            this.PB_Candidate.Location = new System.Drawing.Point(12, 104);
+            this.PB_Candidate.Name = "PB_Candidate";
+            this.PB_Candidate.Size = new System.Drawing.Size(158, 147);
+            this.PB_Candidate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PB_Candidate.TabIndex = 2;
+            this.PB_Candidate.TabStop = false;
             // 
             // FRM_AddCandidatesBox
             // 

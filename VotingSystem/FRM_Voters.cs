@@ -43,5 +43,10 @@ namespace VotingSystem
         {
 
         }
+
+        private void BTN_SearchCandidates_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

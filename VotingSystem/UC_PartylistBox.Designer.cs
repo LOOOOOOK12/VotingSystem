@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Partylist));
             this.PartylistID_lbl = new System.Windows.Forms.Label();
             this.PartylistName_lbl = new System.Windows.Forms.Label();
             this.lbl_PartylistName = new System.Windows.Forms.Label();
@@ -98,7 +99,7 @@
             // PB_PLlogo
             // 
             this.PB_PLlogo.BackColor = System.Drawing.Color.Transparent;
-            this.PB_PLlogo.Image = global::VotingSystem.Properties.Resources.icons8_male_user_96;
+            this.PB_PLlogo.Image = global::VotingSystem.Properties.Resources.icons8_male_user_961;
             this.PB_PLlogo.Location = new System.Drawing.Point(36, 18);
             this.PB_PLlogo.Name = "PB_PLlogo";
             this.PB_PLlogo.Size = new System.Drawing.Size(92, 94);
@@ -111,7 +112,7 @@
             // 
             this.btn_delete.FlatAppearance.BorderSize = 0;
             this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_delete.Image = global::VotingSystem.Properties.Resources.icons8_trash_can_64;
+            this.btn_delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.Image")));
             this.btn_delete.Location = new System.Drawing.Point(689, 35);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(68, 62);
@@ -123,7 +124,7 @@
             // 
             this.btn_edit.FlatAppearance.BorderSize = 0;
             this.btn_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_edit.Image = global::VotingSystem.Properties.Resources.icons8_pencil_64__1_;
+            this.btn_edit.Image = ((System.Drawing.Image)(resources.GetObject("btn_edit.Image")));
             this.btn_edit.Location = new System.Drawing.Point(615, 35);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(68, 62);

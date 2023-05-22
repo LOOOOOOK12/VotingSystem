@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace VotingSystem
 {
-    public partial class HOME : UserControl
+    public partial class FRM_UpdateCandidates : Form
     {
-        public HOME()
+        public FRM_UpdateCandidates()
         {
             InitializeComponent();
         }

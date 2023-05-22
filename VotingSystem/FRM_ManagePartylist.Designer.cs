@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Partylist));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.AddPartylist_btn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BTN_Search = new System.Windows.Forms.Button();
+            this.TXTBX_Search = new System.Windows.Forms.TextBox();
             this.Back_btn = new System.Windows.Forms.Button();
             this.Refresh_btn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.TXTBX_Search = new System.Windows.Forms.TextBox();
-            this.BTN_Search = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -91,6 +92,30 @@
             this.panel1.Size = new System.Drawing.Size(835, 95);
             this.panel1.TabIndex = 0;
             // 
+            // BTN_Search
+            // 
+            this.BTN_Search.BackColor = System.Drawing.Color.Yellow;
+            this.BTN_Search.FlatAppearance.BorderSize = 0;
+            this.BTN_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Search.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
+            this.BTN_Search.Location = new System.Drawing.Point(247, 50);
+            this.BTN_Search.Name = "BTN_Search";
+            this.BTN_Search.Size = new System.Drawing.Size(118, 36);
+            this.BTN_Search.TabIndex = 10;
+            this.BTN_Search.Text = "Search\r\n";
+            this.BTN_Search.UseVisualStyleBackColor = false;
+            this.BTN_Search.Click += new System.EventHandler(this.BTN_Search_Click);
+            // 
+            // TXTBX_Search
+            // 
+            this.TXTBX_Search.Location = new System.Drawing.Point(371, 59);
+            this.TXTBX_Search.Name = "TXTBX_Search";
+            this.TXTBX_Search.Size = new System.Drawing.Size(165, 20);
+            this.TXTBX_Search.TabIndex = 9;
+            this.TXTBX_Search.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TXTBX_Search.TextChanged += new System.EventHandler(this.TXTBX_Search_TextChanged);
+            // 
             // Back_btn
             // 
             this.Back_btn.FlatAppearance.BorderSize = 0;
@@ -119,37 +144,13 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::VotingSystem.Properties.Resources.icons8_user_account_96;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(99, 89);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
-            // 
-            // TXTBX_Search
-            // 
-            this.TXTBX_Search.Location = new System.Drawing.Point(371, 59);
-            this.TXTBX_Search.Name = "TXTBX_Search";
-            this.TXTBX_Search.Size = new System.Drawing.Size(165, 20);
-            this.TXTBX_Search.TabIndex = 9;
-            this.TXTBX_Search.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TXTBX_Search.TextChanged += new System.EventHandler(this.TXTBX_Search_TextChanged);
-            // 
-            // BTN_Search
-            // 
-            this.BTN_Search.BackColor = System.Drawing.Color.Yellow;
-            this.BTN_Search.FlatAppearance.BorderSize = 0;
-            this.BTN_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Search.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
-            this.BTN_Search.Location = new System.Drawing.Point(247, 50);
-            this.BTN_Search.Name = "BTN_Search";
-            this.BTN_Search.Size = new System.Drawing.Size(118, 36);
-            this.BTN_Search.TabIndex = 10;
-            this.BTN_Search.Text = "Search\r\n";
-            this.BTN_Search.UseVisualStyleBackColor = false;
-            this.BTN_Search.Click += new System.EventHandler(this.BTN_Search_Click);
             // 
             // FRM_Partylist
             // 

@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.PB_Clogo = new System.Windows.Forms.PictureBox();
-            this.btn_delete = new System.Windows.Forms.Button();
-            this.btn_edit = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Candidate));
             this.LBL_Candidate_ID = new System.Windows.Forms.Label();
             this.LBL_Firstname = new System.Windows.Forms.Label();
             this.lbl_PartylistName = new System.Windows.Forms.Label();
@@ -47,42 +45,11 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_edit = new System.Windows.Forms.Button();
+            this.PB_Clogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Clogo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // PB_Clogo
-            // 
-            this.PB_Clogo.BackColor = System.Drawing.Color.Transparent;
-            this.PB_Clogo.Image = global::VotingSystem.Properties.Resources.icons8_male_user_96;
-            this.PB_Clogo.Location = new System.Drawing.Point(21, 7);
-            this.PB_Clogo.Name = "PB_Clogo";
-            this.PB_Clogo.Size = new System.Drawing.Size(104, 112);
-            this.PB_Clogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PB_Clogo.TabIndex = 13;
-            this.PB_Clogo.TabStop = false;
-            // 
-            // btn_delete
-            // 
-            this.btn_delete.FlatAppearance.BorderSize = 0;
-            this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_delete.Image = global::VotingSystem.Properties.Resources.icons8_trash_can_64;
-            this.btn_delete.Location = new System.Drawing.Point(694, 35);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(68, 62);
-            this.btn_delete.TabIndex = 25;
-            this.btn_delete.UseVisualStyleBackColor = true;
-            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
-            // 
-            // btn_edit
-            // 
-            this.btn_edit.FlatAppearance.BorderSize = 0;
-            this.btn_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_edit.Image = global::VotingSystem.Properties.Resources.icons8_pencil_64__1_;
-            this.btn_edit.Location = new System.Drawing.Point(620, 35);
-            this.btn_edit.Name = "btn_edit";
-            this.btn_edit.Size = new System.Drawing.Size(68, 62);
-            this.btn_edit.TabIndex = 24;
-            this.btn_edit.UseVisualStyleBackColor = true;
             // 
             // LBL_Candidate_ID
             // 
@@ -234,6 +201,41 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(3, 138);
             this.panel1.TabIndex = 23;
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.FlatAppearance.BorderSize = 0;
+            this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.Image")));
+            this.btn_delete.Location = new System.Drawing.Point(694, 35);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(68, 62);
+            this.btn_delete.TabIndex = 25;
+            this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
+            // 
+            // btn_edit
+            // 
+            this.btn_edit.FlatAppearance.BorderSize = 0;
+            this.btn_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_edit.Image = ((System.Drawing.Image)(resources.GetObject("btn_edit.Image")));
+            this.btn_edit.Location = new System.Drawing.Point(620, 35);
+            this.btn_edit.Name = "btn_edit";
+            this.btn_edit.Size = new System.Drawing.Size(68, 62);
+            this.btn_edit.TabIndex = 24;
+            this.btn_edit.UseVisualStyleBackColor = true;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
+            // 
+            // PB_Clogo
+            // 
+            this.PB_Clogo.BackColor = System.Drawing.Color.Transparent;
+            this.PB_Clogo.Image = global::VotingSystem.Properties.Resources.icons8_male_user_961;
+            this.PB_Clogo.Location = new System.Drawing.Point(21, 7);
+            this.PB_Clogo.Name = "PB_Clogo";
+            this.PB_Clogo.Size = new System.Drawing.Size(104, 112);
+            this.PB_Clogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PB_Clogo.TabIndex = 13;
+            this.PB_Clogo.TabStop = false;
             // 
             // UC_Candidate
             // 

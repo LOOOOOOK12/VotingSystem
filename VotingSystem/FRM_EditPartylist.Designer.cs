@@ -35,9 +35,9 @@
             this.addPL_btn = new System.Windows.Forms.Button();
             this.TXTBX_UpdatePL = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.pb_logo = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.TXTBX_PartylistID = new System.Windows.Forms.TextBox();
+            this.pb_logo = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).BeginInit();
             this.SuspendLayout();
@@ -132,17 +132,6 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Partylist Name:";
             // 
-            // pb_logo
-            // 
-            this.pb_logo.Image = global::VotingSystem.Properties.Resources.icons8_male_user_96;
-            this.pb_logo.Location = new System.Drawing.Point(149, 76);
-            this.pb_logo.Name = "pb_logo";
-            this.pb_logo.Size = new System.Drawing.Size(100, 95);
-            this.pb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_logo.TabIndex = 11;
-            this.pb_logo.TabStop = false;
-            this.pb_logo.Click += new System.EventHandler(this.pb_logo_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -162,6 +151,17 @@
             this.TXTBX_PartylistID.Size = new System.Drawing.Size(235, 20);
             this.TXTBX_PartylistID.TabIndex = 14;
             this.TXTBX_PartylistID.TextChanged += new System.EventHandler(this.TXTBX_PartylistID_TextChanged);
+            // 
+            // pb_logo
+            // 
+            this.pb_logo.Image = global::VotingSystem.Properties.Resources.icons8_male_user_961;
+            this.pb_logo.Location = new System.Drawing.Point(149, 76);
+            this.pb_logo.Name = "pb_logo";
+            this.pb_logo.Size = new System.Drawing.Size(100, 95);
+            this.pb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pb_logo.TabIndex = 11;
+            this.pb_logo.TabStop = false;
+            this.pb_logo.Click += new System.EventHandler(this.pb_logo_Click);
             // 
             // FRM_EditPartylist
             // 

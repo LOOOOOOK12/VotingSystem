@@ -17,6 +17,7 @@ namespace VotingSystem
         public FRM_AddCandidatesBox()
         {
             InitializeComponent();
+            fillcombobox();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -61,6 +62,37 @@ namespace VotingSystem
             {
                 MessageBox.Show("Record Failed!");
             }
+        }
+
+        public void fillcombobox() 
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-SM9NF9V;Initial Catalog=DB_VotingSystem;Integrated Security=True");
+            string sql = "SELECT * FROM Partylist";
+            SqlCommand cmd = new SqlCommand(sql, con); ;
+            SqlDataReader myreader;
+
+            try
+            {
+                con.Open();
+                myreader = cmd.ExecuteReader();
+                while(myreader.Read()) 
+                {
+                    string sname = myreader.GetString(1);
+                    CB_Partylist.Items.Add(sname);
+
+                }
+                 
+            }
+            catch(Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void CB_Partylist_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -73,66 +73,6 @@ namespace VotingSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_close_32 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-close-32", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_close_32__1_ {
-            get {
-                object obj = ResourceManager.GetObject("icons8-close-32 (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_close_321 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-close-321", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_dashboard_50 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-dashboard-50", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_home_32 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-home-32", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_home_50 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-home-50", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icons8_left_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-left-50", resourceCulture);
@@ -153,9 +93,9 @@ namespace VotingSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_male_user_96 {
+        internal static System.Drawing.Bitmap icons8_male_user_64 {
             get {
-                object obj = ResourceManager.GetObject("icons8-male-user-96", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8-male-user-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +103,9 @@ namespace VotingSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_male_user_96__1_ {
+        internal static System.Drawing.Bitmap icons8_male_user_96 {
             get {
-                object obj = ResourceManager.GetObject("icons8-male-user-96 (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8-male-user-96", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +123,9 @@ namespace VotingSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_pencil_24 {
+        internal static System.Drawing.Bitmap icons8_male_user_961 {
             get {
-                object obj = ResourceManager.GetObject("icons8-pencil-24", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8-male-user-961", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +153,9 @@ namespace VotingSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_pencil_96 {
+        internal static System.Drawing.Bitmap icons8_pencil_641 {
             get {
-                object obj = ResourceManager.GetObject("icons8-pencil-96", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8-pencil-641", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,19 +173,9 @@ namespace VotingSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_refresh_32 {
+        internal static System.Drawing.Bitmap icons8_refresh_48 {
             get {
-                object obj = ResourceManager.GetObject("icons8-refresh-32", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_refresh_64 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-refresh-64", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8-refresh-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,16 +193,6 @@ namespace VotingSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_subtract_32__1_ {
-            get {
-                object obj = ResourceManager.GetObject("icons8-subtract-32 (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icons8_trash_can_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-trash-can-64", resourceCulture);
@@ -283,69 +203,9 @@ namespace VotingSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_trash_can_96 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-trash-can-96", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_user_48 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-user-48", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_user_account_32 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-user-account-32", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_user_account_32__1_ {
-            get {
-                object obj = ResourceManager.GetObject("icons8-user-account-32 (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icons8_user_account_96 {
             get {
                 object obj = ResourceManager.GetObject("icons8-user-account-96", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_vote_yes_32__1_ {
-            get {
-                object obj = ResourceManager.GetObject("icons8-vote-yes-32 (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap unnamed {
-            get {
-                object obj = ResourceManager.GetObject("unnamed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
