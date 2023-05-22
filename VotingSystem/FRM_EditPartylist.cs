@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VotingSystem.BLL;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace VotingSystem
@@ -36,16 +37,28 @@ namespace VotingSystem
 
         private void addPL_btn_Click(object sender, EventArgs e)
         {
-            //string UpdatedPLLogo = pb_logo.Text;
-            //string UpdatedPlName = textBox2.Text;
-            //// ... and so on
+            ClassBLL objbll = new ClassBLL();
 
-            //// Insert the new data into the database
-            //InsertDataIntoDatabase(newData1, newData2);
+            int partylistID; // Variable to store the Partylist ID
 
-            //// Update the labels in the previous user control
-            //UpdatePreviousUserControlLabels(newData1, newData2);
+            if (int.TryParse(TXTBX_PartylistID.Text, out partylistID))
+            {
+                if (objbll.UpdateItems(partylistID, pb_logo.Image, TXTBX_UpdatePL.Text))
+                {
+                    MessageBox.Show("Record Successful!");
+                }
+                else
+                {
+                    MessageBox.Show("Record Failed!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid Partylist ID!");
+            }
         }
+
+        
 
         private byte[] ImageToByteArray(Image image)
         {
@@ -62,6 +75,21 @@ namespace VotingSystem
             {
                 return Image.FromStream(ms);
             }
+        }
+
+        private void TXTBX_UpdatePL_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pb_logo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TXTBX_PartylistID_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

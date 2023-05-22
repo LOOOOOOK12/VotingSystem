@@ -36,6 +36,8 @@
             this.TXTBX_UpdatePL = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pb_logo = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.TXTBX_PartylistID = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).BeginInit();
             this.SuspendLayout();
@@ -84,9 +86,9 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(311, 278);
+            this.button2.Location = new System.Drawing.Point(311, 330);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 29);
+            this.button2.Size = new System.Drawing.Size(75, 28);
             this.button2.TabIndex = 10;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = false;
@@ -102,9 +104,9 @@
             this.addPL_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addPL_btn.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addPL_btn.ForeColor = System.Drawing.Color.White;
-            this.addPL_btn.Location = new System.Drawing.Point(230, 278);
+            this.addPL_btn.Location = new System.Drawing.Point(230, 330);
             this.addPL_btn.Name = "addPL_btn";
-            this.addPL_btn.Size = new System.Drawing.Size(75, 29);
+            this.addPL_btn.Size = new System.Drawing.Size(75, 28);
             this.addPL_btn.TabIndex = 9;
             this.addPL_btn.Text = "Update Partylist";
             this.addPL_btn.UseVisualStyleBackColor = false;
@@ -113,17 +115,18 @@
             // TXTBX_UpdatePL
             // 
             this.TXTBX_UpdatePL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TXTBX_UpdatePL.Location = new System.Drawing.Point(73, 235);
+            this.TXTBX_UpdatePL.Location = new System.Drawing.Point(70, 281);
             this.TXTBX_UpdatePL.Name = "TXTBX_UpdatePL";
             this.TXTBX_UpdatePL.Size = new System.Drawing.Size(235, 20);
             this.TXTBX_UpdatePL.TabIndex = 8;
+            this.TXTBX_UpdatePL.TextChanged += new System.EventHandler(this.TXTBX_UpdatePL_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(70, 216);
+            this.label2.Location = new System.Drawing.Point(67, 262);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 16);
             this.label2.TabIndex = 7;
@@ -138,12 +141,35 @@
             this.pb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_logo.TabIndex = 11;
             this.pb_logo.TabStop = false;
+            this.pb_logo.Click += new System.EventHandler(this.pb_logo_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(67, 209);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 16);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Partylist ID:";
+            // 
+            // TXTBX_PartylistID
+            // 
+            this.TXTBX_PartylistID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXTBX_PartylistID.Location = new System.Drawing.Point(70, 228);
+            this.TXTBX_PartylistID.Name = "TXTBX_PartylistID";
+            this.TXTBX_PartylistID.Size = new System.Drawing.Size(235, 20);
+            this.TXTBX_PartylistID.TabIndex = 14;
+            this.TXTBX_PartylistID.TextChanged += new System.EventHandler(this.TXTBX_PartylistID_TextChanged);
             // 
             // FRM_EditPartylist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(399, 319);
+            this.ClientSize = new System.Drawing.Size(399, 370);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.TXTBX_PartylistID);
             this.Controls.Add(this.btn_Updatelogo);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pb_logo);
@@ -172,5 +198,7 @@
         private System.Windows.Forms.Button addPL_btn;
         private System.Windows.Forms.TextBox TXTBX_UpdatePL;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox TXTBX_PartylistID;
     }
 }

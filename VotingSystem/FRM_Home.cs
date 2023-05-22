@@ -19,7 +19,7 @@ namespace VotingSystem
 
         private void Form3_Load(object sender, EventArgs e)
         {
-
+            timer1.Start();
         }
 
         private void Minimize_btn_Click(object sender, EventArgs e)
@@ -78,6 +78,29 @@ namespace VotingSystem
 
 
 
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label2.Text = DateTime.Now.ToShortDateString();
+            label3.Text = DateTime.Now.ToShortTimeString();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+            FRM_Voters voters = new FRM_Voters();
+
+            
         }
     }
 }

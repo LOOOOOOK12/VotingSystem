@@ -103,6 +103,43 @@ namespace VotingSystem.DAL
             {
                 throw;
             }
+
+
+        }
+
+        //PANG UPDATE
+        public bool UpdateItemInTable(int partylistID, string partylistName, Image partylistLogo)
+        {
+            Connection con = new Connection();
+            if (ConnectionState.Closed == con.connect.State)
+            {
+                con.connect.Open();
+            }
+
+            string query = "UPDATE Partylist SET PartylistName = @PartylistName, PartylistLogo = @PartylistLogo WHERE Partylist_ID = @Partylist_ID";
+
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand(query, con.connect))
+                {
+                    cmd.Parameters.AddWithValue("@Partylist_ID", partylistID);
+                    cmd.Parameters.AddWithValue("@PartylistName", partylistName.Trim());
+
+                    // Converting image to binary to store in the database
+                    MemoryStream ms = new MemoryStream();
+                    partylistLogo.Save(ms, partylistLogo.RawFormat);
+                    // Set the binary format image to the parameter
+                    cmd.Parameters.AddWithValue("@PartylistLogo", ms.ToArray());
+
+                    cmd.ExecuteNonQuery();
+                }
+                return true;
+            }
+            catch
+            {
+                throw;
+            }
         }
     }
+
 }

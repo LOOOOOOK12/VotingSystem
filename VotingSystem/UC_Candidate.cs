@@ -14,7 +14,7 @@ namespace VotingSystem
 {
     public partial class UC_Candidate : UserControl
     {
-        
+        private FlowLayoutPanel flowLayoutPanel2;
 
         public UC_Candidate()
         {
@@ -22,7 +22,6 @@ namespace VotingSystem
 
         }
 
-        private FlowLayoutPanel flowLayoutPanel2;
         public string Candidate_ID
         {
             get { return LBL_Candidate_ID.Text; }

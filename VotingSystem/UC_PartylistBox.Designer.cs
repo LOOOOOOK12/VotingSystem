@@ -33,10 +33,10 @@
             this.lbl_PartylistName = new System.Windows.Forms.Label();
             this.lbl_partylistID = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.PB_PLlogo = new System.Windows.Forms.PictureBox();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_edit = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.PB_PLlogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,6 +48,7 @@
             this.PartylistID_lbl.Name = "PartylistID_lbl";
             this.PartylistID_lbl.Size = new System.Drawing.Size(79, 19);
             this.PartylistID_lbl.TabIndex = 17;
+            this.PartylistID_lbl.Click += new System.EventHandler(this.PartylistID_lbl_Click);
             // 
             // PartylistName_lbl
             // 
@@ -86,6 +87,14 @@
             this.panel2.Size = new System.Drawing.Size(781, 3);
             this.panel2.TabIndex = 21;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.Location = new System.Drawing.Point(778, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(3, 130);
+            this.panel1.TabIndex = 22;
+            // 
             // PB_PLlogo
             // 
             this.PB_PLlogo.BackColor = System.Drawing.Color.Transparent;
@@ -96,6 +105,7 @@
             this.PB_PLlogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PB_PLlogo.TabIndex = 12;
             this.PB_PLlogo.TabStop = false;
+            this.PB_PLlogo.Click += new System.EventHandler(this.PB_PLlogo_Click);
             // 
             // btn_delete
             // 
@@ -120,14 +130,6 @@
             this.btn_edit.TabIndex = 18;
             this.btn_edit.UseVisualStyleBackColor = true;
             this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel1.Location = new System.Drawing.Point(778, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(3, 130);
-            this.panel1.TabIndex = 22;
             // 
             // UC_Partylist
             // 

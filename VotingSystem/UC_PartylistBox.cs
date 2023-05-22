@@ -96,5 +96,15 @@ namespace VotingSystem
         {
 
         }
+
+        private void PB_PLlogo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PartylistID_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

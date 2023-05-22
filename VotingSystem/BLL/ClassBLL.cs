@@ -55,5 +55,21 @@ namespace VotingSystem.BLL
             }
         }
 
+        public bool UpdateItems( int PartylistID,Image img, string Partylistname)
+        {
+            try
+            {
+                ClassDAL objdal = new ClassDAL();
+                return objdal.UpdateItemInTable(PartylistID,Partylistname, img);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message.ToString());
+                return false;
+            }
+        }
+
+
+
     }
 }

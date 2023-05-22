@@ -28,8 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Home));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Minimize_btn = new System.Windows.Forms.Button();
             this.BTN_Candidates = new System.Windows.Forms.Button();
             this.Home_btn = new System.Windows.Forms.Button();
             this.Logout_btn = new System.Windows.Forms.Button();
@@ -37,12 +41,18 @@
             this.Voters_btn = new System.Windows.Forms.Button();
             this.Partylist_btn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.Minimize_btn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.LBL_Voters = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,6 +70,47 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(180, 510);
             this.panel1.TabIndex = 6;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.Minimize_btn);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(180, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(655, 117);
+            this.panel2.TabIndex = 7;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // label1
+            // 
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(121, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(370, 117);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "STI College Of Legazpi";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Minimize_btn
+            // 
+            this.Minimize_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Minimize_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Minimize_btn.FlatAppearance.BorderSize = 0;
+            this.Minimize_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Minimize_btn.Image = ((System.Drawing.Image)(resources.GetObject("Minimize_btn.Image")));
+            this.Minimize_btn.Location = new System.Drawing.Point(623, 0);
+            this.Minimize_btn.Name = "Minimize_btn";
+            this.Minimize_btn.Size = new System.Drawing.Size(29, 27);
+            this.Minimize_btn.TabIndex = 2;
+            this.Minimize_btn.Text = " ";
+            this.Minimize_btn.UseVisualStyleBackColor = true;
+            this.Minimize_btn.Click += new System.EventHandler(this.Minimize_btn_Click);
             // 
             // BTN_Candidates
             // 
@@ -172,51 +223,83 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // panel2
+            // panel3
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
-            this.panel2.Controls.Add(this.Minimize_btn);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(180, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(655, 117);
-            this.panel2.TabIndex = 7;
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Location = new System.Drawing.Point(652, 123);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(171, 170);
+            this.panel3.TabIndex = 8;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // Minimize_btn
+            // panel4
             // 
-            this.Minimize_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Minimize_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Minimize_btn.FlatAppearance.BorderSize = 0;
-            this.Minimize_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Minimize_btn.Image = ((System.Drawing.Image)(resources.GetObject("Minimize_btn.Image")));
-            this.Minimize_btn.Location = new System.Drawing.Point(623, 0);
-            this.Minimize_btn.Name = "Minimize_btn";
-            this.Minimize_btn.Size = new System.Drawing.Size(29, 27);
-            this.Minimize_btn.TabIndex = 2;
-            this.Minimize_btn.Text = " ";
-            this.Minimize_btn.UseVisualStyleBackColor = true;
-            this.Minimize_btn.Click += new System.EventHandler(this.Minimize_btn_Click);
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
+            this.panel4.Controls.Add(this.LBL_Voters);
+            this.panel4.Location = new System.Drawing.Point(652, 123);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(171, 38);
+            this.panel4.TabIndex = 0;
             // 
-            // label1
+            // label2
             // 
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(134, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(370, 117);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "STI College Of Legazpi";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(496, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 28);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Date";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(497, 57);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 21);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Time";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // LBL_Voters
+            // 
+            this.LBL_Voters.AutoSize = true;
+            this.LBL_Voters.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_Voters.ForeColor = System.Drawing.Color.White;
+            this.LBL_Voters.Location = new System.Drawing.Point(14, 10);
+            this.LBL_Voters.Name = "LBL_Voters";
+            this.LBL_Voters.Size = new System.Drawing.Size(144, 21);
+            this.LBL_Voters.TabIndex = 5;
+            this.LBL_Voters.Text = "Registered Voters";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
+            this.label4.Location = new System.Drawing.Point(33, 84);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(112, 39);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Voters";
             // 
             // FRM_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Window;
+            this.BackColor = System.Drawing.SystemColors.Menu;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(835, 510);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -226,8 +309,13 @@
             this.Text = "STI Voting System";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -244,5 +332,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Minimize_btn;
         private System.Windows.Forms.Button BTN_Candidates;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label LBL_Voters;
     }
 }
