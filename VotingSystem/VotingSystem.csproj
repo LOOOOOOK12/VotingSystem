@@ -63,8 +63,10 @@
   <ItemGroup>
     <Compile Include="BLL\ClassBLL.cs" />
     <Compile Include="BLL\ClassBLL_Cadidates.cs" />
+    <Compile Include="BLL\ClassBLL_Election.cs" />
     <Compile Include="DAL\ClassDAL.cs" />
     <Compile Include="DAL\ClassDAL_Candidates.cs" />
+    <Compile Include="DAL\ClassDAL_Election.cs" />
     <Compile Include="DAL\Connections.cs" />
     <Compile Include="DAL\DataAccess.cs" />
     <Compile Include="DAL\Partylist.cs" />

@@ -34,9 +34,9 @@
             this.BTN_SearchCandidates = new System.Windows.Forms.Button();
             this.BTN_AddElection = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.Back_btn = new System.Windows.Forms.Button();
-            this.Refresh_btn = new System.Windows.Forms.Button();
+            this.BTN_Refresh = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -48,7 +48,7 @@
             this.panel1.Controls.Add(this.TXTBX_SearchCandidates);
             this.panel1.Controls.Add(this.BTN_SearchCandidates);
             this.panel1.Controls.Add(this.Back_btn);
-            this.panel1.Controls.Add(this.Refresh_btn);
+            this.panel1.Controls.Add(this.BTN_Refresh);
             this.panel1.Controls.Add(this.BTN_AddElection);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
@@ -106,12 +106,13 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Edit Election";
             // 
-            // flowLayoutPanel1
+            // flowLayoutPanel3
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 101);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(811, 397);
-            this.flowLayoutPanel1.TabIndex = 3;
+            this.flowLayoutPanel3.AutoScroll = true;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(12, 101);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(811, 397);
+            this.flowLayoutPanel3.TabIndex = 3;
             // 
             // Back_btn
             // 
@@ -126,17 +127,18 @@
             this.Back_btn.UseVisualStyleBackColor = true;
             this.Back_btn.Click += new System.EventHandler(this.Back_btn_Click);
             // 
-            // Refresh_btn
+            // BTN_Refresh
             // 
-            this.Refresh_btn.FlatAppearance.BorderSize = 0;
-            this.Refresh_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Refresh_btn.Image = ((System.Drawing.Image)(resources.GetObject("Refresh_btn.Image")));
-            this.Refresh_btn.Location = new System.Drawing.Point(734, 50);
-            this.Refresh_btn.Name = "Refresh_btn";
-            this.Refresh_btn.Size = new System.Drawing.Size(37, 36);
-            this.Refresh_btn.TabIndex = 7;
-            this.Refresh_btn.Text = " ";
-            this.Refresh_btn.UseVisualStyleBackColor = true;
+            this.BTN_Refresh.FlatAppearance.BorderSize = 0;
+            this.BTN_Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Refresh.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Refresh.Image")));
+            this.BTN_Refresh.Location = new System.Drawing.Point(734, 50);
+            this.BTN_Refresh.Name = "BTN_Refresh";
+            this.BTN_Refresh.Size = new System.Drawing.Size(37, 36);
+            this.BTN_Refresh.TabIndex = 7;
+            this.BTN_Refresh.Text = " ";
+            this.BTN_Refresh.UseVisualStyleBackColor = true;
+            this.BTN_Refresh.Click += new System.EventHandler(this.BTN_Refresh_Click);
             // 
             // pictureBox1
             // 
@@ -153,7 +155,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(835, 510);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FRM_Election";
@@ -172,10 +174,10 @@
         private System.Windows.Forms.TextBox TXTBX_SearchCandidates;
         private System.Windows.Forms.Button BTN_SearchCandidates;
         private System.Windows.Forms.Button Back_btn;
-        private System.Windows.Forms.Button Refresh_btn;
+        private System.Windows.Forms.Button BTN_Refresh;
         private System.Windows.Forms.Button BTN_AddElection;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
     }
 }

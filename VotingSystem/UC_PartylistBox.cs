@@ -16,8 +16,8 @@ namespace VotingSystem
 {
     public partial class UC_Partylist : UserControl
     {
+        private FlowLayoutPanel flowLayoutPanel1;
 
-        
         public UC_Partylist()
         {
             
@@ -43,7 +43,7 @@ namespace VotingSystem
             set { PB_PLlogo.Image = value; }
         }
 
-        private FlowLayoutPanel flowLayoutPanel1;
+        
 
 
 

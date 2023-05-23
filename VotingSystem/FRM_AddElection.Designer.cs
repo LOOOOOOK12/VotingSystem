@@ -87,6 +87,7 @@
             this.addPL_btn.TabIndex = 5;
             this.addPL_btn.Text = "Add Partylist";
             this.addPL_btn.UseVisualStyleBackColor = false;
+            this.addPL_btn.Click += new System.EventHandler(this.addPL_btn_Click);
             // 
             // TXTBX_ElectionTitle
             // 

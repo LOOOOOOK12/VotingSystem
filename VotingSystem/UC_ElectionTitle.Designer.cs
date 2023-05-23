@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_ElectionTitle));
             this.LBL_ElectionTitle = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.LBL_Description = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.LBL_ElectionID = new System.Windows.Forms.Label();
             this.btn_delete = new System.Windows.Forms.Button();
@@ -45,27 +45,27 @@
             this.LBL_ElectionTitle.ForeColor = System.Drawing.Color.Black;
             this.LBL_ElectionTitle.Location = new System.Drawing.Point(185, 13);
             this.LBL_ElectionTitle.Name = "LBL_ElectionTitle";
-            this.LBL_ElectionTitle.Size = new System.Drawing.Size(406, 102);
+            this.LBL_ElectionTitle.Size = new System.Drawing.Size(406, 105);
             this.LBL_ElectionTitle.TabIndex = 0;
             this.LBL_ElectionTitle.Text = "Election Title";
             this.LBL_ElectionTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LBL_ElectionTitle.Click += new System.EventHandler(this.LBL_ElectionTitle_Click);
             // 
-            // label2
+            // LBL_Description
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(266, 132);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(239, 76);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Election Description";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LBL_Description.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_Description.Location = new System.Drawing.Point(266, 132);
+            this.LBL_Description.Name = "LBL_Description";
+            this.LBL_Description.Size = new System.Drawing.Size(239, 76);
+            this.LBL_Description.TabIndex = 1;
+            this.LBL_Description.Text = "Election Description";
+            this.LBL_Description.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(47, 13);
+            this.label3.Location = new System.Drawing.Point(58, 55);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 21);
             this.label3.TabIndex = 2;
@@ -74,9 +74,10 @@
             // LBL_ElectionID
             // 
             this.LBL_ElectionID.AutoSize = true;
-            this.LBL_ElectionID.Location = new System.Drawing.Point(86, 57);
+            this.LBL_ElectionID.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_ElectionID.Location = new System.Drawing.Point(97, 99);
             this.LBL_ElectionID.Name = "LBL_ElectionID";
-            this.LBL_ElectionID.Size = new System.Drawing.Size(0, 13);
+            this.LBL_ElectionID.Size = new System.Drawing.Size(0, 19);
             this.LBL_ElectionID.TabIndex = 3;
             // 
             // btn_delete
@@ -89,6 +90,7 @@
             this.btn_delete.Size = new System.Drawing.Size(68, 62);
             this.btn_delete.TabIndex = 21;
             this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_edit
             // 
@@ -129,10 +131,11 @@
             this.Controls.Add(this.btn_edit);
             this.Controls.Add(this.LBL_ElectionID);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.LBL_Description);
             this.Controls.Add(this.LBL_ElectionTitle);
             this.Name = "UC_ElectionTitle";
             this.Size = new System.Drawing.Size(781, 214);
+            this.Load += new System.EventHandler(this.UC_ElectionTitle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,7 +144,7 @@
         #endregion
 
         private System.Windows.Forms.Label LBL_ElectionTitle;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label LBL_Description;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label LBL_ElectionID;
         private System.Windows.Forms.Button btn_delete;

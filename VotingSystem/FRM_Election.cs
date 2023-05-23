@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VotingSystem.BLL;
 
 namespace VotingSystem
 {
@@ -16,6 +18,38 @@ namespace VotingSystem
         {
             InitializeComponent();
         }
+
+        private void GenerateDynamicUserControl()
+        {
+            flowLayoutPanel3.Controls.Clear();
+
+            ClassBLL_Election objbll = new ClassBLL_Election();
+
+            DataTable dt = objbll.GetItems();
+
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                foreach (DataRow row in dt.Rows)
+                {
+                    UC_ElectionTitle ElectionItem = new UC_ElectionTitle();
+
+
+
+                    ElectionItem.ElectionID = row["Election_ID"].ToString();
+                    ElectionItem.ElectionTitle = row["ElectionTitle"].ToString();
+                    ElectionItem.Description = row["Description"].ToString();
+                    flowLayoutPanel3.Controls.Add(ElectionItem);
+
+                    ElectionItem.Click += new System.EventHandler(this.BTN_Refresh_Click);
+                }
+            }
+            else
+            {
+                // Show a message or handle no data available
+                MessageBox.Show("No data available.");
+            }
+        }
+
 
         private void BTN_SearchCandidates_Click(object sender, EventArgs e)
         {
@@ -31,6 +65,11 @@ namespace VotingSystem
         private void Back_btn_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void BTN_Refresh_Click(object sender, EventArgs e)
+        {
+            GenerateDynamicUserControl();
         }
     }
 }
