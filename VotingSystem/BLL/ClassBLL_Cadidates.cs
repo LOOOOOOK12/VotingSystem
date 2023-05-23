@@ -53,5 +53,21 @@ namespace VotingSystem.BLL
                 return null;
             }
         }
+
+        public bool UpdateItems(int candidateID, string Firstname, string Middlename, string Lastname, string Course, string Position, Image CandidatePic)
+        {
+            try
+            {
+                ClassDAL_Candidates objdal = new ClassDAL_Candidates();
+                return objdal.UpdateItemInTable(candidateID, Firstname, Middlename, Lastname, Course, Position, CandidatePic);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message.ToString());
+                return false;
+            }
+        }
+
+
     }
 }

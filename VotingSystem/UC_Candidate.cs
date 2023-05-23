@@ -116,5 +116,11 @@ namespace VotingSystem
             FRM_UpdateCandidates updateCandidates = new FRM_UpdateCandidates();
             updateCandidates.ShowDialog();
         }
+
+
+
+
+
+
     }
 }

@@ -103,11 +103,11 @@ namespace VotingSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Log out", "You want to Log out?", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("Are you sure you want to exit the application?", "Exit", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 FRM_Login FL = new FRM_Login();
-                Dispose();
+                Application.Exit();
             }
         }
     }

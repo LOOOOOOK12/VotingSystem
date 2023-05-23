@@ -52,7 +52,9 @@ namespace VotingSystem
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            FRM_Election Election = new FRM_Election();
+            Election.Owner = this;
+            Election.ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)

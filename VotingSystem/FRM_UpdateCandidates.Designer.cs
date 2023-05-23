@@ -48,7 +48,7 @@
             this.BTN_InsertPhoto = new System.Windows.Forms.Button();
             this.PB_Candidate = new System.Windows.Forms.PictureBox();
             this.BTN_Cancel = new System.Windows.Forms.Button();
-            this.BTN_AddCandidate = new System.Windows.Forms.Button();
+            this.BTN_UpdateCandidate = new System.Windows.Forms.Button();
             this.TXTBX_CandidateID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -202,6 +202,7 @@
             this.BTN_InsertPhoto.TabIndex = 21;
             this.BTN_InsertPhoto.Text = "Insert Photo";
             this.BTN_InsertPhoto.UseVisualStyleBackColor = false;
+            this.BTN_InsertPhoto.Click += new System.EventHandler(this.BTN_InsertPhoto_Click);
             // 
             // PB_Candidate
             // 
@@ -226,17 +227,18 @@
             this.BTN_Cancel.UseVisualStyleBackColor = false;
             this.BTN_Cancel.Click += new System.EventHandler(this.BTN_Cancel_Click);
             // 
-            // BTN_AddCandidate
+            // BTN_UpdateCandidate
             // 
-            this.BTN_AddCandidate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
-            this.BTN_AddCandidate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_AddCandidate.ForeColor = System.Drawing.Color.White;
-            this.BTN_AddCandidate.Location = new System.Drawing.Point(468, 314);
-            this.BTN_AddCandidate.Name = "BTN_AddCandidate";
-            this.BTN_AddCandidate.Size = new System.Drawing.Size(109, 32);
-            this.BTN_AddCandidate.TabIndex = 36;
-            this.BTN_AddCandidate.Text = "Update Candidate";
-            this.BTN_AddCandidate.UseVisualStyleBackColor = false;
+            this.BTN_UpdateCandidate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
+            this.BTN_UpdateCandidate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_UpdateCandidate.ForeColor = System.Drawing.Color.White;
+            this.BTN_UpdateCandidate.Location = new System.Drawing.Point(468, 314);
+            this.BTN_UpdateCandidate.Name = "BTN_UpdateCandidate";
+            this.BTN_UpdateCandidate.Size = new System.Drawing.Size(109, 32);
+            this.BTN_UpdateCandidate.TabIndex = 36;
+            this.BTN_UpdateCandidate.Text = "Update Candidate";
+            this.BTN_UpdateCandidate.UseVisualStyleBackColor = false;
+            this.BTN_UpdateCandidate.Click += new System.EventHandler(this.BTN_AddCandidate_Click);
             // 
             // TXTBX_CandidateID
             // 
@@ -262,7 +264,7 @@
             this.Controls.Add(this.TXTBX_CandidateID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.BTN_Cancel);
-            this.Controls.Add(this.BTN_AddCandidate);
+            this.Controls.Add(this.BTN_UpdateCandidate);
             this.Controls.Add(this.CB_Position);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.CB_Course);
@@ -312,7 +314,7 @@
         private System.Windows.Forms.Button BTN_InsertPhoto;
         private System.Windows.Forms.PictureBox PB_Candidate;
         private System.Windows.Forms.Button BTN_Cancel;
-        private System.Windows.Forms.Button BTN_AddCandidate;
+        private System.Windows.Forms.Button BTN_UpdateCandidate;
         private System.Windows.Forms.TextBox TXTBX_CandidateID;
         private System.Windows.Forms.Label label2;
     }

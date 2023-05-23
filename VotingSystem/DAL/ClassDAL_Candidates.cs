@@ -86,7 +86,7 @@ namespace VotingSystem.DAL
                 con.connect.Open();
             }
 
-            string query = "SELECT * FROM Candidates WHERE Firstname LIKE @Search OR Lastname LIKE @Search";
+            string query = "SELECT * FROM Candidates WHERE Firstname LIKE @Search OR Lastname LIKE @Search OR Middlename LIKE @Search";
             SqlCommand cmd = new SqlCommand(query, con.connect);
             cmd.Parameters.AddWithValue("@Search", "%" + search + "%");
 
@@ -104,6 +104,46 @@ namespace VotingSystem.DAL
                 throw;
             }
         }
+
+        public bool UpdateItemInTable(int candidateID, string firstname, string middlename, string lastname, string course, string position, Image candidatePic)
+        {
+            Connection con = new Connection();
+            if (ConnectionState.Closed == con.connect.State)
+            {
+                con.connect.Open();
+            }
+
+            string query = "UPDATE Candidates SET Firstname = @Firstname, Middlename = @Middlename, Lastname = @Lastname, Course = @Course, Position = @Position, CandidatePic = @CandidatePic WHERE Candidate_ID = @Candidate_ID";
+
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand(query, con.connect))
+                {
+                    cmd.Parameters.AddWithValue("@Candidate_ID", candidateID);
+                    cmd.Parameters.AddWithValue("@Firstname", firstname.Trim());
+                    cmd.Parameters.AddWithValue("@Middlename", middlename.Trim());
+                    cmd.Parameters.AddWithValue("@Lastname", lastname.Trim());
+                    cmd.Parameters.AddWithValue("@Course", course.Trim());
+                    cmd.Parameters.AddWithValue("@Position", position.Trim());
+                    
+
+
+                    // Converting image to binary to store in the database
+                    MemoryStream ms = new MemoryStream();
+                    candidatePic.Save(ms, candidatePic.RawFormat);
+                    // Set the binary format image to the parameter
+                    cmd.Parameters.AddWithValue("@CandidatePic", ms.ToArray());
+
+                    cmd.ExecuteNonQuery();
+                }
+                return true;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
 
     }
 }

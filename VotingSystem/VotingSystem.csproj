@@ -74,11 +74,23 @@
     <Compile Include="FRM_AddCandidatesBox.Designer.cs">
       <DependentUpon>FRM_AddCandidatesBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRM_AddElection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_AddElection.Designer.cs">
+      <DependentUpon>FRM_AddElection.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRM_EditPartylist.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FRM_EditPartylist.Designer.cs">
       <DependentUpon>FRM_EditPartylist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Election.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Election.Designer.cs">
+      <DependentUpon>FRM_Election.cs</DependentUpon>
     </Compile>
     <Compile Include="FRM_Home.cs">
       <SubType>Form</SubType>
@@ -147,6 +159,12 @@
     <Compile Include="UC_Candidate.Designer.cs">
       <DependentUpon>UC_Candidate.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_ElectionTitle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_ElectionTitle.Designer.cs">
+      <DependentUpon>UC_ElectionTitle.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Home.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -162,8 +180,14 @@
     <EmbeddedResource Include="FRM_AddCandidatesBox.resx">
       <DependentUpon>FRM_AddCandidatesBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FRM_AddElection.resx">
+      <DependentUpon>FRM_AddElection.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FRM_EditPartylist.resx">
       <DependentUpon>FRM_EditPartylist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Election.resx">
+      <DependentUpon>FRM_Election.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_Home.resx">
       <DependentUpon>FRM_Home.cs</DependentUpon>
@@ -199,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Candidate.resx">
       <DependentUpon>UC_Candidate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ElectionTitle.resx">
+      <DependentUpon>UC_ElectionTitle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Home.resx">
       <DependentUpon>UC_Home.cs</DependentUpon>
@@ -270,6 +297,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-cross-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-election-70.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
