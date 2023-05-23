@@ -21,5 +21,16 @@ namespace VotingSystem
         {
 
         }
+
+        private void BTN_AddElection_Click(object sender, EventArgs e)
+        {
+            FRM_AddElection AddElection = new FRM_AddElection();
+            AddElection.ShowDialog();
+        }
+
+        private void Back_btn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }
