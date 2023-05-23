@@ -162,6 +162,11 @@
             // CB_Year
             // 
             this.CB_Year.FormattingEnabled = true;
+            this.CB_Year.Items.AddRange(new object[] {
+            "1st",
+            "2nd",
+            "3rd",
+            "4th"});
             this.CB_Year.Location = new System.Drawing.Point(340, 168);
             this.CB_Year.Name = "CB_Year";
             this.CB_Year.Size = new System.Drawing.Size(136, 21);

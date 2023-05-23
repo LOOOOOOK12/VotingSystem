@@ -142,7 +142,8 @@
             this.Course.FormattingEnabled = true;
             this.Course.Items.AddRange(new object[] {
             "Bachelor of Science in Information Technology",
-            "Bachelor of Science in Computer Engineering"});
+            "Bachelor of Science in Computer Engineering",
+            "Bachelor of Science in Computer Science"});
             this.Course.Location = new System.Drawing.Point(402, 78);
             this.Course.Name = "Course";
             this.Course.Size = new System.Drawing.Size(171, 21);

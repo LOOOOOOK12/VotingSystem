@@ -64,9 +64,9 @@ namespace VotingSystem
                     if (reader.HasRows)
                     {
                         // Valid login credentials
-                        FRM_Home f3 = new FRM_Home();
+                        FRM_Voting Voting = new FRM_Voting();
                         this.Hide();
-                        //f3.ShowDialog();
+                        Voting.ShowDialog();
                     }
                     else
                     {
@@ -99,6 +99,16 @@ namespace VotingSystem
         private void userNametxtbx_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Log out", "You want to Log out?", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                FRM_Login FL = new FRM_Login();
+                Dispose();
+            }
         }
     }
 }

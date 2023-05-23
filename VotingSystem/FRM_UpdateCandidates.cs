@@ -16,5 +16,10 @@ namespace VotingSystem
         {
             InitializeComponent();
         }
+
+        private void BTN_Cancel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

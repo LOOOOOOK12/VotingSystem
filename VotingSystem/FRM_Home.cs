@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Reflection.Emit;
@@ -72,7 +73,32 @@ namespace VotingSystem
 
         private void FRM_Home_Load(object sender, EventArgs e)
         {
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-SM9NF9V;Initial Catalog=DB_VotingSystem;Integrated Security=True");
+
             timer1.Start();
+
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+
+            string query = "SELECT COUNT(votersID) FROM Voters";
+
+            try
+            { 
+                cmd = new SqlCommand(query, con);
+                Int32 rowCount = Convert.ToInt32(cmd.ExecuteScalar());
+                cmd.Dispose();
+                con.Close();
+
+                label4.Text = rowCount.ToString();
+
+            }
+            catch(Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -87,6 +113,11 @@ namespace VotingSystem
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
         }

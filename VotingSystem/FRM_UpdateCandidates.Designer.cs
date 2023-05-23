@@ -224,6 +224,7 @@
             this.BTN_Cancel.TabIndex = 37;
             this.BTN_Cancel.Text = "Cancel";
             this.BTN_Cancel.UseVisualStyleBackColor = false;
+            this.BTN_Cancel.Click += new System.EventHandler(this.BTN_Cancel_Click);
             // 
             // BTN_AddCandidate
             // 
