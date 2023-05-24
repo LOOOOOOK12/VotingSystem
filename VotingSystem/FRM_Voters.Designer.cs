@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.TXTBX_SearchCandidates = new System.Windows.Forms.TextBox();
             this.BTN_Delete = new System.Windows.Forms.Button();
             this.BTN_Update = new System.Windows.Forms.Button();
-            this.Refresh_btn = new System.Windows.Forms.Button();
-            this.Back_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Refresh_btn = new System.Windows.Forms.Button();
+            this.Back_btn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -57,6 +57,20 @@
             this.panel1.Size = new System.Drawing.Size(835, 100);
             this.panel1.TabIndex = 2;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Yellow;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
+            this.button1.Location = new System.Drawing.Point(253, 60);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(118, 36);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Search\r\n";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // TXTBX_SearchCandidates
             // 
             this.TXTBX_SearchCandidates.Location = new System.Drawing.Point(377, 70);
@@ -64,6 +78,7 @@
             this.TXTBX_SearchCandidates.Size = new System.Drawing.Size(165, 20);
             this.TXTBX_SearchCandidates.TabIndex = 15;
             this.TXTBX_SearchCandidates.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TXTBX_SearchCandidates.TextChanged += new System.EventHandler(this.TXTBX_SearchCandidates_TextChanged);
             // 
             // BTN_Delete
             // 
@@ -93,6 +108,26 @@
             this.BTN_Update.TabIndex = 13;
             this.BTN_Update.Text = "Update";
             this.BTN_Update.UseVisualStyleBackColor = false;
+            this.BTN_Update.Click += new System.EventHandler(this.BTN_Update_Click);
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(341, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(199, 38);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Voters History\r\n";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 117);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(811, 381);
+            this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Refresh_btn
             // 
@@ -118,39 +153,6 @@
             this.Back_btn.Text = " ";
             this.Back_btn.UseVisualStyleBackColor = true;
             this.Back_btn.Click += new System.EventHandler(this.Back_btn_Click);
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(341, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 38);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Voters History\r\n";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 117);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(811, 381);
-            this.dataGridView1.TabIndex = 3;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Yellow;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
-            this.button1.Location = new System.Drawing.Point(253, 60);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 36);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Search\r\n";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // FRM_Voters
             // 

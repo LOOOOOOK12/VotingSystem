@@ -48,5 +48,16 @@ namespace VotingSystem
         {
 
         }
+
+        private void TXTBX_SearchCandidates_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BTN_Update_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-SM9NF9V;Initial Catalog=DB_VotingSystem;Integrated Security=True");
+            
+        }
     }
 }

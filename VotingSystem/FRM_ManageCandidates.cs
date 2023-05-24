@@ -50,9 +50,10 @@ namespace VotingSystem
                             listitems[i].Lastname = row["Lastname"].ToString();
                             listitems[i].Course = row["Course"].ToString();
                             listitems[i].Position = row["Position"].ToString();
+                            listitems[i].Partylist = row["Partylist"].ToString();
 
 
-                            
+
 
                             flowLayoutPanel2.Controls.Add(listitems[i]);
 
@@ -109,7 +110,12 @@ namespace VotingSystem
 
                     CandidateItem.Candidate_ID = row["Candidate_ID"].ToString();
                     CandidateItem.Firstname = row["Firstname"].ToString();
-                    CandidateItem.Lastname = row["Lastname"].ToString() ;
+                    CandidateItem.Middlename = row["Middlename"].ToString();
+                    CandidateItem.Lastname = row["Lastname"].ToString();
+                    CandidateItem.Course = row["Course"].ToString();
+                    CandidateItem.Position = row["Position"].ToString();
+                    CandidateItem.Partylist = row["Partylist"].ToString();
+
 
                     flowLayoutPanel2.Controls.Add(CandidateItem);
 

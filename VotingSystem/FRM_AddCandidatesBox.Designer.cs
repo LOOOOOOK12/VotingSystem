@@ -222,6 +222,12 @@
             // CB_Course
             // 
             this.CB_Course.FormattingEnabled = true;
+            this.CB_Course.Items.AddRange(new object[] {
+            "Bachelor of Science in Information Technology",
+            "Bachelore of Science in Computer Engineering",
+            "Bachelore of Science in Hospitality Management",
+            "Bachelore of Science in Business Administration",
+            "Bachelor of Science in Accounting Information Systems"});
             this.CB_Course.Location = new System.Drawing.Point(179, 168);
             this.CB_Course.Name = "CB_Course";
             this.CB_Course.Size = new System.Drawing.Size(136, 21);
@@ -230,6 +236,14 @@
             // CB_Position
             // 
             this.CB_Position.FormattingEnabled = true;
+            this.CB_Position.Items.AddRange(new object[] {
+            "President",
+            "Vice-President",
+            "Secretary",
+            "1st year representative",
+            "2nd year representative",
+            "3rd year representative",
+            "4th year representative"});
             this.CB_Position.Location = new System.Drawing.Point(340, 230);
             this.CB_Position.Name = "CB_Position";
             this.CB_Position.Size = new System.Drawing.Size(136, 21);

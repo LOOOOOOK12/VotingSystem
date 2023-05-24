@@ -14,7 +14,7 @@ namespace VotingSystem.DAL
     {
 
         //ADD ITEMS
-        public bool AddItemsToTable(string Firstname, string Middlename, string Lastname, string Course, string Position, Image CandidatePic ) 
+        public bool AddItemsToTable(string Firstname, string Middlename, string Lastname, string Course, string Position, Image CandidatePic, string partylist ) 
         {
             Connection con = new Connection();
             if (ConnectionState.Closed == con.connect.State)
@@ -22,7 +22,7 @@ namespace VotingSystem.DAL
                 con.connect.Open();
             }
 
-            string query = "INSERT INTO Candidates(Firstname,Middlename,Lastname,Course,Position,CandidatePic) VALUES (@Firstname,@Middlename,@Lastname,@Course,@Position,@CandidatePic)";
+            string query = "INSERT INTO Candidates(Firstname,Middlename,Lastname,Course,Position,CandidatePic,Partylist) VALUES (@Firstname,@Middlename,@Lastname,@Course,@Position,@CandidatePic,@Partylist)";
 
             try
             {
@@ -33,6 +33,8 @@ namespace VotingSystem.DAL
                     cmd.Parameters.AddWithValue("@Lastname", Lastname.Trim());
                     cmd.Parameters.AddWithValue("@Course", Course.Trim());
                     cmd.Parameters.AddWithValue("@Position", Position.Trim());
+                    cmd.Parameters.AddWithValue("@Partylist", partylist.Trim());
+
 
                     //converting image to binary to store to database
                     MemoryStream ms = new MemoryStream();
@@ -86,7 +88,7 @@ namespace VotingSystem.DAL
                 con.connect.Open();
             }
 
-            string query = "SELECT * FROM Candidates WHERE Firstname LIKE @Search OR Lastname LIKE @Search OR Middlename LIKE @Search";
+            string query = "SELECT * FROM Candidates WHERE Firstname LIKE @Search OR Lastname LIKE @Search OR Middlename LIKE @Search OR Partylist LIKE @Search OR Position LIKE @Search";
             SqlCommand cmd = new SqlCommand(query, con.connect);
             cmd.Parameters.AddWithValue("@Search", "%" + search + "%");
 

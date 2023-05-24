@@ -54,7 +54,7 @@ namespace VotingSystem
         {
             ClassBLL_Cadidates objBLLC = new ClassBLL_Cadidates();
 
-            if (objBLLC.SaveItems(TXTBX_Firstname.Text, TXTBX_Middlename.Text, TXTBX_Lastname.Text,CB_Course.Text, CB_Position.Text,PB_Candidate.Image))
+            if (objBLLC.SaveItems(TXTBX_Firstname.Text, TXTBX_Middlename.Text, TXTBX_Lastname.Text,CB_Course.Text, CB_Position.Text,PB_Candidate.Image, CB_Partylist.Text))
             {
                 MessageBox.Show("Record Successful!");
             }
