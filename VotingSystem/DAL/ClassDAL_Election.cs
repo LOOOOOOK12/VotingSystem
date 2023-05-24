@@ -93,5 +93,33 @@ namespace VotingSystem.DAL
             }
         }
 
+        //PANG UPDATE
+        public bool UpdateItemInTable(int electionID, string electionTitle, string descriptions)
+        {
+            Connection con = new Connection();
+            if (ConnectionState.Closed == con.connect.State)
+            {
+                con.connect.Open();
+            }
+
+            string query = "UPDATE Election SET ElectionTitle = @ElectionTitle, Description = @Description WHERE Election_ID = @Election_ID";
+
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand(query, con.connect))
+                {
+                    cmd.Parameters.AddWithValue("@Election_ID", electionID);
+                    cmd.Parameters.AddWithValue("@ElectionTitle", electionTitle.Trim());
+                    cmd.Parameters.AddWithValue("@Description", descriptions.Trim());            
+                    cmd.ExecuteNonQuery();
+                }
+                return true;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
     }
 }

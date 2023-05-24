@@ -53,7 +53,35 @@ namespace VotingSystem
 
         private void BTN_SearchCandidates_Click(object sender, EventArgs e)
         {
+            string SearchElection = TXTBX_SearchElection.Text.Trim();
 
+
+            ClassBLL_Election objbllEelction = new ClassBLL_Election();
+            DataTable searchResults = objbllEelction.SearchItems(SearchElection);
+
+            flowLayoutPanel3.Controls.Clear(); // Clear existing controls
+
+            if (searchResults != null && searchResults.Rows.Count > 0)
+            {
+                foreach (DataRow row in searchResults.Rows)
+                {
+                    UC_ElectionTitle electionItem = new UC_ElectionTitle();
+
+
+
+                    electionItem.ElectionID = row["Election_ID"].ToString();
+                    electionItem.ElectionTitle = row["ElectionTitle"].ToString();
+
+                    flowLayoutPanel3.Controls.Add(electionItem);
+
+                    electionItem.Click += new System.EventHandler(this.BTN_Refresh_Click);
+                }
+            }
+            else
+            {
+                // Show a message or handle no search results
+                MessageBox.Show("No search results found.");
+            }
         }
 
         private void BTN_AddElection_Click(object sender, EventArgs e)

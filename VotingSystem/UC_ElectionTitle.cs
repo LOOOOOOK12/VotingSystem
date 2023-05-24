@@ -82,6 +82,10 @@ namespace VotingSystem
             }
         }
 
-
+        private void btn_edit_Click(object sender, EventArgs e)
+        {
+            FRM_UpdateElection updateElection = new FRM_UpdateElection();
+            updateElection.ShowDialog();
+        }
     }
 }

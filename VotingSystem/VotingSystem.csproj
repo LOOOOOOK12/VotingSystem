@@ -136,6 +136,12 @@
     <Compile Include="FRM_UpdateCandidates.Designer.cs">
       <DependentUpon>FRM_UpdateCandidates.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRM_UpdateElection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_UpdateElection.Designer.cs">
+      <DependentUpon>FRM_UpdateElection.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRM_Voters.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_UpdateCandidates.resx">
       <DependentUpon>FRM_UpdateCandidates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_UpdateElection.resx">
+      <DependentUpon>FRM_UpdateElection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_Voters.resx">
       <DependentUpon>FRM_Voters.cs</DependentUpon>

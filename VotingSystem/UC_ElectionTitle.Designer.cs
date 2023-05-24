@@ -102,6 +102,7 @@
             this.btn_edit.Size = new System.Drawing.Size(68, 62);
             this.btn_edit.TabIndex = 20;
             this.btn_edit.UseVisualStyleBackColor = true;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
             // panel2
             // 

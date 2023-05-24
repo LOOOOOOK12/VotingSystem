@@ -55,5 +55,20 @@ namespace VotingSystem.BLL
             }
         }
 
+
+        public bool UpdateItems(int electionID, string electionTitle, string Description)
+        {
+            try
+            {
+                ClassDAL_Election objdal = new ClassDAL_Election();
+                return objdal.UpdateItemInTable(electionID, electionTitle, Description);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message.ToString());
+                return false;
+            }
+        }
+
     }
 }
