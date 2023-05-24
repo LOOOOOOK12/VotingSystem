@@ -167,6 +167,12 @@
     <Compile Include="UC_Candidate.Designer.cs">
       <DependentUpon>UC_Candidate.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Candidates.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Candidates.Designer.cs">
+      <DependentUpon>UC_Candidates.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_ElectionTitle.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -234,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Candidate.resx">
       <DependentUpon>UC_Candidate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Candidates.resx">
+      <DependentUpon>UC_Candidates.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_ElectionTitle.resx">
       <DependentUpon>UC_ElectionTitle.cs</DependentUpon>
