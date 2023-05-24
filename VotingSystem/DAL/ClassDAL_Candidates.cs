@@ -107,7 +107,7 @@ namespace VotingSystem.DAL
             }
         }
 
-        public bool UpdateItemInTable(int candidateID, string firstname, string middlename, string lastname, string course, string position, Image candidatePic)
+        public bool UpdateItemInTable(int candidateID, string firstname, string middlename, string lastname, string course, string position, Image candidatePic, string partylist)
         {
             Connection con = new Connection();
             if (ConnectionState.Closed == con.connect.State)
@@ -115,7 +115,7 @@ namespace VotingSystem.DAL
                 con.connect.Open();
             }
 
-            string query = "UPDATE Candidates SET Firstname = @Firstname, Middlename = @Middlename, Lastname = @Lastname, Course = @Course, Position = @Position, CandidatePic = @CandidatePic WHERE Candidate_ID = @Candidate_ID";
+            string query = "UPDATE Candidates SET Firstname = @Firstname, Middlename = @Middlename, Lastname = @Lastname, Course = @Course, Position = @Position, CandidatePic = @CandidatePic, Partylist = @Partylist  WHERE Candidate_ID = @Candidate_ID";
 
             try
             {
@@ -127,7 +127,8 @@ namespace VotingSystem.DAL
                     cmd.Parameters.AddWithValue("@Lastname", lastname.Trim());
                     cmd.Parameters.AddWithValue("@Course", course.Trim());
                     cmd.Parameters.AddWithValue("@Position", position.Trim());
-                    
+                    cmd.Parameters.AddWithValue("@Partylist", partylist.Trim());
+
 
 
                     // Converting image to binary to store in the database

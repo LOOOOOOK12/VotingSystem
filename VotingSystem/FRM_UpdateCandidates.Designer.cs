@@ -46,11 +46,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.BTN_InsertPhoto = new System.Windows.Forms.Button();
-            this.PB_Candidate = new System.Windows.Forms.PictureBox();
             this.BTN_Cancel = new System.Windows.Forms.Button();
             this.BTN_UpdateCandidate = new System.Windows.Forms.Button();
             this.TXTBX_CandidateID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.PB_Candidate = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Candidate)).BeginInit();
             this.SuspendLayout();
@@ -78,6 +78,14 @@
             // CB_Position
             // 
             this.CB_Position.FormattingEnabled = true;
+            this.CB_Position.Items.AddRange(new object[] {
+            "President",
+            "Vice-President",
+            "Secretary",
+            "1st year representative",
+            "2nd year representative",
+            "3rd year representative",
+            "4th year representative"});
             this.CB_Position.Location = new System.Drawing.Point(340, 232);
             this.CB_Position.Name = "CB_Position";
             this.CB_Position.Size = new System.Drawing.Size(136, 21);
@@ -86,6 +94,12 @@
             // CB_Course
             // 
             this.CB_Course.FormattingEnabled = true;
+            this.CB_Course.Items.AddRange(new object[] {
+            "Bachelor of Science in Information Technology",
+            "Bachelore of Science in Computer Engineering",
+            "Bachelore of Science in Hospitality Management",
+            "Bachelore of Science in Business Administration",
+            "Bachelor of Science in Accounting Information Systems"});
             this.CB_Course.Location = new System.Drawing.Point(340, 166);
             this.CB_Course.Name = "CB_Course";
             this.CB_Course.Size = new System.Drawing.Size(136, 21);
@@ -115,6 +129,11 @@
             // CB_Year
             // 
             this.CB_Year.FormattingEnabled = true;
+            this.CB_Year.Items.AddRange(new object[] {
+            "1st",
+            "2nd",
+            "3rd",
+            "4th"});
             this.CB_Year.Location = new System.Drawing.Point(501, 166);
             this.CB_Year.Name = "CB_Year";
             this.CB_Year.Size = new System.Drawing.Size(136, 21);
@@ -204,16 +223,6 @@
             this.BTN_InsertPhoto.UseVisualStyleBackColor = false;
             this.BTN_InsertPhoto.Click += new System.EventHandler(this.BTN_InsertPhoto_Click);
             // 
-            // PB_Candidate
-            // 
-            this.PB_Candidate.Image = ((System.Drawing.Image)(resources.GetObject("PB_Candidate.Image")));
-            this.PB_Candidate.Location = new System.Drawing.Point(12, 106);
-            this.PB_Candidate.Name = "PB_Candidate";
-            this.PB_Candidate.Size = new System.Drawing.Size(158, 147);
-            this.PB_Candidate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PB_Candidate.TabIndex = 20;
-            this.PB_Candidate.TabStop = false;
-            // 
             // BTN_Cancel
             // 
             this.BTN_Cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
@@ -255,6 +264,16 @@
             this.label2.Size = new System.Drawing.Size(72, 13);
             this.label2.TabIndex = 38;
             this.label2.Text = "Candidate ID:";
+            // 
+            // PB_Candidate
+            // 
+            this.PB_Candidate.Image = ((System.Drawing.Image)(resources.GetObject("PB_Candidate.Image")));
+            this.PB_Candidate.Location = new System.Drawing.Point(12, 106);
+            this.PB_Candidate.Name = "PB_Candidate";
+            this.PB_Candidate.Size = new System.Drawing.Size(158, 147);
+            this.PB_Candidate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PB_Candidate.TabIndex = 20;
+            this.PB_Candidate.TabStop = false;
             // 
             // FRM_UpdateCandidates
             // 

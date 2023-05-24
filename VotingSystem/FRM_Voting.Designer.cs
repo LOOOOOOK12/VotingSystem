@@ -31,12 +31,16 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Voting));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ContainerPanel = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.Time = new System.Windows.Forms.Label();
             this.Date = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BTN_Minimize = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.Sidepanel = new System.Windows.Forms.Panel();
             this.BTN_LogOut = new System.Windows.Forms.Button();
             this.BTN_Vote = new System.Windows.Forms.Button();
@@ -44,10 +48,6 @@
             this.BTN_Candidate = new System.Windows.Forms.Button();
             this.BTN_Home = new System.Windows.Forms.Button();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.ContainerPanel = new System.Windows.Forms.Panel();
             this.uC_Home1 = new VotingSystem.UC_Home();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -70,6 +70,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(835, 122);
             this.panel1.TabIndex = 3;
+            // 
+            // ContainerPanel
+            // 
+            this.ContainerPanel.Location = new System.Drawing.Point(178, 122);
+            this.ContainerPanel.Name = "ContainerPanel";
+            this.ContainerPanel.Size = new System.Drawing.Size(657, 388);
+            this.ContainerPanel.TabIndex = 8;
+            // 
+            // panel9
+            // 
+            this.panel9.Location = new System.Drawing.Point(178, 122);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(657, 388);
+            this.panel9.TabIndex = 8;
+            // 
+            // panel7
+            // 
+            this.panel7.Location = new System.Drawing.Point(181, 122);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(200, 100);
+            this.panel7.TabIndex = 8;
             // 
             // Time
             // 
@@ -142,6 +163,13 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(178, 388);
             this.panel2.TabIndex = 4;
+            // 
+            // panel8
+            // 
+            this.panel8.Location = new System.Drawing.Point(178, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(654, 388);
+            this.panel8.TabIndex = 8;
             // 
             // Sidepanel
             // 
@@ -235,39 +263,11 @@
             // 
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // panel7
-            // 
-            this.panel7.Location = new System.Drawing.Point(181, 122);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(200, 100);
-            this.panel7.TabIndex = 8;
-            // 
-            // panel8
-            // 
-            this.panel8.Location = new System.Drawing.Point(178, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(654, 388);
-            this.panel8.TabIndex = 8;
-            // 
-            // panel9
-            // 
-            this.panel9.Location = new System.Drawing.Point(178, 122);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(657, 388);
-            this.panel9.TabIndex = 8;
-            // 
-            // ContainerPanel
-            // 
-            this.ContainerPanel.Location = new System.Drawing.Point(178, 122);
-            this.ContainerPanel.Name = "ContainerPanel";
-            this.ContainerPanel.Size = new System.Drawing.Size(657, 388);
-            this.ContainerPanel.TabIndex = 8;
-            // 
             // uC_Home1
             // 
-            this.uC_Home1.Location = new System.Drawing.Point(176, 122);
+            this.uC_Home1.Location = new System.Drawing.Point(178, 122);
             this.uC_Home1.Name = "uC_Home1";
-            this.uC_Home1.Size = new System.Drawing.Size(659, 388);
+            this.uC_Home1.Size = new System.Drawing.Size(657, 388);
             this.uC_Home1.TabIndex = 5;
             // 
             // FRM_Voting

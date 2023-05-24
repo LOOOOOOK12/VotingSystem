@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace VotingSystem
         public FRM_UpdateCandidates()
         {
             InitializeComponent();
+            fillcombobox();
         }
 
         private void BTN_Cancel_Click(object sender, EventArgs e)
@@ -32,7 +34,7 @@ namespace VotingSystem
 
             if (int.TryParse(TXTBX_CandidateID.Text, out candidateID))
             {
-                if (objC.UpdateItems(candidateID, TXTBX_Firstname.Text, TXTBX_Middlename.Text,TXTBX_Lastname.Text, CB_Course.Text,  CB_Position.Text, PB_Candidate.Image))
+                if (objC.UpdateItems(candidateID, TXTBX_Firstname.Text, TXTBX_Middlename.Text, TXTBX_Lastname.Text, CB_Course.Text, CB_Position.Text, PB_Candidate.Image,CB_Partylist.Text))
                 {
                     MessageBox.Show("Record Successful!");
                 }
@@ -75,6 +77,33 @@ namespace VotingSystem
                 Image image = Image.FromFile(opendlg.FileName);
                 PB_Candidate.Image = image;
             }
+        }
+
+
+        public void fillcombobox()
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-SM9NF9V;Initial Catalog=DB_VotingSystem;Integrated Security=True");
+            string sql = "SELECT * FROM Partylist";
+            SqlCommand cmd = new SqlCommand(sql, con); ;
+            SqlDataReader myreader;
+
+            try
+            {
+                con.Open();
+                myreader = cmd.ExecuteReader();
+                while (myreader.Read())
+                {
+                    string sname = myreader.GetString(1);
+                    CB_Partylist.Items.Add(sname);
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }
