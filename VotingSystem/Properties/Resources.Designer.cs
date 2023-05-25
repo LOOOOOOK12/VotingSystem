@@ -229,5 +229,15 @@ namespace VotingSystem.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap simple_ways_to_harness_passion_for_success_Square {
+            get {
+                object obj = ResourceManager.GetObject("simple-ways-to-harness-passion-for-success-Square", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

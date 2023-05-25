@@ -48,10 +48,15 @@
             this.BTN_Candidate = new System.Windows.Forms.Button();
             this.BTN_Home = new System.Windows.Forms.Button();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.uC_Home1 = new VotingSystem.UC_Home();
+            this.VotingPanel = new System.Windows.Forms.Panel();
+            this.UC_HOME = new VotingSystem.UC_Home();
+            this.uC_Candidates2 = new VotingSystem.UC_Candidates();
+            this.UC_Vote = new VotingSystem.UC_Vote();
+            this.uC_Candidates1 = new VotingSystem.UC_Candidates();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.VotingPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -263,19 +268,59 @@
             // 
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // uC_Home1
+            // VotingPanel
             // 
-            this.uC_Home1.Location = new System.Drawing.Point(178, 122);
-            this.uC_Home1.Name = "uC_Home1";
-            this.uC_Home1.Size = new System.Drawing.Size(657, 388);
-            this.uC_Home1.TabIndex = 5;
+            this.VotingPanel.Controls.Add(this.UC_HOME);
+            this.VotingPanel.Controls.Add(this.uC_Candidates2);
+            this.VotingPanel.Controls.Add(this.UC_Vote);
+            this.VotingPanel.Controls.Add(this.uC_Candidates1);
+            this.VotingPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.VotingPanel.Location = new System.Drawing.Point(178, 122);
+            this.VotingPanel.Name = "VotingPanel";
+            this.VotingPanel.Size = new System.Drawing.Size(657, 388);
+            this.VotingPanel.TabIndex = 5;
+            // 
+            // UC_HOME
+            // 
+            this.UC_HOME.BackColor = System.Drawing.SystemColors.Menu;
+            this.UC_HOME.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.UC_HOME.Location = new System.Drawing.Point(0, 0);
+            this.UC_HOME.Name = "UC_HOME";
+            this.UC_HOME.Size = new System.Drawing.Size(657, 388);
+            this.UC_HOME.TabIndex = 3;
+            // 
+            // uC_Candidates2
+            // 
+            this.uC_Candidates2.BackColor = System.Drawing.SystemColors.Menu;
+            this.uC_Candidates2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_Candidates2.Location = new System.Drawing.Point(0, 0);
+            this.uC_Candidates2.Name = "uC_Candidates2";
+            this.uC_Candidates2.Size = new System.Drawing.Size(657, 388);
+            this.uC_Candidates2.TabIndex = 2;
+            // 
+            // UC_Vote
+            // 
+            this.UC_Vote.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.UC_Vote.Location = new System.Drawing.Point(0, 0);
+            this.UC_Vote.Name = "UC_Vote";
+            this.UC_Vote.Size = new System.Drawing.Size(657, 388);
+            this.UC_Vote.TabIndex = 1;
+            // 
+            // uC_Candidates1
+            // 
+            this.uC_Candidates1.BackColor = System.Drawing.SystemColors.Menu;
+            this.uC_Candidates1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_Candidates1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Candidates1.Name = "uC_Candidates1";
+            this.uC_Candidates1.Size = new System.Drawing.Size(657, 388);
+            this.uC_Candidates1.TabIndex = 0;
             // 
             // FRM_Voting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(835, 510);
-            this.Controls.Add(this.uC_Home1);
+            this.Controls.Add(this.VotingPanel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -287,6 +332,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.VotingPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -311,6 +357,10 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
-        private UC_Home uC_Home1;
+        private System.Windows.Forms.Panel VotingPanel;
+        private UC_Vote UC_Vote;
+        private UC_Candidates uC_Candidates1;
+        private UC_Candidates uC_Candidates2;
+        private UC_Home UC_HOME;
     }
 }

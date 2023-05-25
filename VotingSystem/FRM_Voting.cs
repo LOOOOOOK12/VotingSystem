@@ -22,6 +22,10 @@ namespace VotingSystem
         {
             Sidepanel.Height = BTN_Vote.Height;
             Sidepanel.Top = BTN_Vote.Top;
+            UC_Vote Vote = new UC_Vote();
+            VotingPanel.Controls.Clear();
+            VotingPanel.Controls.Add(Vote);
+            Vote.BringToFront();
         }
 
         private void BTN_LogOut_Click(object sender, EventArgs e)
@@ -84,8 +88,8 @@ namespace VotingSystem
             Sidepanel.Height = BTN_Home.Height;
             Sidepanel.Top = BTN_Home.Top;
             UC_Home Home = new UC_Home();
-            ContainerPanel.Controls.Clear();
-            ContainerPanel.Controls.Add(Home);
+            VotingPanel.Controls.Clear();
+            VotingPanel.Controls.Add(Home);
             Home.BringToFront();
             
 
@@ -96,12 +100,17 @@ namespace VotingSystem
         {
             Sidepanel.Height = BTN_Candidate.Height;
             Sidepanel.Top = BTN_Candidate.Top;
+            UC_Candidates Candidates = new UC_Candidates();
+            VotingPanel.Controls.Clear();
+            VotingPanel.Controls.Add(Candidates);
+            Candidates.BringToFront();
         }
 
         private void BTN_Election_Click(object sender, EventArgs e)
         {
             Sidepanel.Height = BTN_Election.Height;
             Sidepanel.Top = BTN_Election.Top;
+            
         }
     }
 }
