@@ -26,32 +26,47 @@ namespace VotingSystem
 
         private void BTN_Home_Click(object sender, EventArgs e)
         {
-
+            Sidepanel.Height = BTN_Home.Height;
+            Sidepanel.Top = BTN_Home.Top;
         }
 
+
+        // BTN_Candidates
         private void button2_Click(object sender, EventArgs e)
         {
+            Sidepanel.Height = BTN_Candidate.Height;
+            Sidepanel.Top = BTN_Candidate.Top;
             FRM_ManageCandidates FMC = new FRM_ManageCandidates();
             FMC.Owner = this;
             FMC.ShowDialog();
         }
 
+        //BTN_Partylist
         private void button1_Click(object sender, EventArgs e)
         {
+            Sidepanel.Height = BTN_Partylist.Height;
+            Sidepanel.Top = BTN_Partylist.Top;
             FRM_Partylist PT = new FRM_Partylist();
             PT.Owner = this;
             PT.ShowDialog();
         }
 
+
+        //BTN_Voters
         private void button4_Click(object sender, EventArgs e)
         {
+            Sidepanel.Height = BTN_Voters.Height;
+            Sidepanel.Top = BTN_Voters.Top;
             FRM_Voters Voters = new FRM_Voters();
             Voters.Owner = this;
             Voters.ShowDialog();
         }
 
+        //BTN_Election
         private void button3_Click(object sender, EventArgs e)
         {
+            Sidepanel.Height = BTN_Election.Height;
+            Sidepanel.Top = BTN_Election.Top;
             FRM_Election Election = new FRM_Election();
             Election.Owner = this;
             Election.ShowDialog();
@@ -59,6 +74,8 @@ namespace VotingSystem
 
         private void button5_Click(object sender, EventArgs e)
         {
+            Sidepanel.Height = BTN_LogOut.Height;
+            Sidepanel.Top = BTN_LogOut.Top;
             DialogResult result = MessageBox.Show("Log out", "You want to Log out?", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {

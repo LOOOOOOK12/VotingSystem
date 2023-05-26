@@ -30,6 +30,8 @@ namespace VotingSystem
 
         private void BTN_LogOut_Click(object sender, EventArgs e)
         {
+            Sidepanel.Height = BTN_LogOut.Height;
+            Sidepanel.Top = BTN_LogOut.Top;
             DialogResult result = MessageBox.Show("Log out", "You want to Log out?", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
@@ -51,6 +53,7 @@ namespace VotingSystem
 
         private void FRM_Voting_Load(object sender, EventArgs e)
         {
+            timer2.Start();
             //SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-SM9NF9V;Initial Catalog=DB_VotingSystem;Integrated Security=True");
 
             //timer2.Start();
@@ -110,6 +113,10 @@ namespace VotingSystem
         {
             Sidepanel.Height = BTN_Election.Height;
             Sidepanel.Top = BTN_Election.Top;
+            UC_Elections elections = new UC_Elections();
+            VotingPanel.Controls.Clear();
+            VotingPanel.Controls.Add(elections);
+            elections.BringToFront();
             
         }
     }
