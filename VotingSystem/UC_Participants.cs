@@ -30,13 +30,13 @@ namespace VotingSystem
             }
         public string PartylistName
         {
-            get { return LBL_CandidateName.Text; }
-            set { LBL_CandidateName.Text = value; }
+            get { return LBL_Partylist.Text; }
+            set { LBL_Partylist.Text = value; }
         }
         public string Postition
         {
-            get { return LBL_CandidateName.Text; }
-            set { LBL_CandidateName.Text = value; }
+            get { return LBL_Position.Text; }
+            set { LBL_Position.Text = value; }
         }
         public Image CandidatePicture
         {

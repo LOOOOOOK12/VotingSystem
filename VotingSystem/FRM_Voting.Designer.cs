@@ -37,26 +37,26 @@
             this.Time = new System.Windows.Forms.Label();
             this.Date = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.BTN_Minimize = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.Sidepanel = new System.Windows.Forms.Panel();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.VotingPanel = new System.Windows.Forms.Panel();
             this.BTN_LogOut = new System.Windows.Forms.Button();
             this.BTN_Vote = new System.Windows.Forms.Button();
             this.BTN_Election = new System.Windows.Forms.Button();
             this.BTN_Candidate = new System.Windows.Forms.Button();
             this.BTN_Home = new System.Windows.Forms.Button();
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.VotingPanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BTN_Minimize = new System.Windows.Forms.Button();
             this.UC_HOME = new VotingSystem.UC_Home();
             this.uC_Candidates2 = new VotingSystem.UC_Candidates();
             this.UC_Vote = new VotingSystem.UC_Vote();
             this.uC_Candidates1 = new VotingSystem.UC_Candidates();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.VotingPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -130,29 +130,6 @@
             this.label1.Text = "STI College Of Legazpi";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(178, 122);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
-            // BTN_Minimize
-            // 
-            this.BTN_Minimize.FlatAppearance.BorderSize = 0;
-            this.BTN_Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Minimize.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Minimize.Image")));
-            this.BTN_Minimize.Location = new System.Drawing.Point(794, 0);
-            this.BTN_Minimize.Name = "BTN_Minimize";
-            this.BTN_Minimize.Size = new System.Drawing.Size(41, 36);
-            this.BTN_Minimize.TabIndex = 8;
-            this.BTN_Minimize.Text = " ";
-            this.BTN_Minimize.UseVisualStyleBackColor = true;
-            this.BTN_Minimize.Click += new System.EventHandler(this.BTN_Minimize_Click);
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(0)))));
@@ -183,6 +160,22 @@
             this.Sidepanel.Name = "Sidepanel";
             this.Sidepanel.Size = new System.Drawing.Size(10, 40);
             this.Sidepanel.TabIndex = 8;
+            // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // VotingPanel
+            // 
+            this.VotingPanel.Controls.Add(this.UC_HOME);
+            this.VotingPanel.Controls.Add(this.uC_Candidates2);
+            this.VotingPanel.Controls.Add(this.UC_Vote);
+            this.VotingPanel.Controls.Add(this.uC_Candidates1);
+            this.VotingPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.VotingPanel.Location = new System.Drawing.Point(178, 122);
+            this.VotingPanel.Name = "VotingPanel";
+            this.VotingPanel.Size = new System.Drawing.Size(657, 388);
+            this.VotingPanel.TabIndex = 5;
             // 
             // BTN_LogOut
             // 
@@ -264,21 +257,28 @@
             this.BTN_Home.UseVisualStyleBackColor = true;
             this.BTN_Home.Click += new System.EventHandler(this.BTN_Home_Click);
             // 
-            // timer2
+            // pictureBox1
             // 
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(178, 122);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
-            // VotingPanel
+            // BTN_Minimize
             // 
-            this.VotingPanel.Controls.Add(this.UC_HOME);
-            this.VotingPanel.Controls.Add(this.uC_Candidates2);
-            this.VotingPanel.Controls.Add(this.UC_Vote);
-            this.VotingPanel.Controls.Add(this.uC_Candidates1);
-            this.VotingPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.VotingPanel.Location = new System.Drawing.Point(178, 122);
-            this.VotingPanel.Name = "VotingPanel";
-            this.VotingPanel.Size = new System.Drawing.Size(657, 388);
-            this.VotingPanel.TabIndex = 5;
+            this.BTN_Minimize.FlatAppearance.BorderSize = 0;
+            this.BTN_Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Minimize.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Minimize.Image")));
+            this.BTN_Minimize.Location = new System.Drawing.Point(794, 0);
+            this.BTN_Minimize.Name = "BTN_Minimize";
+            this.BTN_Minimize.Size = new System.Drawing.Size(41, 36);
+            this.BTN_Minimize.TabIndex = 8;
+            this.BTN_Minimize.Text = " ";
+            this.BTN_Minimize.UseVisualStyleBackColor = true;
+            this.BTN_Minimize.Click += new System.EventHandler(this.BTN_Minimize_Click);
             // 
             // UC_HOME
             // 
@@ -324,15 +324,16 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FRM_Voting";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRM_Voting";
             this.Load += new System.EventHandler(this.FRM_Voting_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.VotingPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
