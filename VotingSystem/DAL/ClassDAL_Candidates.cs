@@ -53,7 +53,6 @@ namespace VotingSystem.DAL
         }
 
         //PANG VIEW
-
         public DataTable ReadItemsTable()
         {
             Connection con = new Connection();

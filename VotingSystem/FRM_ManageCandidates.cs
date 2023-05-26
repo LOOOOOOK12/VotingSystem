@@ -52,9 +52,6 @@ namespace VotingSystem
                             listitems[i].Position = row["Position"].ToString();
                             listitems[i].Partylist = row["Partylist"].ToString();
 
-
-
-
                             flowLayoutPanel2.Controls.Add(listitems[i]);
 
                             listitems[i].Click += new System.EventHandler(this.Refresh_btn_Click);

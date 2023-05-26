@@ -64,9 +64,11 @@
     <Compile Include="BLL\ClassBLL.cs" />
     <Compile Include="BLL\ClassBLL_Cadidates.cs" />
     <Compile Include="BLL\ClassBLL_Election.cs" />
+    <Compile Include="BLL\ClassBLL_Votes.cs" />
     <Compile Include="DAL\ClassDAL.cs" />
     <Compile Include="DAL\ClassDAL_Candidates.cs" />
     <Compile Include="DAL\ClassDAL_Election.cs" />
+    <Compile Include="DAL\ClassDAL_Votes.cs" />
     <Compile Include="DAL\Connections.cs" />
     <Compile Include="DAL\DataAccess.cs" />
     <Compile Include="DAL\Partylist.cs" />
@@ -191,6 +193,12 @@
     <Compile Include="UC_Home.Designer.cs">
       <DependentUpon>UC_Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Participants.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Participants.Designer.cs">
+      <DependentUpon>UC_Participants.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_PartylistBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -264,6 +272,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Home.resx">
       <DependentUpon>UC_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Participants.resx">
+      <DependentUpon>UC_Participants.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_PartylistBox.resx">
       <DependentUpon>UC_PartylistBox.cs</DependentUpon>
@@ -341,6 +352,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\simple-ways-to-harness-passion-for-success-Square.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-picture-32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

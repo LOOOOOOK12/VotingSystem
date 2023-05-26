@@ -56,24 +56,29 @@ namespace VotingSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "INSERT INTO Voters (Firstname,Lastname,Middlename,Course,Year, Age,ID,password,Bdate,Bmonth,Byear) VALUES('"+txtb_Firstname.Text+"','"+txtb_Lastname.Text+"', '"+txtb_MiddleName.Text+"', '"+Course.SelectedItem.ToString()+"', " +
-           "'" + Year.SelectedItem.ToString() + "','" + Age.Text + "','" + txtb_IDnumber.Text + "','" + txtb_Password.Text + "'," +
-           "'" + Date.SelectedItem.ToString() + "','" + Month.SelectedItem.ToString() + "','" + Year.SelectedItem.ToString() + "')";
-            cmd.ExecuteNonQuery();
-            con.Close();
+            if (txtb_Password.Text == txtb_Cpassword.Text)
+            {
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "INSERT INTO Voters (Firstname,Lastname,Middlename,Course,Year, Age,ID,password,Bdate,Bmonth,Byear) VALUES('" + txtb_Firstname.Text + "','" + txtb_Lastname.Text + "', '" + txtb_MiddleName.Text + "', '" + Course.SelectedItem.ToString() + "', " +
+               "'" + Year.SelectedItem.ToString() + "','" + Age.Text + "','" + txtb_IDnumber.Text + "','" + txtb_Password.Text + "'," +
+               "'" + Date.SelectedItem.ToString() + "','" + Month.SelectedItem.ToString() + "','" + Year.SelectedItem.ToString() + "')";
+                cmd.ExecuteNonQuery();
+                con.Close();
 
-            MessageBox.Show("Create Account Successfull!");
+                MessageBox.Show("Create Account Successfull!");
 
-           
+                Hide();
+                f1.Show();
 
-            Hide();
-            f1.Show();
-
-
+            }
+            else
+            {
+                MessageBox.Show("Confirm Password Incorrect Please try again");
+                txtb_Password.Clear();
+                txtb_Cpassword.Clear();
+            }   
         }
 
         private void label5_Click_1(object sender, EventArgs e)
