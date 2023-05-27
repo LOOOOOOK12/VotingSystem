@@ -211,6 +211,12 @@
     <Compile Include="UC_Vote.Designer.cs">
       <DependentUpon>UC_Vote.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_VotingBtn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_VotingBtn.Designer.cs">
+      <DependentUpon>UC_VotingBtn.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FRM_AddCandidatesBox.resx">
       <DependentUpon>FRM_AddCandidatesBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -281,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Vote.resx">
       <DependentUpon>UC_Vote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_VotingBtn.resx">
+      <DependentUpon>UC_VotingBtn.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
