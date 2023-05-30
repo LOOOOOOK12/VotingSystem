@@ -14,7 +14,7 @@ namespace VotingSystem.DAL
     {
 
         //ADD ITEMS
-        public bool AddItemsToTable(string Firstname, string Middlename, string Lastname, string Course, string Position, Image CandidatePic, string partylist ) 
+        public bool AddItemsToTable(string name, string Course, string Position, Image CandidatePic, string partylist ) 
         {
             Connection con = new Connection();
             if (ConnectionState.Closed == con.connect.State)
@@ -22,15 +22,13 @@ namespace VotingSystem.DAL
                 con.connect.Open();
             }
 
-            string query = "INSERT INTO Candidates(Firstname,Middlename,Lastname,Course,Position,CandidatePic,Partylist) VALUES (@Firstname,@Middlename,@Lastname,@Course,@Position,@CandidatePic,@Partylist)";
+            string query = "INSERT INTO Candidates(Name,Course,Position,CandidatePic,Partylist) VALUES (@Name,@Course,@Position,@CandidatePic,@Partylist)";
 
             try
             {
                 using (SqlCommand cmd = new SqlCommand(query, con.connect))
                 {
-                    cmd.Parameters.AddWithValue("@Firstname", Firstname.Trim());
-                    cmd.Parameters.AddWithValue("@Middlename", Middlename.Trim());
-                    cmd.Parameters.AddWithValue("@Lastname", Lastname.Trim());
+                    cmd.Parameters.AddWithValue("@Name", name.Trim());
                     cmd.Parameters.AddWithValue("@Course", Course.Trim());
                     cmd.Parameters.AddWithValue("@Position", Position.Trim());
                     cmd.Parameters.AddWithValue("@Partylist", partylist.Trim());
@@ -87,7 +85,7 @@ namespace VotingSystem.DAL
                 con.connect.Open();
             }
 
-            string query = "SELECT * FROM Candidates WHERE Firstname LIKE @Search OR Lastname LIKE @Search OR Middlename LIKE @Search OR Partylist LIKE @Search OR Position LIKE @Search";
+            string query = "SELECT * FROM Candidates WHERE Name LIKE @Search OR Partylist LIKE @Search OR Position LIKE @Search";
             SqlCommand cmd = new SqlCommand(query, con.connect);
             cmd.Parameters.AddWithValue("@Search", "%" + search + "%");
 
@@ -106,7 +104,8 @@ namespace VotingSystem.DAL
             }
         }
 
-        public bool UpdateItemInTable(int candidateID, string firstname, string middlename, string lastname, string course, string position, Image candidatePic, string partylist)
+        //PANG UPDATE
+        public bool UpdateItemInTable(int candidateID, string name, string course, string position, Image candidatePic, string partylist)
         {
             Connection con = new Connection();
             if (ConnectionState.Closed == con.connect.State)
@@ -114,16 +113,14 @@ namespace VotingSystem.DAL
                 con.connect.Open();
             }
 
-            string query = "UPDATE Candidates SET Firstname = @Firstname, Middlename = @Middlename, Lastname = @Lastname, Course = @Course, Position = @Position, CandidatePic = @CandidatePic, Partylist = @Partylist  WHERE Candidate_ID = @Candidate_ID";
+            string query = "UPDATE Candidates SET Name = @Name, Course = @Course, Position = @Position, CandidatePic = @CandidatePic, Partylist = @Partylist  WHERE Candidate_ID = @Candidate_ID";
 
             try
             {
                 using (SqlCommand cmd = new SqlCommand(query, con.connect))
                 {
                     cmd.Parameters.AddWithValue("@Candidate_ID", candidateID);
-                    cmd.Parameters.AddWithValue("@Firstname", firstname.Trim());
-                    cmd.Parameters.AddWithValue("@Middlename", middlename.Trim());
-                    cmd.Parameters.AddWithValue("@Lastname", lastname.Trim());
+                    cmd.Parameters.AddWithValue("@Name", name.Trim());
                     cmd.Parameters.AddWithValue("@Course", course.Trim());
                     cmd.Parameters.AddWithValue("@Position", position.Trim());
                     cmd.Parameters.AddWithValue("@Partylist", partylist.Trim());
