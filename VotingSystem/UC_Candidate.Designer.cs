@@ -30,13 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Candidate));
             this.LBL_Candidate_ID = new System.Windows.Forms.Label();
-            this.LBL_Firstname = new System.Windows.Forms.Label();
+            this.LBL_Name = new System.Windows.Forms.Label();
             this.lbl_PartylistName = new System.Windows.Forms.Label();
             this.lbl_partylistID = new System.Windows.Forms.Label();
-            this.LBL_Middlename = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.LBL_Lastname = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.LBL_Position = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.LBL_Partylist = new System.Windows.Forms.Label();
@@ -60,24 +56,24 @@
             this.LBL_Candidate_ID.Size = new System.Drawing.Size(79, 31);
             this.LBL_Candidate_ID.TabIndex = 23;
             // 
-            // LBL_Firstname
+            // LBL_Name
             // 
-            this.LBL_Firstname.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_Firstname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
-            this.LBL_Firstname.Location = new System.Drawing.Point(261, 26);
-            this.LBL_Firstname.Name = "LBL_Firstname";
-            this.LBL_Firstname.Size = new System.Drawing.Size(141, 19);
-            this.LBL_Firstname.TabIndex = 22;
+            this.LBL_Name.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
+            this.LBL_Name.Location = new System.Drawing.Point(264, 56);
+            this.LBL_Name.Name = "LBL_Name";
+            this.LBL_Name.Size = new System.Drawing.Size(141, 19);
+            this.LBL_Name.TabIndex = 22;
             // 
             // lbl_PartylistName
             // 
             this.lbl_PartylistName.AutoSize = true;
             this.lbl_PartylistName.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_PartylistName.Location = new System.Drawing.Point(262, 7);
+            this.lbl_PartylistName.Location = new System.Drawing.Point(265, 37);
             this.lbl_PartylistName.Name = "lbl_PartylistName";
-            this.lbl_PartylistName.Size = new System.Drawing.Size(74, 17);
+            this.lbl_PartylistName.Size = new System.Drawing.Size(46, 17);
             this.lbl_PartylistName.TabIndex = 21;
-            this.lbl_PartylistName.Text = "First Name:";
+            this.lbl_PartylistName.Text = "Name:";
             // 
             // lbl_partylistID
             // 
@@ -88,45 +84,6 @@
             this.lbl_partylistID.Size = new System.Drawing.Size(87, 17);
             this.lbl_partylistID.TabIndex = 20;
             this.lbl_partylistID.Text = "Candidate ID:";
-            // 
-            // LBL_Middlename
-            // 
-            this.LBL_Middlename.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_Middlename.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
-            this.LBL_Middlename.Location = new System.Drawing.Point(261, 66);
-            this.LBL_Middlename.Name = "LBL_Middlename";
-            this.LBL_Middlename.Size = new System.Drawing.Size(141, 19);
-            this.LBL_Middlename.TabIndex = 27;
-            this.LBL_Middlename.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(262, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 17);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "Middle Name:";
-            // 
-            // LBL_Lastname
-            // 
-            this.LBL_Lastname.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_Lastname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
-            this.LBL_Lastname.Location = new System.Drawing.Point(261, 111);
-            this.LBL_Lastname.Name = "LBL_Lastname";
-            this.LBL_Lastname.Size = new System.Drawing.Size(141, 19);
-            this.LBL_Lastname.TabIndex = 29;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(262, 94);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 17);
-            this.label4.TabIndex = 28;
-            this.label4.Text = "Last Name:";
             // 
             // LBL_Position
             // 
@@ -249,14 +206,10 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.LBL_Course);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.LBL_Lastname);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.LBL_Middlename);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_edit);
             this.Controls.Add(this.LBL_Candidate_ID);
-            this.Controls.Add(this.LBL_Firstname);
+            this.Controls.Add(this.LBL_Name);
             this.Controls.Add(this.lbl_PartylistName);
             this.Controls.Add(this.lbl_partylistID);
             this.Controls.Add(this.PB_Clogo);
@@ -275,13 +228,9 @@
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_edit;
         private System.Windows.Forms.Label LBL_Candidate_ID;
-        private System.Windows.Forms.Label LBL_Firstname;
+        private System.Windows.Forms.Label LBL_Name;
         private System.Windows.Forms.Label lbl_PartylistName;
         private System.Windows.Forms.Label lbl_partylistID;
-        private System.Windows.Forms.Label LBL_Middlename;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label LBL_Lastname;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label LBL_Position;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label LBL_Partylist;
