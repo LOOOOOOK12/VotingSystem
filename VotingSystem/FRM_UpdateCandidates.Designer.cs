@@ -33,17 +33,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.CB_Position = new System.Windows.Forms.ComboBox();
             this.CB_Course = new System.Windows.Forms.ComboBox();
-            this.TXTBX_Lastname = new System.Windows.Forms.TextBox();
-            this.TXTBX_Firstname = new System.Windows.Forms.TextBox();
-            this.TXTBX_Middlename = new System.Windows.Forms.TextBox();
+            this.TXTBX_Name = new System.Windows.Forms.TextBox();
             this.CB_Year = new System.Windows.Forms.ComboBox();
             this.CB_Partylist = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.BTN_InsertPhoto = new System.Windows.Forms.Button();
             this.BTN_Cancel = new System.Windows.Forms.Button();
@@ -86,9 +82,9 @@
             "2nd year representative",
             "3rd year representative",
             "4th year representative"});
-            this.CB_Position.Location = new System.Drawing.Point(340, 232);
+            this.CB_Position.Location = new System.Drawing.Point(408, 232);
             this.CB_Position.Name = "CB_Position";
-            this.CB_Position.Size = new System.Drawing.Size(136, 21);
+            this.CB_Position.Size = new System.Drawing.Size(169, 21);
             this.CB_Position.TabIndex = 35;
             // 
             // CB_Course
@@ -100,31 +96,17 @@
             "Bachelore of Science in Hospitality Management",
             "Bachelore of Science in Business Administration",
             "Bachelor of Science in Accounting Information Systems"});
-            this.CB_Course.Location = new System.Drawing.Point(340, 166);
+            this.CB_Course.Location = new System.Drawing.Point(179, 169);
             this.CB_Course.Name = "CB_Course";
-            this.CB_Course.Size = new System.Drawing.Size(136, 21);
+            this.CB_Course.Size = new System.Drawing.Size(187, 21);
             this.CB_Course.TabIndex = 34;
             // 
-            // TXTBX_Lastname
+            // TXTBX_Name
             // 
-            this.TXTBX_Lastname.Location = new System.Drawing.Point(179, 167);
-            this.TXTBX_Lastname.Name = "TXTBX_Lastname";
-            this.TXTBX_Lastname.Size = new System.Drawing.Size(136, 20);
-            this.TXTBX_Lastname.TabIndex = 33;
-            // 
-            // TXTBX_Firstname
-            // 
-            this.TXTBX_Firstname.Location = new System.Drawing.Point(340, 106);
-            this.TXTBX_Firstname.Name = "TXTBX_Firstname";
-            this.TXTBX_Firstname.Size = new System.Drawing.Size(136, 20);
-            this.TXTBX_Firstname.TabIndex = 32;
-            // 
-            // TXTBX_Middlename
-            // 
-            this.TXTBX_Middlename.Location = new System.Drawing.Point(501, 106);
-            this.TXTBX_Middlename.Name = "TXTBX_Middlename";
-            this.TXTBX_Middlename.Size = new System.Drawing.Size(136, 20);
-            this.TXTBX_Middlename.TabIndex = 31;
+            this.TXTBX_Name.Location = new System.Drawing.Point(408, 106);
+            this.TXTBX_Name.Name = "TXTBX_Name";
+            this.TXTBX_Name.Size = new System.Drawing.Size(169, 20);
+            this.TXTBX_Name.TabIndex = 32;
             // 
             // CB_Year
             // 
@@ -134,9 +116,9 @@
             "2nd",
             "3rd",
             "4th"});
-            this.CB_Year.Location = new System.Drawing.Point(501, 166);
+            this.CB_Year.Location = new System.Drawing.Point(408, 169);
             this.CB_Year.Name = "CB_Year";
-            this.CB_Year.Size = new System.Drawing.Size(136, 21);
+            this.CB_Year.Size = new System.Drawing.Size(169, 21);
             this.CB_Year.TabIndex = 30;
             // 
             // CB_Partylist
@@ -144,7 +126,7 @@
             this.CB_Partylist.FormattingEnabled = true;
             this.CB_Partylist.Location = new System.Drawing.Point(179, 232);
             this.CB_Partylist.Name = "CB_Partylist";
-            this.CB_Partylist.Size = new System.Drawing.Size(136, 21);
+            this.CB_Partylist.Size = new System.Drawing.Size(187, 21);
             this.CB_Partylist.TabIndex = 29;
             // 
             // label9
@@ -159,7 +141,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(337, 216);
+            this.label8.Location = new System.Drawing.Point(405, 216);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(47, 13);
             this.label8.TabIndex = 27;
@@ -168,7 +150,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(498, 150);
+            this.label7.Location = new System.Drawing.Point(405, 153);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(32, 13);
             this.label7.TabIndex = 26;
@@ -177,38 +159,20 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(340, 150);
+            this.label6.Location = new System.Drawing.Point(179, 153);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 13);
             this.label6.TabIndex = 25;
             this.label6.Text = "Course:";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(176, 151);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 13);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "Last name:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(498, 90);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 13);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Middlename:";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(337, 90);
+            this.label3.Location = new System.Drawing.Point(405, 90);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 22;
-            this.label3.Text = "First name:";
+            this.label3.Text = "Name:";
             // 
             // BTN_InsertPhoto
             // 
@@ -253,7 +217,7 @@
             // 
             this.TXTBX_CandidateID.Location = new System.Drawing.Point(179, 106);
             this.TXTBX_CandidateID.Name = "TXTBX_CandidateID";
-            this.TXTBX_CandidateID.Size = new System.Drawing.Size(136, 20);
+            this.TXTBX_CandidateID.Size = new System.Drawing.Size(187, 20);
             this.TXTBX_CandidateID.TabIndex = 39;
             // 
             // label2
@@ -288,14 +252,10 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.CB_Course);
             this.Controls.Add(this.PB_Candidate);
-            this.Controls.Add(this.TXTBX_Lastname);
             this.Controls.Add(this.BTN_InsertPhoto);
-            this.Controls.Add(this.TXTBX_Firstname);
+            this.Controls.Add(this.TXTBX_Name);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.TXTBX_Middlename);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.CB_Year);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.CB_Partylist);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label9);
@@ -305,6 +265,7 @@
             this.Name = "FRM_UpdateCandidates";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRM_UpdateCandidates";
+            this.Load += new System.EventHandler(this.FRM_UpdateCandidates_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PB_Candidate)).EndInit();
             this.ResumeLayout(false);
@@ -318,17 +279,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox CB_Position;
         private System.Windows.Forms.ComboBox CB_Course;
-        private System.Windows.Forms.TextBox TXTBX_Lastname;
-        private System.Windows.Forms.TextBox TXTBX_Firstname;
-        private System.Windows.Forms.TextBox TXTBX_Middlename;
+        private System.Windows.Forms.TextBox TXTBX_Name;
         private System.Windows.Forms.ComboBox CB_Year;
         private System.Windows.Forms.ComboBox CB_Partylist;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button BTN_InsertPhoto;
         private System.Windows.Forms.PictureBox PB_Candidate;
