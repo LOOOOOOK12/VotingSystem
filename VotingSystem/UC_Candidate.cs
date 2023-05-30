@@ -28,24 +28,13 @@ namespace VotingSystem
             set { LBL_Candidate_ID.Text = value; }
         }
 
-        public string Firstname
+        public string Name
         {
-            get { return LBL_Firstname.Text; }
-            set { LBL_Firstname.Text = value; }
+            get { return LBL_Name.Text; }
+            set { LBL_Name.Text = value; }
         }
 
-        public string Middlename
-        {
-            get { return LBL_Middlename.Text; }
-            set { LBL_Middlename.Text = value; }
-        }
-
-        public string Lastname
-        {
-            get { return LBL_Lastname.Text; }
-            set { LBL_Lastname.Text = value; }
-        }
-
+       
         public string Course
         {
             get { return LBL_Course.Text; }
