@@ -23,10 +23,10 @@ namespace VotingSystem
 
 
 
-        public string CandidateName
+        public string Name
             {
-            get { return LBL_CandidateName.Text; }
-            set { LBL_CandidateName.Text = value; }
+            get { return LBL_Name.Text; }
+            set { LBL_Name.Text = value; }
             }
         public string PartylistName
         {
