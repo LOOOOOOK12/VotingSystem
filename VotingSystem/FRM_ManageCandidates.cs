@@ -45,9 +45,7 @@ namespace VotingSystem
                             listitems[i].CandidatePic = new Bitmap(ms);
 
                             listitems[i].Candidate_ID = row["Candidate_ID"].ToString();
-                            listitems[i].Firstname = row["Firstname"].ToString();
-                            listitems[i].Middlename = row["Middlename"].ToString();
-                            listitems[i].Lastname = row["Lastname"].ToString();
+                            listitems[i].Name = row["Name"].ToString();
                             listitems[i].Course = row["Course"].ToString();
                             listitems[i].Position = row["Position"].ToString();
                             listitems[i].Partylist = row["Partylist"].ToString();
@@ -106,9 +104,7 @@ namespace VotingSystem
                     CandidateItem.CandidatePic = new Bitmap(ms);
 
                     CandidateItem.Candidate_ID = row["Candidate_ID"].ToString();
-                    CandidateItem.Firstname = row["Firstname"].ToString();
-                    CandidateItem.Middlename = row["Middlename"].ToString();
-                    CandidateItem.Lastname = row["Lastname"].ToString();
+                    CandidateItem.Name = row["Name"].ToString();
                     CandidateItem.Course = row["Course"].ToString();
                     CandidateItem.Position = row["Position"].ToString();
                     CandidateItem.Partylist = row["Partylist"].ToString();
