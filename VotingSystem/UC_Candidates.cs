@@ -39,13 +39,9 @@ namespace VotingSystem
                         {
                             listitems[i] = new UC_Participants();
 
-
-
                             MemoryStream ms = new MemoryStream((byte[])row["CandidatePic"]);
                             listitems[i].CandidatePicture = new Bitmap(ms);
-
-                           
-                            listitems[i].CandidateName = row["Firstname"].ToString();
+                            listitems[i].Name = row["Name"].ToString();
                             listitems[i].Postition = row["Position"].ToString();
                             listitems[i].PartylistName = row["Partylist"].ToString();
                             
