@@ -34,7 +34,7 @@ namespace VotingSystem
 
             if (int.TryParse(TXTBX_CandidateID.Text, out candidateID))
             {
-                if (objC.UpdateItems(candidateID, TXTBX_Firstname.Text, TXTBX_Middlename.Text, TXTBX_Lastname.Text, CB_Course.Text, CB_Position.Text, PB_Candidate.Image,CB_Partylist.Text))
+                if (objC.UpdateItems(candidateID, TXTBX_Name.Text,  CB_Course.Text, CB_Position.Text, PB_Candidate.Image,CB_Partylist.Text))
                 {
                     MessageBox.Show("Record Successful!");
                 }
@@ -103,6 +103,11 @@ namespace VotingSystem
             {
                 MessageBox.Show(ex.Message);
             }
+
+        }
+
+        private void FRM_UpdateCandidates_Load(object sender, EventArgs e)
+        {
 
         }
     }
