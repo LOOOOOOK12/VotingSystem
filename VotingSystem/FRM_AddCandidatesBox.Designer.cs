@@ -45,6 +45,8 @@
             this.CB_Course = new System.Windows.Forms.ComboBox();
             this.CB_Position = new System.Windows.Forms.ComboBox();
             this.PB_Candidate = new System.Windows.Forms.PictureBox();
+            this.CB_Elections = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Candidate)).BeginInit();
             this.SuspendLayout();
@@ -223,11 +225,38 @@
             this.PB_Candidate.TabIndex = 2;
             this.PB_Candidate.TabStop = false;
             // 
+            // CB_Elections
+            // 
+            this.CB_Elections.FormattingEnabled = true;
+            this.CB_Elections.Items.AddRange(new object[] {
+            "President",
+            "Vice-President",
+            "Secretary",
+            "1st year representative",
+            "2nd year representative",
+            "3rd year representative",
+            "4th year representative"});
+            this.CB_Elections.Location = new System.Drawing.Point(360, 103);
+            this.CB_Elections.Name = "CB_Elections";
+            this.CB_Elections.Size = new System.Drawing.Size(175, 21);
+            this.CB_Elections.TabIndex = 44;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(357, 87);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(45, 13);
+            this.label4.TabIndex = 43;
+            this.label4.Text = "Election";
+            // 
             // FRM_AddCandidatesBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(566, 358);
+            this.Controls.Add(this.CB_Elections);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.CB_Position);
             this.Controls.Add(this.CB_Course);
             this.Controls.Add(this.TXTBX_Name);
@@ -273,5 +302,7 @@
         private System.Windows.Forms.TextBox TXTBX_Name;
         private System.Windows.Forms.ComboBox CB_Course;
         private System.Windows.Forms.ComboBox CB_Position;
+        private System.Windows.Forms.ComboBox CB_Elections;
+        private System.Windows.Forms.Label label4;
     }
 }
