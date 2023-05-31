@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using System.IO;
+using System.Windows.Forms;
 
 namespace VotingSystem.DAL
 {
@@ -14,7 +15,7 @@ namespace VotingSystem.DAL
     {
 
         //ADD ITEMS
-        public bool AddItemsToTable(string name, string Course, string Position, Image CandidatePic, string partylist ) 
+        public bool AddItemsToTable(string name, string Course, string Position, Image CandidatePic, string partylist)
         {
             Connection con = new Connection();
             if (ConnectionState.Closed == con.connect.State)
@@ -22,31 +23,61 @@ namespace VotingSystem.DAL
                 con.connect.Open();
             }
 
-            string query = "INSERT INTO Candidates(Name,Course,Position,CandidatePic,Partylist) VALUES (@Name,@Course,@Position,@CandidatePic,@Partylist)";
-
             try
             {
-                using (SqlCommand cmd = new SqlCommand(query, con.connect))
+                // Convert the Bitmap to a byte array
+                byte[] candidatePicBytes;
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    CandidatePic.Save(ms, CandidatePic.RawFormat);
+                    candidatePicBytes = ms.ToArray();
+                }
+
+                // Retrieve the Partylist_ID based on the selected PartylistName
+                string partylistQuery = "SELECT Partylist_ID FROM Partylist WHERE PartylistName = @PartylistName";
+                int partylistId;
+
+                using (SqlCommand partylistCommand = new SqlCommand(partylistQuery, con.connect))
+                {
+                    partylistCommand.Parameters.AddWithValue("@PartylistName", partylist.Trim());
+                    partylistId = (int)partylistCommand.ExecuteScalar();
+                }
+
+                // Retrieve the chosen PartylistName
+                string chosenPartylistName;
+                using (SqlCommand partylistNameCommand = new SqlCommand("SELECT PartylistName FROM Partylist WHERE Partylist_ID = @PartylistID", con.connect))
+                {
+                    partylistNameCommand.Parameters.AddWithValue("@PartylistID", partylistId);
+                    chosenPartylistName = (string)partylistNameCommand.ExecuteScalar();
+                }
+
+                // Insert data into the Candidates table
+                string insertQuery = "INSERT INTO Candidates (Name, Course, Position, CandidatePic, Partylist_ID) " +
+                                     "VALUES (@Name, @Course, @Position, @CandidatePic, @PartylistID)";
+
+                using (SqlCommand cmd = new SqlCommand(insertQuery, con.connect))
                 {
                     cmd.Parameters.AddWithValue("@Name", name.Trim());
                     cmd.Parameters.AddWithValue("@Course", Course.Trim());
                     cmd.Parameters.AddWithValue("@Position", Position.Trim());
-                    cmd.Parameters.AddWithValue("@Partylist", partylist.Trim());
-
-
-                    //converting image to binary to store to database
-                    MemoryStream ms = new MemoryStream();
-                    CandidatePic.Save(ms, CandidatePic.RawFormat);
-                    // set to binary format image to parameter
-                    cmd.Parameters.AddWithValue("@CandidatePic", ms.ToArray());
+                    cmd.Parameters.AddWithValue("@CandidatePic", candidatePicBytes);
+                    cmd.Parameters.AddWithValue("@PartylistID", partylistId);
 
                     cmd.ExecuteNonQuery();
                 }
+
+                // Display the chosen partylist name
+                MessageBox.Show($"Candidate added successfully with Partylist: {chosenPartylistName}", "Information", MessageBoxButtons.OK);
+
                 return true;
             }
             catch
             {
                 throw;
+            }
+            finally
+            {
+                con.connect.Close();
             }
         }
 
