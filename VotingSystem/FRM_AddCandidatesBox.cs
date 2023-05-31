@@ -18,8 +18,9 @@ namespace VotingSystem
         {
             InitializeComponent();
             fillcombobox();
+          
         }
-
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-SM9NF9V;Initial Catalog=DB_VotingSystem;Integrated Security=True");
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -37,6 +38,12 @@ namespace VotingSystem
 
         private void FRM_AddCandidates_Load(object sender, EventArgs e)
         {
+            SqlDataAdapter da = new SqlDataAdapter("SELECT Candidates.Partylist_ID,Partylist.PartylistName FROM Candidates INNER JOIN Partylist on Candidates.Partylist_ID = Partylist.Partylist_ID", con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            CB_Partylist.DataSource = dt;
+            CB_Partylist.DisplayMember = "PartylistName";
+            CB_Partylist.ValueMember = "Partylist_ID";
 
         }
 
@@ -66,27 +73,27 @@ namespace VotingSystem
 
         public void fillcombobox() 
         {
-            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-SM9NF9V;Initial Catalog=DB_VotingSystem;Integrated Security=True");
-            string sql = "SELECT * FROM Partylist";
-            SqlCommand cmd = new SqlCommand(sql, con); ;
-            SqlDataReader myreader;
+            //SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-SM9NF9V;Initial Catalog=DB_VotingSystem;Integrated Security=True");
+            //string sql = "SELECT * FROM Partylist";
+            //SqlCommand cmd = new SqlCommand(sql, con); ;
+            //SqlDataReader myreader;
 
-            try
-            {
-                con.Open();
-                myreader = cmd.ExecuteReader();
-                while(myreader.Read()) 
-                {
-                    string sname = myreader.GetString(1);
-                    CB_Partylist.Items.Add(sname);
+            //try
+            //{
+            //    con.Open();
+            //    myreader = cmd.ExecuteReader();
+            //    while (myreader.Read())
+            //    {
+            //        string sname = myreader.GetString(1);
+            //        CB_Partylist.Items.Add(sname);
 
-                }
-                 
-            }
-            catch(Exception ex) 
-            {
-                MessageBox.Show(ex.Message);
-            }
+            //    }
+
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
 
         }
 
