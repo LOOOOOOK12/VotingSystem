@@ -28,6 +28,12 @@ namespace VotingSystem
             set { LBL_Candidate_ID.Text = value; }
         }
 
+        public string Election
+        {
+            get { return LBL_Election.Text; }
+            set { LBL_Election.Text = value; }
+        }
+
         public string Name
         {
             get { return LBL_Name.Text; }
@@ -106,10 +112,9 @@ namespace VotingSystem
             updateCandidates.ShowDialog();
         }
 
+        private void LBL_Candidate_ID_Click(object sender, EventArgs e)
+        {
 
-
-
-
-
+        }
     }
 }
