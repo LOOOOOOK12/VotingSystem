@@ -37,6 +37,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BTN_Minimize = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.Sidepanel = new System.Windows.Forms.Panel();
             this.BTN_LogOut = new System.Windows.Forms.Button();
             this.BTN_Voters = new System.Windows.Forms.Button();
             this.BTN_Election = new System.Windows.Forms.Button();
@@ -52,7 +53,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.Sidepanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -148,6 +148,14 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(178, 388);
             this.panel2.TabIndex = 3;
+            // 
+            // Sidepanel
+            // 
+            this.Sidepanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
+            this.Sidepanel.Location = new System.Drawing.Point(0, 45);
+            this.Sidepanel.Name = "Sidepanel";
+            this.Sidepanel.Size = new System.Drawing.Size(10, 40);
+            this.Sidepanel.TabIndex = 10;
             // 
             // BTN_LogOut
             // 
@@ -254,7 +262,7 @@
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.panel4);
-            this.panel3.Location = new System.Drawing.Point(649, 128);
+            this.panel3.Location = new System.Drawing.Point(293, 216);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(174, 174);
             this.panel3.TabIndex = 4;
@@ -298,7 +306,7 @@
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.panel6);
-            this.panel5.Location = new System.Drawing.Point(649, 324);
+            this.panel5.Location = new System.Drawing.Point(582, 216);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(174, 174);
             this.panel5.TabIndex = 5;
@@ -334,14 +342,6 @@
             this.label3.Size = new System.Drawing.Size(106, 20);
             this.label3.TabIndex = 13;
             this.label3.Text = "Voters Voted";
-            // 
-            // Sidepanel
-            // 
-            this.Sidepanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
-            this.Sidepanel.Location = new System.Drawing.Point(0, 45);
-            this.Sidepanel.Name = "Sidepanel";
-            this.Sidepanel.Size = new System.Drawing.Size(10, 40);
-            this.Sidepanel.TabIndex = 10;
             // 
             // FRM_Home
             // 
