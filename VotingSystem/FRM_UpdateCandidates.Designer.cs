@@ -47,6 +47,8 @@
             this.TXTBX_CandidateID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.PB_Candidate = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.CB_Elections = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Candidate)).BeginInit();
             this.SuspendLayout();
@@ -82,9 +84,9 @@
             "2nd year representative",
             "3rd year representative",
             "4th year representative"});
-            this.CB_Position.Location = new System.Drawing.Point(408, 232);
+            this.CB_Position.Location = new System.Drawing.Point(359, 232);
             this.CB_Position.Name = "CB_Position";
-            this.CB_Position.Size = new System.Drawing.Size(169, 21);
+            this.CB_Position.Size = new System.Drawing.Size(152, 21);
             this.CB_Position.TabIndex = 35;
             // 
             // CB_Course
@@ -98,14 +100,14 @@
             "Bachelor of Science in Accounting Information Systems"});
             this.CB_Course.Location = new System.Drawing.Point(179, 169);
             this.CB_Course.Name = "CB_Course";
-            this.CB_Course.Size = new System.Drawing.Size(187, 21);
+            this.CB_Course.Size = new System.Drawing.Size(154, 21);
             this.CB_Course.TabIndex = 34;
             // 
             // TXTBX_Name
             // 
-            this.TXTBX_Name.Location = new System.Drawing.Point(408, 106);
+            this.TXTBX_Name.Location = new System.Drawing.Point(359, 106);
             this.TXTBX_Name.Name = "TXTBX_Name";
-            this.TXTBX_Name.Size = new System.Drawing.Size(169, 20);
+            this.TXTBX_Name.Size = new System.Drawing.Size(152, 20);
             this.TXTBX_Name.TabIndex = 32;
             // 
             // CB_Year
@@ -116,9 +118,9 @@
             "2nd",
             "3rd",
             "4th"});
-            this.CB_Year.Location = new System.Drawing.Point(408, 169);
+            this.CB_Year.Location = new System.Drawing.Point(359, 169);
             this.CB_Year.Name = "CB_Year";
-            this.CB_Year.Size = new System.Drawing.Size(169, 21);
+            this.CB_Year.Size = new System.Drawing.Size(152, 21);
             this.CB_Year.TabIndex = 30;
             // 
             // CB_Partylist
@@ -126,7 +128,7 @@
             this.CB_Partylist.FormattingEnabled = true;
             this.CB_Partylist.Location = new System.Drawing.Point(179, 232);
             this.CB_Partylist.Name = "CB_Partylist";
-            this.CB_Partylist.Size = new System.Drawing.Size(187, 21);
+            this.CB_Partylist.Size = new System.Drawing.Size(154, 21);
             this.CB_Partylist.TabIndex = 29;
             // 
             // label9
@@ -141,7 +143,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(405, 216);
+            this.label8.Location = new System.Drawing.Point(356, 216);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(47, 13);
             this.label8.TabIndex = 27;
@@ -150,7 +152,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(405, 153);
+            this.label7.Location = new System.Drawing.Point(356, 153);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(32, 13);
             this.label7.TabIndex = 26;
@@ -168,7 +170,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(405, 90);
+            this.label3.Location = new System.Drawing.Point(356, 90);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 22;
@@ -217,7 +219,7 @@
             // 
             this.TXTBX_CandidateID.Location = new System.Drawing.Point(179, 106);
             this.TXTBX_CandidateID.Name = "TXTBX_CandidateID";
-            this.TXTBX_CandidateID.Size = new System.Drawing.Size(187, 20);
+            this.TXTBX_CandidateID.Size = new System.Drawing.Size(154, 20);
             this.TXTBX_CandidateID.TabIndex = 39;
             // 
             // label2
@@ -239,11 +241,38 @@
             this.PB_Candidate.TabIndex = 20;
             this.PB_Candidate.TabStop = false;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(523, 90);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(45, 13);
+            this.label4.TabIndex = 40;
+            this.label4.Text = "Election";
+            // 
+            // CB_Elections
+            // 
+            this.CB_Elections.FormattingEnabled = true;
+            this.CB_Elections.Items.AddRange(new object[] {
+            "President",
+            "Vice-President",
+            "Secretary",
+            "1st year representative",
+            "2nd year representative",
+            "3rd year representative",
+            "4th year representative"});
+            this.CB_Elections.Location = new System.Drawing.Point(526, 106);
+            this.CB_Elections.Name = "CB_Elections";
+            this.CB_Elections.Size = new System.Drawing.Size(152, 21);
+            this.CB_Elections.TabIndex = 42;
+            // 
             // FRM_UpdateCandidates
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(690, 358);
+            this.Controls.Add(this.CB_Elections);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.TXTBX_CandidateID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.BTN_Cancel);
@@ -293,5 +322,7 @@
         private System.Windows.Forms.Button BTN_UpdateCandidate;
         private System.Windows.Forms.TextBox TXTBX_CandidateID;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox CB_Elections;
     }
 }
