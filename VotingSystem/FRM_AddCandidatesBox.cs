@@ -18,7 +18,8 @@ namespace VotingSystem
         {
             InitializeComponent();
             fillcombobox();
-          
+            fillcombobox2();
+
         }
         SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-SM9NF9V;Initial Catalog=DB_VotingSystem;Integrated Security=True");
         private void label1_Click(object sender, EventArgs e)
@@ -61,7 +62,7 @@ namespace VotingSystem
         {
             ClassBLL_Cadidates objBLLC = new ClassBLL_Cadidates();
 
-            if (objBLLC.SaveItems(TXTBX_Name.Text, CB_Course.Text, CB_Position.Text,PB_Candidate.Image, CB_Partylist.Text))
+            if (objBLLC.SaveItems(TXTBX_Name.Text, CB_Course.Text, CB_Position.Text,PB_Candidate.Image, CB_Partylist.Text,CB_Elections.Text ))
             {
                 MessageBox.Show("Record Successful!");
             }
@@ -95,6 +96,34 @@ namespace VotingSystem
             {
                 MessageBox.Show(ex.Message);
             }
+
+        }
+
+        public void fillcombobox2() 
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-SM9NF9V;Initial Catalog=DB_VotingSystem;Integrated Security=True");
+            string sql = "SELECT * FROM Election";
+            SqlCommand cmd = new SqlCommand(sql, con); ;
+            SqlDataReader myreader;
+
+            try
+            {
+                con.Open();
+                myreader = cmd.ExecuteReader();
+                while (myreader.Read())
+                {
+                    string sname = myreader.GetString(1);
+                    CB_Elections.Items.Add(sname);
+
+                }
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
 
         }
 
