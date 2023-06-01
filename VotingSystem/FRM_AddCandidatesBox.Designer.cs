@@ -147,7 +147,7 @@
             "2nd",
             "3rd",
             "4th"});
-            this.CB_Year.Location = new System.Drawing.Point(179, 168);
+            this.CB_Year.Location = new System.Drawing.Point(360, 168);
             this.CB_Year.Name = "CB_Year";
             this.CB_Year.Size = new System.Drawing.Size(175, 21);
             this.CB_Year.TabIndex = 12;
@@ -194,7 +194,7 @@
             "Bachelore of Science in Hospitality Management",
             "Bachelore of Science in Business Administration",
             "Bachelor of Science in Accounting Information Systems"});
-            this.CB_Course.Location = new System.Drawing.Point(360, 168);
+            this.CB_Course.Location = new System.Drawing.Point(179, 168);
             this.CB_Course.Name = "CB_Course";
             this.CB_Course.Size = new System.Drawing.Size(175, 21);
             this.CB_Course.TabIndex = 18;
