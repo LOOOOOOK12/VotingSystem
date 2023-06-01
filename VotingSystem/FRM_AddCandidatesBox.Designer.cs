@@ -228,14 +228,6 @@
             // CB_Elections
             // 
             this.CB_Elections.FormattingEnabled = true;
-            this.CB_Elections.Items.AddRange(new object[] {
-            "President",
-            "Vice-President",
-            "Secretary",
-            "1st year representative",
-            "2nd year representative",
-            "3rd year representative",
-            "4th year representative"});
             this.CB_Elections.Location = new System.Drawing.Point(360, 103);
             this.CB_Elections.Name = "CB_Elections";
             this.CB_Elections.Size = new System.Drawing.Size(175, 21);
