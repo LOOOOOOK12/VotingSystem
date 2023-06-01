@@ -23,8 +23,10 @@ namespace VotingSystem
             FL_Candidates.Controls.Clear();
 
             ClassBLL_Cadidates objBLLC = new ClassBLL_Cadidates();
+            
 
             DataTable dt = objBLLC.GetItems();
+           
 
 
             if (dt != null)
@@ -32,6 +34,7 @@ namespace VotingSystem
                 if (dt.Rows.Count > 0)
                 {
                     UC_Participants[] listitems = new UC_Participants[dt.Rows.Count];
+                    
 
                     for (int i = 0; i < 1; i++)
                     {
@@ -40,10 +43,13 @@ namespace VotingSystem
                             listitems[i] = new UC_Participants();
 
                             MemoryStream ms = new MemoryStream((byte[])row["CandidatePic"]);
+                           
+
+                            listitems[i].PartylistLogo = new Bitmap(ms);
                             listitems[i].CandidatePicture = new Bitmap(ms);
                             listitems[i].Name = row["Name"].ToString();
                             listitems[i].Postition = row["Position"].ToString();
-                            listitems[i].PartylistName = row["Partylist"].ToString();
+                            listitems[i].PartylistName = row["Partylist_ID"].ToString();
                             
 
                             FL_Candidates.Controls.Add(listitems[i]);
