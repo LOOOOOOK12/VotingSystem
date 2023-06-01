@@ -48,6 +48,7 @@ namespace VotingSystem
                             listitems[i].Course = row["Course"].ToString();
                             listitems[i].Position = row["Position"].ToString();
                             listitems[i].Partylist = row["Partylist_ID"].ToString();
+                            listitems[i].Election = row["Election_ID"].ToString();
 
                             flowLayoutPanel2.Controls.Add(listitems[i]);
 
