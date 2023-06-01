@@ -15,7 +15,7 @@ namespace VotingSystem.DAL
     {
 
         //ADD ITEMS
-        public bool AddItemsToTable(string name, string Course, string Position, Image CandidatePic, string partylist)
+        public bool AddItemsToTable(string name, string Course, string Position, Image CandidatePic, string partylist, string election)
         {
             Connection con = new Connection();
             if (ConnectionState.Closed == con.connect.State)
@@ -43,17 +43,16 @@ namespace VotingSystem.DAL
                     partylistId = (int)partylistCommand.ExecuteScalar();
                 }
 
-                // Retrieve the chosen PartylistName
-                string chosenPartylistName;
-                using (SqlCommand partylistNameCommand = new SqlCommand("SELECT PartylistName FROM Partylist WHERE Partylist_ID = @PartylistID", con.connect))
+                // Retrieve the Election_ID from the Elections table
+                int electionId;
+                using (SqlCommand electionCommand = new SqlCommand("SELECT Election_ID FROM Election", con.connect))
                 {
-                    partylistNameCommand.Parameters.AddWithValue("@PartylistID", partylistId);
-                    chosenPartylistName = (string)partylistNameCommand.ExecuteScalar();
+                    electionId = (int)electionCommand.ExecuteScalar();
                 }
 
                 // Insert data into the Candidates table
-                string insertQuery = "INSERT INTO Candidates (Name, Course, Position, CandidatePic, Partylist_ID) " +
-                                     "VALUES (@Name, @Course, @Position, @CandidatePic, @PartylistID)";
+                string insertQuery = "INSERT INTO Candidates (Name, Course, Position, CandidatePic, Partylist_ID, Election_ID) " +
+                                     "VALUES (@Name, @Course, @Position, @CandidatePic, @PartylistID, @ElectionID)";
 
                 using (SqlCommand cmd = new SqlCommand(insertQuery, con.connect))
                 {
@@ -62,15 +61,15 @@ namespace VotingSystem.DAL
                     cmd.Parameters.AddWithValue("@Position", Position.Trim());
                     cmd.Parameters.AddWithValue("@CandidatePic", candidatePicBytes);
                     cmd.Parameters.AddWithValue("@PartylistID", partylistId);
+                    cmd.Parameters.AddWithValue("@ElectionID", electionId);
 
                     cmd.ExecuteNonQuery();
                 }
 
                 // Display the chosen partylist name
-                MessageBox.Show($"Candidate added successfully with Partylist: {chosenPartylistName}", "Information", MessageBoxButtons.OK);
+                MessageBox.Show($"Candidate added successfully with Partylist: {partylist}", "Information", MessageBoxButtons.OK);
 
                 return true;
-
             }
             catch
             {
