@@ -44,18 +44,18 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 306);
+            this.panel2.Location = new System.Drawing.Point(0, 322);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(265, 4);
+            this.panel2.Size = new System.Drawing.Size(251, 4);
             this.panel2.TabIndex = 9;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(265, 0);
+            this.panel1.Location = new System.Drawing.Point(251, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(4, 310);
+            this.panel1.Size = new System.Drawing.Size(4, 326);
             this.panel1.TabIndex = 8;
             // 
             // PB_PartylistLogo
@@ -139,7 +139,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "UC_VotingBtn";
-            this.Size = new System.Drawing.Size(269, 310);
+            this.Size = new System.Drawing.Size(255, 326);
             ((System.ComponentModel.ISupportInitialize)(this.PB_PartylistLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_CandidatePic)).EndInit();
             this.ResumeLayout(false);
