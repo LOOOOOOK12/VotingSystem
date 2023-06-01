@@ -40,7 +40,6 @@ namespace VotingSystem
                             listitems[i] = new UC_Candidate();
 
 
-
                             MemoryStream ms = new MemoryStream((byte[])row["CandidatePic"]);
                             listitems[i].CandidatePic = new Bitmap(ms);
 
@@ -48,7 +47,7 @@ namespace VotingSystem
                             listitems[i].Name = row["Name"].ToString();
                             listitems[i].Course = row["Course"].ToString();
                             listitems[i].Position = row["Position"].ToString();
-                            listitems[i].Partylist = row["Partylist"].ToString();
+                            listitems[i].Partylist = row["Partylist_ID"].ToString();
 
                             flowLayoutPanel2.Controls.Add(listitems[i]);
 
