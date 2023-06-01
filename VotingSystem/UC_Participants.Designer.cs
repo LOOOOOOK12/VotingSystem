@@ -104,7 +104,7 @@
             // PB_CandidatePic
             // 
             this.PB_CandidatePic.Image = global::VotingSystem.Properties.Resources.icons8_male_user_96;
-            this.PB_CandidatePic.Location = new System.Drawing.Point(70, 75);
+            this.PB_CandidatePic.Location = new System.Drawing.Point(70, 71);
             this.PB_CandidatePic.Name = "PB_CandidatePic";
             this.PB_CandidatePic.Size = new System.Drawing.Size(100, 97);
             this.PB_CandidatePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
