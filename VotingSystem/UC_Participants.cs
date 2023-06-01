@@ -22,7 +22,6 @@ namespace VotingSystem
         private FlowLayoutPanel FL_Candidates;
 
 
-
         public string Name
             {
             get { return LBL_Name.Text; }
