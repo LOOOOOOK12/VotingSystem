@@ -34,7 +34,6 @@
             // FL_Candidates
             // 
             this.FL_Candidates.AutoScroll = true;
-            this.FL_Candidates.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FL_Candidates.Location = new System.Drawing.Point(0, 0);
             this.FL_Candidates.Name = "FL_Candidates";
             this.FL_Candidates.Size = new System.Drawing.Size(657, 388);
