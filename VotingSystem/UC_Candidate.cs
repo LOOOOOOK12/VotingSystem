@@ -59,11 +59,20 @@ namespace VotingSystem
             set { LBL_Position.Text = value; }
         }
 
+
+        public string ElectionName
+        {
+            get { return LBL_Election.Text; }
+            set { LBL_Election.Text = value; }
+        }
+
         public Image CandidatePic
         {
             get { return PB_Clogo.Image; }
             set { PB_Clogo.Image = value; }
         }
+
+       
 
         private void DeleteDataFromDatabase()
         {
