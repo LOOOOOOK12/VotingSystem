@@ -70,6 +70,7 @@ namespace VotingSystem.DAL
                 MessageBox.Show($"Candidate added successfully with Partylist: {chosenPartylistName}", "Information", MessageBoxButtons.OK);
 
                 return true;
+
             }
             catch
             {
@@ -80,6 +81,7 @@ namespace VotingSystem.DAL
                 con.connect.Close();
             }
         }
+
 
         //PANG VIEW
         public DataTable ReadItemsTable()
