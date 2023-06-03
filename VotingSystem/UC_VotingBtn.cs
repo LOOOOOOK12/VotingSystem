@@ -16,9 +16,13 @@ namespace VotingSystem
         {
             InitializeComponent();
         }
+        public string ElectionTitle
+        {
+            get { return LBL_EletionTitle.Text; }
+            set { LBL_EletionTitle.Text = value; }
+        }
 
-       
-        public string CName
+        public string Name
         {
             get { return LBL_Name.Text; }
             set { LBL_Name.Text = value; }
