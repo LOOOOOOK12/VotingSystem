@@ -36,6 +36,7 @@
             this.LBL_PartylistName = new System.Windows.Forms.Label();
             this.LBL_Name = new System.Windows.Forms.Label();
             this.LBL_Position = new System.Windows.Forms.Label();
+            this.LBL_EletionTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PB_PartylistLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_CandidatePic)).BeginInit();
             this.SuspendLayout();
@@ -44,7 +45,7 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 322);
+            this.panel2.Location = new System.Drawing.Point(0, 373);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(251, 4);
             this.panel2.TabIndex = 9;
@@ -55,7 +56,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(251, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(4, 326);
+            this.panel1.Size = new System.Drawing.Size(4, 377);
             this.panel1.TabIndex = 8;
             // 
             // PB_PartylistLogo
@@ -71,7 +72,7 @@
             // PB_CandidatePic
             // 
             this.PB_CandidatePic.Image = global::VotingSystem.Properties.Resources.icons8_male_user_96;
-            this.PB_CandidatePic.Location = new System.Drawing.Point(78, 40);
+            this.PB_CandidatePic.Location = new System.Drawing.Point(78, 90);
             this.PB_CandidatePic.Name = "PB_CandidatePic";
             this.PB_CandidatePic.Size = new System.Drawing.Size(109, 101);
             this.PB_CandidatePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -85,7 +86,7 @@
             this.BTN_Vote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Vote.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Vote.ForeColor = System.Drawing.Color.White;
-            this.BTN_Vote.Location = new System.Drawing.Point(79, 267);
+            this.BTN_Vote.Location = new System.Drawing.Point(78, 317);
             this.BTN_Vote.Name = "BTN_Vote";
             this.BTN_Vote.Size = new System.Drawing.Size(109, 33);
             this.BTN_Vote.TabIndex = 12;
@@ -97,7 +98,7 @@
             // 
             this.LBL_PartylistName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LBL_PartylistName.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_PartylistName.Location = new System.Drawing.Point(78, 194);
+            this.LBL_PartylistName.Location = new System.Drawing.Point(78, 244);
             this.LBL_PartylistName.Name = "LBL_PartylistName";
             this.LBL_PartylistName.Size = new System.Drawing.Size(109, 21);
             this.LBL_PartylistName.TabIndex = 13;
@@ -108,7 +109,7 @@
             // 
             this.LBL_Name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LBL_Name.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_Name.Location = new System.Drawing.Point(79, 162);
+            this.LBL_Name.Location = new System.Drawing.Point(79, 212);
             this.LBL_Name.Name = "LBL_Name";
             this.LBL_Name.Size = new System.Drawing.Size(109, 21);
             this.LBL_Name.TabIndex = 14;
@@ -119,17 +120,29 @@
             // 
             this.LBL_Position.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LBL_Position.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_Position.Location = new System.Drawing.Point(78, 227);
+            this.LBL_Position.Location = new System.Drawing.Point(78, 277);
             this.LBL_Position.Name = "LBL_Position";
             this.LBL_Position.Size = new System.Drawing.Size(109, 21);
             this.LBL_Position.TabIndex = 15;
             this.LBL_Position.Text = "Position";
             this.LBL_Position.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // LBL_EletionTitle
+            // 
+            this.LBL_EletionTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LBL_EletionTitle.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_EletionTitle.Location = new System.Drawing.Point(79, 3);
+            this.LBL_EletionTitle.Name = "LBL_EletionTitle";
+            this.LBL_EletionTitle.Size = new System.Drawing.Size(109, 71);
+            this.LBL_EletionTitle.TabIndex = 16;
+            this.LBL_EletionTitle.Text = "Election Title";
+            this.LBL_EletionTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // UC_VotingBtn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.LBL_EletionTitle);
             this.Controls.Add(this.LBL_Position);
             this.Controls.Add(this.LBL_Name);
             this.Controls.Add(this.LBL_PartylistName);
@@ -139,7 +152,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "UC_VotingBtn";
-            this.Size = new System.Drawing.Size(255, 326);
+            this.Size = new System.Drawing.Size(255, 377);
             ((System.ComponentModel.ISupportInitialize)(this.PB_PartylistLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_CandidatePic)).EndInit();
             this.ResumeLayout(false);
@@ -156,5 +169,6 @@
         private System.Windows.Forms.Label LBL_PartylistName;
         private System.Windows.Forms.Label LBL_Name;
         private System.Windows.Forms.Label LBL_Position;
+        private System.Windows.Forms.Label LBL_EletionTitle;
     }
 }
