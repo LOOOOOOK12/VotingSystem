@@ -13,33 +13,33 @@ namespace VotingSystem.BLL
     internal class ClassBLL_Votes
     {
 
-        //public bool SaveItems(string Firstname, string Middlename, string Lastname,  string Position, Image CandidatePic, string partylist)
-        //{
-        //    try
-        //    {
-        //        ClassDAL_Candidates objdal = new ClassDAL_Candidates();
-        //        return objdal.AddItemsToTable(Firstname, Middlename, Lastname, Position, CandidatePic, partylist);
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        DialogResult result = MessageBox.Show(e.Message.ToString());
-        //        return false;
-        //    }
-        //}
+        public bool SaveItems(int voteID, string name, string partylistName, string position, Image candidatePic, Image partylistPic)
+        {
+            try
+            {
+                ClassDAL_Votes objdalVotes = new ClassDAL_Votes();
+                return objdalVotes.AddItemsToTable(voteID,name,partylistName,position,candidatePic,partylistPic);
+            }
+            catch (Exception e)
+            {
+                DialogResult result = MessageBox.Show(e.Message.ToString());
+                return false;
+            }
+        }
 
-        //public DataTable GetItems()
-        //{
-        //    try
-        //    {
-        //        ClassDAL_Candidates objDALC = new ClassDAL_Candidates();
-        //        return objDALC.ReadItemsTable();
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        DialogResult result = MessageBox.Show(e.Message.ToString());
-        //        return null;
-        //    }
-        //}
+        public DataTable GetItems()
+        {
+            try
+            {
+                ClassDAL_Votes objdalVotes = new ClassDAL_Votes();
+                return objdalVotes.ReadItemsTable();
+            }
+            catch (Exception e)
+            {
+                DialogResult result = MessageBox.Show(e.Message.ToString());
+                return null;
+            }
+        }
 
         //public DataTable SearchItems(string search)
         //{
