@@ -16,6 +16,9 @@ namespace VotingSystem
         {
             InitializeComponent();
         }
+
+        private FlowLayoutPanel FL_Vote;
+
         public string ElectionTitle
         {
             get { return LBL_EletionTitle.Text; }
