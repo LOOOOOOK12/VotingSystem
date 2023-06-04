@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.FL_Vote = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // FL_Vote
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 63);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(644, 322);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.FL_Vote.Location = new System.Drawing.Point(0, 63);
+            this.FL_Vote.Name = "FL_Vote";
+            this.FL_Vote.Size = new System.Drawing.Size(650, 322);
+            this.FL_Vote.TabIndex = 0;
             // 
             // label1
             // 
@@ -55,9 +55,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.FL_Vote);
             this.Name = "UC_Vote";
             this.Size = new System.Drawing.Size(650, 388);
+            this.Load += new System.EventHandler(this.UC_Vote_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -65,7 +66,7 @@
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel FL_Vote;
         private System.Windows.Forms.Label label1;
     }
 }
