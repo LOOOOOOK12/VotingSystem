@@ -72,28 +72,28 @@
     <Compile Include="DAL\Connections.cs" />
     <Compile Include="DAL\DataAccess.cs" />
     <Compile Include="DAL\Partylist.cs" />
-    <Compile Include="FRM_AddCandidatesBox.cs">
+    <Compile Include="ADMIN_AddUpdateCandidates\FRM_AddCandidatesBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FRM_AddCandidatesBox.Designer.cs">
+    <Compile Include="ADMIN_AddUpdateCandidates\FRM_AddCandidatesBox.Designer.cs">
       <DependentUpon>FRM_AddCandidatesBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="FRM_AddElection.cs">
+    <Compile Include="ADMIN_AddUpdateElection\FRM_AddElection.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FRM_AddElection.Designer.cs">
+    <Compile Include="ADMIN_AddUpdateElection\FRM_AddElection.Designer.cs">
       <DependentUpon>FRM_AddElection.cs</DependentUpon>
     </Compile>
-    <Compile Include="FRM_EditPartylist.cs">
+    <Compile Include="ADMIN_AddUpdatePartylist\FRM_EditPartylist.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FRM_EditPartylist.Designer.cs">
+    <Compile Include="ADMIN_AddUpdatePartylist\FRM_EditPartylist.Designer.cs">
       <DependentUpon>FRM_EditPartylist.cs</DependentUpon>
     </Compile>
-    <Compile Include="FRM_Election.cs">
+    <Compile Include="ADMIN_AddUpdateElection\FRM_Election.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FRM_Election.Designer.cs">
+    <Compile Include="ADMIN_AddUpdateElection\FRM_Election.Designer.cs">
       <DependentUpon>FRM_Election.cs</DependentUpon>
     </Compile>
     <Compile Include="FRM_Home.cs">
@@ -114,46 +114,46 @@
     <Compile Include="FRM_CreateAcc.Designer.cs">
       <DependentUpon>FRM_CreateAcc.cs</DependentUpon>
     </Compile>
-    <Compile Include="FRM_ManagePartylist.cs">
+    <Compile Include="ADMIN_AddUpdatePartylist\FRM_ManagePartylist.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FRM_ManagePartylist.Designer.cs">
+    <Compile Include="ADMIN_AddUpdatePartylist\FRM_ManagePartylist.Designer.cs">
       <DependentUpon>FRM_ManagePartylist.cs</DependentUpon>
     </Compile>
-    <Compile Include="FRM_AddPL.cs">
+    <Compile Include="ADMIN_AddUpdatePartylist\FRM_AddPL.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FRM_AddPL.Designer.cs">
+    <Compile Include="ADMIN_AddUpdatePartylist\FRM_AddPL.Designer.cs">
       <DependentUpon>FRM_AddPL.cs</DependentUpon>
     </Compile>
-    <Compile Include="FRM_ManageCandidates.cs">
+    <Compile Include="ADMIN_AddUpdateCandidates\FRM_ManageCandidates.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FRM_ManageCandidates.Designer.cs">
+    <Compile Include="ADMIN_AddUpdateCandidates\FRM_ManageCandidates.Designer.cs">
       <DependentUpon>FRM_ManageCandidates.cs</DependentUpon>
     </Compile>
-    <Compile Include="FRM_UpdateCandidates.cs">
+    <Compile Include="ADMIN_AddUpdateCandidates\FRM_UpdateCandidates.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FRM_UpdateCandidates.Designer.cs">
+    <Compile Include="ADMIN_AddUpdateCandidates\FRM_UpdateCandidates.Designer.cs">
       <DependentUpon>FRM_UpdateCandidates.cs</DependentUpon>
     </Compile>
-    <Compile Include="FRM_UpdateElection.cs">
+    <Compile Include="ADMIN_AddUpdateElection\FRM_UpdateElection.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FRM_UpdateElection.Designer.cs">
+    <Compile Include="ADMIN_AddUpdateElection\FRM_UpdateElection.Designer.cs">
       <DependentUpon>FRM_UpdateElection.cs</DependentUpon>
     </Compile>
-    <Compile Include="FRM_Voters.cs">
+    <Compile Include="ADMIN_VotersHistory\FRM_Voters.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FRM_Voters.Designer.cs">
+    <Compile Include="ADMIN_VotersHistory\FRM_Voters.Designer.cs">
       <DependentUpon>FRM_Voters.cs</DependentUpon>
     </Compile>
-    <Compile Include="FRM_Voting.cs">
+    <Compile Include="VOTERS_VotingForms\FRM_Voting.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FRM_Voting.Designer.cs">
+    <Compile Include="VOTERS_VotingForms\FRM_Voting.Designer.cs">
       <DependentUpon>FRM_Voting.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -163,70 +163,70 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="UC_Candidate.cs">
+    <Compile Include="ADMIN_AddUpdateCandidates\UC_Candidate.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Candidate.Designer.cs">
+    <Compile Include="ADMIN_AddUpdateCandidates\UC_Candidate.Designer.cs">
       <DependentUpon>UC_Candidate.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Candidates.cs">
+    <Compile Include="VOTERS_VotingForms\UCMenus\UC_Candidates.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Candidates.Designer.cs">
+    <Compile Include="VOTERS_VotingForms\UCMenus\UC_Candidates.Designer.cs">
       <DependentUpon>UC_Candidates.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Elections.cs">
+    <Compile Include="VOTERS_VotingForms\UCMenus\UC_Elections.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Elections.Designer.cs">
+    <Compile Include="VOTERS_VotingForms\UCMenus\UC_Elections.Designer.cs">
       <DependentUpon>UC_Elections.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_ElectionTitle.cs">
+    <Compile Include="ADMIN_AddUpdateElection\UC_ElectionTitle.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_ElectionTitle.Designer.cs">
+    <Compile Include="ADMIN_AddUpdateElection\UC_ElectionTitle.Designer.cs">
       <DependentUpon>UC_ElectionTitle.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Home.cs">
+    <Compile Include="VOTERS_VotingForms\UCMenus\UC_Home.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Home.Designer.cs">
+    <Compile Include="VOTERS_VotingForms\UCMenus\UC_Home.Designer.cs">
       <DependentUpon>UC_Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Participants.cs">
+    <Compile Include="VOTERS_UserControls\UC_Participants.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Participants.Designer.cs">
+    <Compile Include="VOTERS_UserControls\UC_Participants.Designer.cs">
       <DependentUpon>UC_Participants.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_PartylistBox.cs">
+    <Compile Include="ADMIN_AddUpdatePartylist\UC_PartylistBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_PartylistBox.Designer.cs">
+    <Compile Include="ADMIN_AddUpdatePartylist\UC_PartylistBox.Designer.cs">
       <DependentUpon>UC_PartylistBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Vote.cs">
+    <Compile Include="VOTERS_VotingForms\UCMenus\UC_Vote.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Vote.Designer.cs">
+    <Compile Include="VOTERS_VotingForms\UCMenus\UC_Vote.Designer.cs">
       <DependentUpon>UC_Vote.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_VotingBtn.cs">
+    <Compile Include="VOTERS_UserControls\UC_VotingBtn.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_VotingBtn.Designer.cs">
+    <Compile Include="VOTERS_UserControls\UC_VotingBtn.Designer.cs">
       <DependentUpon>UC_VotingBtn.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FRM_AddCandidatesBox.resx">
+    <EmbeddedResource Include="ADMIN_AddUpdateCandidates\FRM_AddCandidatesBox.resx">
       <DependentUpon>FRM_AddCandidatesBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FRM_AddElection.resx">
+    <EmbeddedResource Include="ADMIN_AddUpdateElection\FRM_AddElection.resx">
       <DependentUpon>FRM_AddElection.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FRM_EditPartylist.resx">
+    <EmbeddedResource Include="ADMIN_AddUpdatePartylist\FRM_EditPartylist.resx">
       <DependentUpon>FRM_EditPartylist.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FRM_Election.resx">
+    <EmbeddedResource Include="ADMIN_AddUpdateElection\FRM_Election.resx">
       <DependentUpon>FRM_Election.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_Home.resx">
@@ -238,25 +238,25 @@
     <EmbeddedResource Include="FRM_CreateAcc.resx">
       <DependentUpon>FRM_CreateAcc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FRM_ManagePartylist.resx">
+    <EmbeddedResource Include="ADMIN_AddUpdatePartylist\FRM_ManagePartylist.resx">
       <DependentUpon>FRM_ManagePartylist.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FRM_AddPL.resx">
+    <EmbeddedResource Include="ADMIN_AddUpdatePartylist\FRM_AddPL.resx">
       <DependentUpon>FRM_AddPL.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FRM_ManageCandidates.resx">
+    <EmbeddedResource Include="ADMIN_AddUpdateCandidates\FRM_ManageCandidates.resx">
       <DependentUpon>FRM_ManageCandidates.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FRM_UpdateCandidates.resx">
+    <EmbeddedResource Include="ADMIN_AddUpdateCandidates\FRM_UpdateCandidates.resx">
       <DependentUpon>FRM_UpdateCandidates.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FRM_UpdateElection.resx">
+    <EmbeddedResource Include="ADMIN_AddUpdateElection\FRM_UpdateElection.resx">
       <DependentUpon>FRM_UpdateElection.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FRM_Voters.resx">
+    <EmbeddedResource Include="ADMIN_VotersHistory\FRM_Voters.resx">
       <DependentUpon>FRM_Voters.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FRM_Voting.resx">
+    <EmbeddedResource Include="VOTERS_VotingForms\FRM_Voting.resx">
       <DependentUpon>FRM_Voting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -264,31 +264,31 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_Candidate.resx">
+    <EmbeddedResource Include="ADMIN_AddUpdateCandidates\UC_Candidate.resx">
       <DependentUpon>UC_Candidate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_Candidates.resx">
+    <EmbeddedResource Include="VOTERS_VotingForms\UCMenus\UC_Candidates.resx">
       <DependentUpon>UC_Candidates.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_Elections.resx">
+    <EmbeddedResource Include="VOTERS_VotingForms\UCMenus\UC_Elections.resx">
       <DependentUpon>UC_Elections.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_ElectionTitle.resx">
+    <EmbeddedResource Include="ADMIN_AddUpdateElection\UC_ElectionTitle.resx">
       <DependentUpon>UC_ElectionTitle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_Home.resx">
+    <EmbeddedResource Include="VOTERS_VotingForms\UCMenus\UC_Home.resx">
       <DependentUpon>UC_Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_Participants.resx">
+    <EmbeddedResource Include="VOTERS_UserControls\UC_Participants.resx">
       <DependentUpon>UC_Participants.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_PartylistBox.resx">
+    <EmbeddedResource Include="ADMIN_AddUpdatePartylist\UC_PartylistBox.resx">
       <DependentUpon>UC_PartylistBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_Vote.resx">
+    <EmbeddedResource Include="VOTERS_VotingForms\UCMenus\UC_Vote.resx">
       <DependentUpon>UC_Vote.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_VotingBtn.resx">
+    <EmbeddedResource Include="VOTERS_UserControls\UC_VotingBtn.resx">
       <DependentUpon>UC_VotingBtn.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
