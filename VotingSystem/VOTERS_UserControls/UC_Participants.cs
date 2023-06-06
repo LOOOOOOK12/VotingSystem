@@ -22,6 +22,11 @@ namespace VotingSystem
         private FlowLayoutPanel FL_Candidates;
 
 
+        public string ElectionTitle
+        {
+            get { return LBL_ElectionTitle.Text; }
+            set { LBL_ElectionTitle.Text = value; }
+        }
         public string Name
             {
             get { return LBL_Name.Text; }
