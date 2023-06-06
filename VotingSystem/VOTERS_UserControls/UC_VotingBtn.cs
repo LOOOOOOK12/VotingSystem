@@ -16,7 +16,6 @@ namespace VotingSystem
         {
             InitializeComponent();
         }
-
         private FlowLayoutPanel FL_Vote;
 
         public string ElectionTitle
