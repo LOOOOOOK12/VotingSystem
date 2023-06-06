@@ -47,8 +47,8 @@ namespace VotingSystem
                             listitems[i].Name = row["Name"].ToString();
                             listitems[i].Course = row["Course"].ToString();
                             listitems[i].Position = row["Position"].ToString();
-                            listitems[i].Partylist = row["Partylist_ID"].ToString();
-                            listitems[i].Election = row["Election_ID"].ToString();
+                            listitems[i].Partylist = row["PartylistName"].ToString();
+                            listitems[i].ElectionTitle = row["ElectionTitle"].ToString();
 
                             flowLayoutPanel2.Controls.Add(listitems[i]);
 
@@ -107,7 +107,8 @@ namespace VotingSystem
                     CandidateItem.Name = row["Name"].ToString();
                     CandidateItem.Course = row["Course"].ToString();
                     CandidateItem.Position = row["Position"].ToString();
-                    CandidateItem.Partylist = row["Partylist"].ToString();
+                    CandidateItem.Partylist = row["PartylistName"].ToString();
+                    CandidateItem.ElectionTitle = row["ElectionTitle"].ToString();
 
 
                     flowLayoutPanel2.Controls.Add(CandidateItem);
