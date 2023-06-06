@@ -2,6 +2,8 @@
 
 Voting System Project for Integrative Programming and Information Management...
 
+NOTE: outputs displays whenever refresh button is pressed in specific forms...
+
 
 # Log-In Form
 ![log in](https://github.com/LOOOOOOK12/VotingSystem/assets/122534468/36277621-1563-4882-9f2e-cc4092eee303)
@@ -27,5 +29,28 @@ Before the refresh button is pressed, it will not display the added partylists..
 
 # Manage Partylist (After Refresh button is pressed)
 ![Manage Partylist after refresh is pressed](https://github.com/LOOOOOOK12/VotingSystem/assets/122534468/3d796318-35d0-46a0-b8ad-01005e55555d)
+
+When refresh is pressed the Partylist items (User Controls) are loaded (The Flow layout panel is scrollable)...
+
+# Add Partylist Form
+![Add Partylist](https://github.com/LOOOOOOK12/VotingSystem/assets/122534468/3fcaf42f-50e2-4c8a-8495-dd73cbed3e36)
+
+When add Partylist is pressed, the add partylist form is shown...
+
+# Update Partylist
+![Update Partylist](https://github.com/LOOOOOOK12/VotingSystem/assets/122534468/01f61097-6b51-4985-9741-bd55be24f672)
+
+When the pencil button is pressed it will open the update partylist form...
+
+Every update/edit of partylist, the partylist id should be inserted (May fix in the future)
+
+# Delete partylist
+![Delete Partylist popup](https://github.com/LOOOOOOK12/VotingSystem/assets/122534468/b886c476-2c51-4284-8d55-110e7eaff40f)
+
+# Search Partylist
+![Search Partylist name in Manage Partylist](https://github.com/LOOOOOOK12/VotingSystem/assets/122534468/a1ecb033-fce0-4358-b6e6-e057dd3b6580)
+
+#
+
 
 
