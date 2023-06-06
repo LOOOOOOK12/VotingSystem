@@ -61,16 +61,16 @@
             // 
             this.LBL_Name.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
-            this.LBL_Name.Location = new System.Drawing.Point(281, 26);
+            this.LBL_Name.Location = new System.Drawing.Point(231, 47);
             this.LBL_Name.Name = "LBL_Name";
-            this.LBL_Name.Size = new System.Drawing.Size(141, 40);
+            this.LBL_Name.Size = new System.Drawing.Size(143, 40);
             this.LBL_Name.TabIndex = 22;
             // 
             // lbl_PartylistName
             // 
             this.lbl_PartylistName.AutoSize = true;
             this.lbl_PartylistName.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_PartylistName.Location = new System.Drawing.Point(282, 7);
+            this.lbl_PartylistName.Location = new System.Drawing.Point(232, 28);
             this.lbl_PartylistName.Name = "lbl_PartylistName";
             this.lbl_PartylistName.Size = new System.Drawing.Size(46, 17);
             this.lbl_PartylistName.TabIndex = 21;
@@ -88,18 +88,18 @@
             // 
             // LBL_Position
             // 
-            this.LBL_Position.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_Position.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_Position.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
-            this.LBL_Position.Location = new System.Drawing.Point(461, 111);
+            this.LBL_Position.Location = new System.Drawing.Point(380, 111);
             this.LBL_Position.Name = "LBL_Position";
-            this.LBL_Position.Size = new System.Drawing.Size(141, 19);
+            this.LBL_Position.Size = new System.Drawing.Size(265, 19);
             this.LBL_Position.TabIndex = 35;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(462, 94);
+            this.label3.Location = new System.Drawing.Point(381, 94);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 17);
             this.label3.TabIndex = 34;
@@ -107,18 +107,18 @@
             // 
             // LBL_Partylist
             // 
-            this.LBL_Partylist.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_Partylist.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_Partylist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
-            this.LBL_Partylist.Location = new System.Drawing.Point(461, 66);
+            this.LBL_Partylist.Location = new System.Drawing.Point(380, 66);
             this.LBL_Partylist.Name = "LBL_Partylist";
-            this.LBL_Partylist.Size = new System.Drawing.Size(141, 19);
+            this.LBL_Partylist.Size = new System.Drawing.Size(265, 19);
             this.LBL_Partylist.TabIndex = 33;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(462, 49);
+            this.label6.Location = new System.Drawing.Point(381, 49);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 17);
             this.label6.TabIndex = 32;
@@ -126,18 +126,18 @@
             // 
             // LBL_Course
             // 
-            this.LBL_Course.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_Course.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_Course.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
-            this.LBL_Course.Location = new System.Drawing.Point(461, 26);
+            this.LBL_Course.Location = new System.Drawing.Point(380, 26);
             this.LBL_Course.Name = "LBL_Course";
-            this.LBL_Course.Size = new System.Drawing.Size(141, 19);
+            this.LBL_Course.Size = new System.Drawing.Size(265, 19);
             this.LBL_Course.TabIndex = 31;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(462, 7);
+            this.label8.Location = new System.Drawing.Point(381, 7);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(52, 17);
             this.label8.TabIndex = 30;
@@ -148,7 +148,7 @@
             this.btn_delete.FlatAppearance.BorderSize = 0;
             this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.Image")));
-            this.btn_delete.Location = new System.Drawing.Point(694, 35);
+            this.btn_delete.Location = new System.Drawing.Point(710, 35);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(68, 62);
             this.btn_delete.TabIndex = 25;
@@ -160,7 +160,7 @@
             this.btn_edit.FlatAppearance.BorderSize = 0;
             this.btn_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_edit.Image = ((System.Drawing.Image)(resources.GetObject("btn_edit.Image")));
-            this.btn_edit.Location = new System.Drawing.Point(620, 35);
+            this.btn_edit.Location = new System.Drawing.Point(636, 35);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(68, 62);
             this.btn_edit.TabIndex = 24;
@@ -184,7 +184,7 @@
             this.LBL_Election.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
             this.LBL_Election.Location = new System.Drawing.Point(144, 94);
             this.LBL_Election.Name = "LBL_Election";
-            this.LBL_Election.Size = new System.Drawing.Size(146, 21);
+            this.LBL_Election.Size = new System.Drawing.Size(182, 36);
             this.LBL_Election.TabIndex = 38;
             // 
             // label2
