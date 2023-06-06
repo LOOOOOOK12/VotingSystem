@@ -33,7 +33,7 @@
             this.LBL_Position = new System.Windows.Forms.Label();
             this.PB_PartylistLogo = new System.Windows.Forms.PictureBox();
             this.PB_CandidatePic = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LBL_ElectionTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PB_PartylistLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_CandidatePic)).BeginInit();
             this.SuspendLayout();
@@ -91,23 +91,23 @@
             this.PB_CandidatePic.TabIndex = 0;
             this.PB_CandidatePic.TabStop = false;
             // 
-            // label1
+            // LBL_ElectionTitle
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(70, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 56);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Election Title";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LBL_ElectionTitle.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_ElectionTitle.ForeColor = System.Drawing.Color.Black;
+            this.LBL_ElectionTitle.Location = new System.Drawing.Point(70, 3);
+            this.LBL_ElectionTitle.Name = "LBL_ElectionTitle";
+            this.LBL_ElectionTitle.Size = new System.Drawing.Size(100, 56);
+            this.LBL_ElectionTitle.TabIndex = 8;
+            this.LBL_ElectionTitle.Text = "Election Title";
+            this.LBL_ElectionTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UC_Participants
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.LBL_ElectionTitle);
             this.Controls.Add(this.PB_PartylistLogo);
             this.Controls.Add(this.LBL_Position);
             this.Controls.Add(this.LBL_Partylist);
@@ -128,6 +128,6 @@
         private System.Windows.Forms.Label LBL_Partylist;
         private System.Windows.Forms.Label LBL_Position;
         private System.Windows.Forms.PictureBox PB_PartylistLogo;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LBL_ElectionTitle;
     }
 }
