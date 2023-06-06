@@ -45,8 +45,9 @@ namespace VotingSystem.DAL
 
                 // Retrieve the Election_ID from the Elections table
                 int electionId;
-                using (SqlCommand electionCommand = new SqlCommand("SELECT Election_ID FROM Election", con.connect))
+                using (SqlCommand electionCommand = new SqlCommand("SELECT Election_ID FROM Election WHERE ElectionTitle = @ElectionTitle", con.connect))
                 {
+                    electionCommand.Parameters.AddWithValue("@ElectionTitle", election.Trim());
                     electionId = (int)electionCommand.ExecuteScalar();
                 }
 
@@ -91,7 +92,39 @@ namespace VotingSystem.DAL
                 con.connect.Open();
             }
 
-            string query = "SELECT * FROM Candidates";
+            string query = "SELECT C.Name AS Name, C.Position,C.Course AS Course, C.Candidate_ID AS Candidate_ID, P.PartylistName AS PartylistName, P.PartylistLogo AS PartylistLogo, C.CandidatePic AS CandidatePic, E.ElectionTitle AS ElectionTitle " +
+                       "FROM Candidates C " +
+                       "INNER JOIN Partylist P ON C.Partylist_ID = P.Partylist_ID " +
+                       "INNER JOIN Election E ON C.Election_ID = E.Election_ID;";
+            SqlCommand cmd = new SqlCommand(query, con.connect);
+            try
+            {
+                using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                {
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+                    return dt;
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        //PANG VIEW SA VOTERS NA TABLE
+        public DataTable ReadItemsTableVoters()
+        {
+            Connection con = new Connection();
+            if (ConnectionState.Closed == con.connect.State)
+            {
+                con.connect.Open();
+            }
+
+            string query = "SELECT C.Name AS Name, C.Position, P.PartylistName AS PartylistName, P.PartylistLogo AS PartylistLogo, C.CandidatePic AS CandidatePic, E.ElectionTitle AS ElectionTitle " +
+                       "FROM Candidates C " +
+                       "INNER JOIN Partylist P ON C.Partylist_ID = P.Partylist_ID " +
+                       "INNER JOIN Election E ON C.Election_ID = E.Election_ID;";
             SqlCommand cmd = new SqlCommand(query, con.connect);
             try
             {
@@ -117,7 +150,12 @@ namespace VotingSystem.DAL
                 con.connect.Open();
             }
 
-            string query = "SELECT * FROM Candidates WHERE Name LIKE @Search OR Partylist LIKE @Search OR Position LIKE @Search";
+            string query =  "SELECT C.Candidate_ID AS Candidate_ID, C.CandidatePic AS CandidatePic, C.Name AS Name, C.Position AS Position,C.Course AS Course, P.PartylistName AS PartylistName, E.ElectionTitle AS ElectionTitle " +
+               "FROM Candidates C " +
+               "INNER JOIN Partylist P ON C.Partylist_ID = P.Partylist_ID " +
+               "INNER JOIN Election E ON C.Election_ID = E.Election_ID " +
+               "WHERE C.Name LIKE @Search OR P.PartylistName LIKE @Search OR C.Position LIKE @Search OR E.ElectionTitle LIKE @Search";
+
             SqlCommand cmd = new SqlCommand(query, con.connect);
             cmd.Parameters.AddWithValue("@Search", "%" + search + "%");
 
@@ -135,6 +173,8 @@ namespace VotingSystem.DAL
                 throw;
             }
         }
+
+
 
         //PANG UPDATE
         public bool UpdateItemInTable(int candidateID, string name, string course, string position, Image candidatePic, string partylist)
