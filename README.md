@@ -50,7 +50,47 @@ Every update/edit of partylist, the partylist id should be inserted (May fix in 
 # Search Partylist
 ![Search Partylist name in Manage Partylist](https://github.com/LOOOOOOK12/VotingSystem/assets/122534468/a1ecb033-fce0-4358-b6e6-e057dd3b6580)
 
-#
+# Manage Election (Before refrech button is pressed)
+![Manage Election before refresh is pressed](https://github.com/LOOOOOOK12/VotingSystem/assets/122534468/75bd3df9-1928-4e7d-bedc-fbf4ff18b79b)
+
+# Manage Election (After refrech button is pressed)
+![Manage Election after refresh is pressed](https://github.com/LOOOOOOK12/VotingSystem/assets/122534468/56ec5d9e-4cc1-4a22-b0cc-9f570e3e0d5e)
+
+# Add Election Title and Description
+![Add Election](https://github.com/LOOOOOOK12/VotingSystem/assets/122534468/1a37f878-779b-41c3-ad55-96ad73e14f6c)
+
+# Update Election Title and Description
+![updated Election title](https://github.com/LOOOOOOK12/VotingSystem/assets/122534468/f45568e6-ce5a-4440-bcb9-9486672d50bb)
+
+# Delete Election
+![Delete Election popup](https://github.com/LOOOOOOK12/VotingSystem/assets/122534468/2cd2c8c3-73de-41dd-9955-a5753f5bd935)
+
+# Manage Candidates (Before refresh button is pressed)
+![Manage Candidates before refresh is pressed](https://github.com/LOOOOOOK12/VotingSystem/assets/122534468/c87d0fb8-0d65-497f-a69a-f05cbf4f309e)
+
+# Manage Candidates (After refresh button is pressed)
+![Manage Candidates after refresh is pressed](https://github.com/LOOOOOOK12/VotingSystem/assets/122534468/dc448c71-3849-40d7-b918-05e72c3718f4)
+
+# Add Candidates
+![Add Candidates](https://github.com/LOOOOOOK12/VotingSystem/assets/122534468/da391857-8574-4ab1-8039-554fbd701837)
+
+# Update Candidates
+![Update Candidates](https://github.com/LOOOOOOK12/VotingSystem/assets/122534468/76fee447-7e06-4876-a7e2-e0a87df0af75)
+
+# Delete Candidates
+![Delete Candidate popup](https://github.com/LOOOOOOK12/VotingSystem/assets/122534468/e0484af7-11e1-4aef-839b-142e50b06433)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
