@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.PB_PartylistLogo = new System.Windows.Forms.PictureBox();
             this.PB_CandidatePic = new System.Windows.Forms.PictureBox();
             this.BTN_Vote = new System.Windows.Forms.Button();
@@ -40,24 +38,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB_PartylistLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_CandidatePic)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 373);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(251, 4);
-            this.panel2.TabIndex = 9;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(251, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(4, 377);
-            this.panel1.TabIndex = 8;
             // 
             // PB_PartylistLogo
             // 
@@ -142,6 +122,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.LBL_EletionTitle);
             this.Controls.Add(this.LBL_Position);
             this.Controls.Add(this.LBL_Name);
@@ -149,8 +130,6 @@
             this.Controls.Add(this.BTN_Vote);
             this.Controls.Add(this.PB_PartylistLogo);
             this.Controls.Add(this.PB_CandidatePic);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Name = "UC_VotingBtn";
             this.Size = new System.Drawing.Size(255, 377);
             ((System.ComponentModel.ISupportInitialize)(this.PB_PartylistLogo)).EndInit();
@@ -160,9 +139,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox PB_PartylistLogo;
         private System.Windows.Forms.PictureBox PB_CandidatePic;
         private System.Windows.Forms.Button BTN_Vote;
