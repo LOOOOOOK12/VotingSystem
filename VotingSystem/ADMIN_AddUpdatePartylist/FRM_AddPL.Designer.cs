@@ -136,7 +136,7 @@
             this.pb_logo.Location = new System.Drawing.Point(150, 76);
             this.pb_logo.Name = "pb_logo";
             this.pb_logo.Size = new System.Drawing.Size(100, 95);
-            this.pb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_logo.TabIndex = 5;
             this.pb_logo.TabStop = false;
             // 
