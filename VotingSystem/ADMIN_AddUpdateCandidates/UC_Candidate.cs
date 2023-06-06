@@ -60,7 +60,7 @@ namespace VotingSystem
         }
 
 
-        public string ElectionName
+        public string ElectionTitle
         {
             get { return LBL_Election.Text; }
             set { LBL_Election.Text = value; }
