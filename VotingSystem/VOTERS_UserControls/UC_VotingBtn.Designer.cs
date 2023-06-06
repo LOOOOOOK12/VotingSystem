@@ -52,7 +52,7 @@
             // PB_CandidatePic
             // 
             this.PB_CandidatePic.Image = global::VotingSystem.Properties.Resources.icons8_male_user_96;
-            this.PB_CandidatePic.Location = new System.Drawing.Point(78, 90);
+            this.PB_CandidatePic.Location = new System.Drawing.Point(63, 90);
             this.PB_CandidatePic.Name = "PB_CandidatePic";
             this.PB_CandidatePic.Size = new System.Drawing.Size(109, 101);
             this.PB_CandidatePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -66,7 +66,7 @@
             this.BTN_Vote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Vote.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Vote.ForeColor = System.Drawing.Color.White;
-            this.BTN_Vote.Location = new System.Drawing.Point(78, 317);
+            this.BTN_Vote.Location = new System.Drawing.Point(63, 317);
             this.BTN_Vote.Name = "BTN_Vote";
             this.BTN_Vote.Size = new System.Drawing.Size(109, 33);
             this.BTN_Vote.TabIndex = 12;
@@ -78,7 +78,7 @@
             // 
             this.LBL_PartylistName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LBL_PartylistName.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_PartylistName.Location = new System.Drawing.Point(78, 244);
+            this.LBL_PartylistName.Location = new System.Drawing.Point(63, 244);
             this.LBL_PartylistName.Name = "LBL_PartylistName";
             this.LBL_PartylistName.Size = new System.Drawing.Size(109, 21);
             this.LBL_PartylistName.TabIndex = 13;
@@ -89,7 +89,7 @@
             // 
             this.LBL_Name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LBL_Name.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_Name.Location = new System.Drawing.Point(79, 212);
+            this.LBL_Name.Location = new System.Drawing.Point(64, 212);
             this.LBL_Name.Name = "LBL_Name";
             this.LBL_Name.Size = new System.Drawing.Size(109, 21);
             this.LBL_Name.TabIndex = 14;
@@ -100,7 +100,7 @@
             // 
             this.LBL_Position.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LBL_Position.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_Position.Location = new System.Drawing.Point(78, 277);
+            this.LBL_Position.Location = new System.Drawing.Point(63, 277);
             this.LBL_Position.Name = "LBL_Position";
             this.LBL_Position.Size = new System.Drawing.Size(109, 21);
             this.LBL_Position.TabIndex = 15;
@@ -111,7 +111,7 @@
             // 
             this.LBL_EletionTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LBL_EletionTitle.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_EletionTitle.Location = new System.Drawing.Point(79, 3);
+            this.LBL_EletionTitle.Location = new System.Drawing.Point(64, 3);
             this.LBL_EletionTitle.Name = "LBL_EletionTitle";
             this.LBL_EletionTitle.Size = new System.Drawing.Size(109, 71);
             this.LBL_EletionTitle.TabIndex = 16;
@@ -131,7 +131,7 @@
             this.Controls.Add(this.PB_PartylistLogo);
             this.Controls.Add(this.PB_CandidatePic);
             this.Name = "UC_VotingBtn";
-            this.Size = new System.Drawing.Size(255, 377);
+            this.Size = new System.Drawing.Size(204, 377);
             ((System.ComponentModel.ISupportInitialize)(this.PB_PartylistLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_CandidatePic)).EndInit();
             this.ResumeLayout(false);
