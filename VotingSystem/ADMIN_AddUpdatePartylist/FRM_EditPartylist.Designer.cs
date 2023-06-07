@@ -33,7 +33,7 @@
             this.btn_Updatelogo = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.addPL_btn = new System.Windows.Forms.Button();
-            this.TXTBX_UpdatePL = new System.Windows.Forms.TextBox();
+            this.TXTBX_partylistName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.TXTBX_PartylistID = new System.Windows.Forms.TextBox();
@@ -112,14 +112,14 @@
             this.addPL_btn.UseVisualStyleBackColor = false;
             this.addPL_btn.Click += new System.EventHandler(this.addPL_btn_Click);
             // 
-            // TXTBX_UpdatePL
+            // TXTBX_partylistName
             // 
-            this.TXTBX_UpdatePL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TXTBX_UpdatePL.Location = new System.Drawing.Point(70, 281);
-            this.TXTBX_UpdatePL.Name = "TXTBX_UpdatePL";
-            this.TXTBX_UpdatePL.Size = new System.Drawing.Size(235, 20);
-            this.TXTBX_UpdatePL.TabIndex = 8;
-            this.TXTBX_UpdatePL.TextChanged += new System.EventHandler(this.TXTBX_UpdatePL_TextChanged);
+            this.TXTBX_partylistName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TXTBX_partylistName.Location = new System.Drawing.Point(70, 281);
+            this.TXTBX_partylistName.Name = "TXTBX_partylistName";
+            this.TXTBX_partylistName.Size = new System.Drawing.Size(235, 20);
+            this.TXTBX_partylistName.TabIndex = 8;
+            this.TXTBX_partylistName.TextChanged += new System.EventHandler(this.TXTBX_UpdatePL_TextChanged);
             // 
             // label2
             // 
@@ -158,7 +158,7 @@
             this.pb_logo.Location = new System.Drawing.Point(149, 76);
             this.pb_logo.Name = "pb_logo";
             this.pb_logo.Size = new System.Drawing.Size(100, 95);
-            this.pb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_logo.TabIndex = 11;
             this.pb_logo.TabStop = false;
             this.pb_logo.Click += new System.EventHandler(this.pb_logo_Click);
@@ -176,7 +176,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.addPL_btn);
-            this.Controls.Add(this.TXTBX_UpdatePL);
+            this.Controls.Add(this.TXTBX_partylistName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FRM_EditPartylist";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -196,7 +196,7 @@
         private System.Windows.Forms.PictureBox pb_logo;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button addPL_btn;
-        private System.Windows.Forms.TextBox TXTBX_UpdatePL;
+        private System.Windows.Forms.TextBox TXTBX_partylistName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TXTBX_PartylistID;
