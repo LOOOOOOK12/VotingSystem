@@ -43,7 +43,7 @@ namespace VotingSystem
 
             if (int.TryParse(TXTBX_PartylistID.Text, out partylistID))
             {
-                if (objbll.UpdateItems(partylistID, pb_logo.Image, TXTBX_UpdatePL.Text))
+                if (objbll.UpdateItems(partylistID, pb_logo.Image, TXTBX_partylistName.Text))
                 {
                     MessageBox.Show("Record Successful!");
                 }
@@ -75,6 +75,15 @@ namespace VotingSystem
             {
                 return Image.FromStream(ms);
             }
+        }
+
+
+        public void displayfieldPartylist(string partylistid, string partylistname, Image partylistlogo)
+        {
+            pb_logo.Image = partylistlogo;
+            TXTBX_PartylistID.Text = partylistid;
+            TXTBX_partylistName.Text = partylistname;
+
         }
 
         private void TXTBX_UpdatePL_TextChanged(object sender, EventArgs e)
