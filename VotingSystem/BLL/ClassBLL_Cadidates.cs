@@ -70,12 +70,12 @@ namespace VotingSystem.BLL
             }
         }
 
-        public bool UpdateItems(int candidateID, string name, string Course, string Position, Image CandidatePic, string partylist)
+        public bool UpdateItems(int candidateID, string name, string Course, string Position, Image CandidatePic, string partylistname, string electiontitle)
         {
             try
             {
                 ClassDAL_Candidates objdal = new ClassDAL_Candidates();
-                return objdal.UpdateItemInTable(candidateID, name, Course, Position, CandidatePic, partylist);
+                return objdal.UpdateItemInTable(candidateID, name, Course, Position, CandidatePic, partylistname,electiontitle);
             }
             catch (Exception e)
             {
