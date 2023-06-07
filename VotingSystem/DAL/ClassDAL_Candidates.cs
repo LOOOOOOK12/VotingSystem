@@ -177,7 +177,7 @@ namespace VotingSystem.DAL
 
 
         //PANG UPDATE
-        public bool UpdateItemInTable(int candidateID, string name, string course, string position, Image candidatePic, string partylist)
+        public bool UpdateItemInTable(int candidateID, string name, string course, string position, Image candidatePic, string partylistname, string electiontitle)
         {
             Connection con = new Connection();
             if (ConnectionState.Closed == con.connect.State)
@@ -185,7 +185,12 @@ namespace VotingSystem.DAL
                 con.connect.Open();
             }
 
-            string query = "UPDATE Candidates SET Name = @Name, Course = @Course, Position = @Position, CandidatePic = @CandidatePic, Partylist = @Partylist  WHERE Candidate_ID = @Candidate_ID";
+            string query = "UPDATE Candidates " +
+                   "SET Name = @Name, Course = @Course, Position = @Position, CandidatePic = @CandidatePic, " +
+                   "    Partylist_ID = (SELECT Partylist_ID FROM Partylist WHERE PartylistName = @PartylistName), " +
+                   "    Election_ID = (SELECT Election_ID FROM Election WHERE ElectionTitle = @ElectionTitle) " +
+                   "WHERE Candidate_ID = @Candidate_ID";
+
 
             try
             {
@@ -195,7 +200,8 @@ namespace VotingSystem.DAL
                     cmd.Parameters.AddWithValue("@Name", name.Trim());
                     cmd.Parameters.AddWithValue("@Course", course.Trim());
                     cmd.Parameters.AddWithValue("@Position", position.Trim());
-                    cmd.Parameters.AddWithValue("@Partylist", partylist.Trim());
+                    cmd.Parameters.AddWithValue("@PartylistName", partylistname.Trim());
+                    cmd.Parameters.AddWithValue("@ElectionTitle", electiontitle.Trim());
 
 
 
