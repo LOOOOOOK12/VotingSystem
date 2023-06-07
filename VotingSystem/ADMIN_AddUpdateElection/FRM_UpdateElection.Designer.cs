@@ -31,7 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.addPL_btn = new System.Windows.Forms.Button();
+            this.BTN_Update = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.TXTBX_ElectionDesc = new System.Windows.Forms.TextBox();
@@ -77,20 +77,20 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // addPL_btn
+            // BTN_Update
             // 
-            this.addPL_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
-            this.addPL_btn.FlatAppearance.BorderSize = 0;
-            this.addPL_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addPL_btn.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addPL_btn.ForeColor = System.Drawing.Color.White;
-            this.addPL_btn.Location = new System.Drawing.Point(249, 330);
-            this.addPL_btn.Name = "addPL_btn";
-            this.addPL_btn.Size = new System.Drawing.Size(75, 29);
-            this.addPL_btn.TabIndex = 7;
-            this.addPL_btn.Text = "Add Partylist";
-            this.addPL_btn.UseVisualStyleBackColor = false;
-            this.addPL_btn.Click += new System.EventHandler(this.addPL_btn_Click);
+            this.BTN_Update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
+            this.BTN_Update.FlatAppearance.BorderSize = 0;
+            this.BTN_Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Update.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Update.ForeColor = System.Drawing.Color.White;
+            this.BTN_Update.Location = new System.Drawing.Point(249, 330);
+            this.BTN_Update.Name = "BTN_Update";
+            this.BTN_Update.Size = new System.Drawing.Size(75, 29);
+            this.BTN_Update.TabIndex = 7;
+            this.BTN_Update.Text = "Update";
+            this.BTN_Update.UseVisualStyleBackColor = false;
+            this.BTN_Update.Click += new System.EventHandler(this.addPL_btn_Click);
             // 
             // label3
             // 
@@ -158,7 +158,7 @@
             this.Controls.Add(this.TXTBX_ElectionDesc);
             this.Controls.Add(this.TXTBX_ElectionTitle);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.addPL_btn);
+            this.Controls.Add(this.BTN_Update);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FRM_UpdateElection";
@@ -174,7 +174,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button addPL_btn;
+        private System.Windows.Forms.Button BTN_Update;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TXTBX_ElectionDesc;
