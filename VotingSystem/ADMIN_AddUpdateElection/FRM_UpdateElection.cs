@@ -45,5 +45,12 @@ namespace VotingSystem
                 MessageBox.Show("Invalid Partylist ID!");
             }
         }
+
+        public void displayfieldElection(string electionID, string electionName) 
+        {
+            TXTBX_ElectionID.Text = electionID;
+            TXTBX_ElectionTitle.Text = electionName;
+            
+        }
     }
 }
