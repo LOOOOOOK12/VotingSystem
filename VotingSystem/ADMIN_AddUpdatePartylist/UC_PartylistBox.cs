@@ -89,6 +89,7 @@ namespace VotingSystem
         private void btn_edit_Click(object sender, EventArgs e)
         {
             FRM_EditPartylist FRM_EditPL = new FRM_EditPartylist();
+            FRM_EditPL.displayfieldPartylist(PartylistID, PartylistName, PartylistLogo);
             FRM_EditPL.ShowDialog();
         }
 
