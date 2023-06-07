@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using VotingSystem.DAL;
 
 namespace VotingSystem
@@ -88,6 +89,8 @@ namespace VotingSystem
         }
 
 
+
+
         private void UC_Candidate_Load(object sender, EventArgs e)
         {
 
@@ -115,9 +118,12 @@ namespace VotingSystem
             }
         }
 
+       
+
         private void btn_edit_Click(object sender, EventArgs e)
         {
             FRM_UpdateCandidates updateCandidates = new FRM_UpdateCandidates();
+            updateCandidates.displayfields(Candidate_ID, Name, Course, Position,Partylist,Election,CandidatePic);
             updateCandidates.ShowDialog();
         }
 
