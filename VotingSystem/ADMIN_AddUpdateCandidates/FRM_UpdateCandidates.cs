@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using VotingSystem.BLL;
 
 namespace VotingSystem
@@ -19,6 +20,8 @@ namespace VotingSystem
         {
             InitializeComponent();
             fillcombobox();
+            fillcombobox2();
+           
         }
 
         private void BTN_Cancel_Click(object sender, EventArgs e)
@@ -34,7 +37,7 @@ namespace VotingSystem
 
             if (int.TryParse(TXTBX_CandidateID.Text, out candidateID))
             {
-                if (objC.UpdateItems(candidateID, TXTBX_Name.Text,  CB_Course.Text, CB_Position.Text, PB_Candidate.Image,CB_Partylist.Text))
+                if (objC.UpdateItems(candidateID, TXTBX_Name.Text,  CB_Course.Text, CB_Position.Text, PB_Candidate.Image,CB_Partylist.Text,CB_Elections.Text))
                 {
                     MessageBox.Show("Record Successful!");
                 }
@@ -105,9 +108,47 @@ namespace VotingSystem
             }
 
         }
+        public void fillcombobox2()
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-SM9NF9V;Initial Catalog=DB_VotingSystem;Integrated Security=True");
+            string sql = "SELECT * FROM Election";
+            SqlCommand cmd = new SqlCommand(sql, con); ;
+            SqlDataReader myreader;
+
+            try
+            {
+                con.Open();
+                myreader = cmd.ExecuteReader();
+                while (myreader.Read())
+                {
+                    string sname = myreader.GetString(1);
+                    CB_Elections.Items.Add(sname);
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        public void displayfields(string candidateID, string Name, string Course, string Position, string partylist, string election, Image candidatePic)
+        {
+            TXTBX_CandidateID.Text = candidateID;
+            TXTBX_Name.Text = Name;
+            CB_Course.Text = Course;
+            CB_Position.Text = Position;
+            CB_Partylist.Text = partylist;
+            CB_Elections.Text = election;
+            PB_Candidate.Image = candidatePic;
+        }
+
 
         private void FRM_UpdateCandidates_Load(object sender, EventArgs e)
         {
+          
 
         }
     }
