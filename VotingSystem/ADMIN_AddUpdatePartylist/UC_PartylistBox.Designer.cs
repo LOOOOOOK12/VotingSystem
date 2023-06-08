@@ -33,6 +33,7 @@
             this.PartylistName_lbl = new System.Windows.Forms.Label();
             this.lbl_PartylistName = new System.Windows.Forms.Label();
             this.lbl_partylistID = new System.Windows.Forms.Label();
+            this.BTN_Members = new System.Windows.Forms.Button();
             this.PB_PLlogo = new System.Windows.Forms.PictureBox();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_edit = new System.Windows.Forms.Button();
@@ -43,7 +44,7 @@
             // 
             this.PartylistID_lbl.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PartylistID_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
-            this.PartylistID_lbl.Location = new System.Drawing.Point(252, 56);
+            this.PartylistID_lbl.Location = new System.Drawing.Point(161, 56);
             this.PartylistID_lbl.Name = "PartylistID_lbl";
             this.PartylistID_lbl.Size = new System.Drawing.Size(79, 19);
             this.PartylistID_lbl.TabIndex = 17;
@@ -53,7 +54,7 @@
             // 
             this.PartylistName_lbl.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PartylistName_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
-            this.PartylistName_lbl.Location = new System.Drawing.Point(375, 56);
+            this.PartylistName_lbl.Location = new System.Drawing.Point(284, 56);
             this.PartylistName_lbl.Name = "PartylistName_lbl";
             this.PartylistName_lbl.Size = new System.Drawing.Size(154, 19);
             this.PartylistName_lbl.TabIndex = 16;
@@ -62,7 +63,7 @@
             // 
             this.lbl_PartylistName.AutoSize = true;
             this.lbl_PartylistName.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_PartylistName.Location = new System.Drawing.Point(375, 18);
+            this.lbl_PartylistName.Location = new System.Drawing.Point(284, 18);
             this.lbl_PartylistName.Name = "lbl_PartylistName";
             this.lbl_PartylistName.Size = new System.Drawing.Size(102, 19);
             this.lbl_PartylistName.TabIndex = 14;
@@ -72,11 +73,24 @@
             // 
             this.lbl_partylistID.AutoSize = true;
             this.lbl_partylistID.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_partylistID.Location = new System.Drawing.Point(252, 18);
+            this.lbl_partylistID.Location = new System.Drawing.Point(161, 18);
             this.lbl_partylistID.Name = "lbl_partylistID";
             this.lbl_partylistID.Size = new System.Drawing.Size(79, 19);
             this.lbl_partylistID.TabIndex = 13;
             this.lbl_partylistID.Text = "Partylist ID:";
+            // 
+            // BTN_Members
+            // 
+            this.BTN_Members.BackgroundImage = global::VotingSystem.Properties.Resources.icons8_eye_48;
+            this.BTN_Members.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BTN_Members.FlatAppearance.BorderSize = 0;
+            this.BTN_Members.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Members.Location = new System.Drawing.Point(574, 37);
+            this.BTN_Members.Name = "BTN_Members";
+            this.BTN_Members.Size = new System.Drawing.Size(56, 60);
+            this.BTN_Members.TabIndex = 20;
+            this.BTN_Members.UseVisualStyleBackColor = true;
+            this.BTN_Members.Click += new System.EventHandler(this.button1_Click);
             // 
             // PB_PLlogo
             // 
@@ -95,7 +109,7 @@
             this.btn_delete.FlatAppearance.BorderSize = 0;
             this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.Image")));
-            this.btn_delete.Location = new System.Drawing.Point(689, 35);
+            this.btn_delete.Location = new System.Drawing.Point(710, 35);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(68, 62);
             this.btn_delete.TabIndex = 19;
@@ -107,7 +121,7 @@
             this.btn_edit.FlatAppearance.BorderSize = 0;
             this.btn_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_edit.Image = ((System.Drawing.Image)(resources.GetObject("btn_edit.Image")));
-            this.btn_edit.Location = new System.Drawing.Point(615, 35);
+            this.btn_edit.Location = new System.Drawing.Point(636, 37);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(68, 62);
             this.btn_edit.TabIndex = 18;
@@ -119,6 +133,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.BTN_Members);
             this.Controls.Add(this.PB_PLlogo);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_edit);
@@ -144,5 +159,6 @@
         private System.Windows.Forms.Label lbl_PartylistName;
         private System.Windows.Forms.Label lbl_partylistID;
         private System.Windows.Forms.PictureBox PB_PLlogo;
+        private System.Windows.Forms.Button BTN_Members;
     }
 }
