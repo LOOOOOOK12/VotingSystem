@@ -65,6 +65,7 @@
             this.TXTBX_SearchElection.Size = new System.Drawing.Size(165, 20);
             this.TXTBX_SearchElection.TabIndex = 12;
             this.TXTBX_SearchElection.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TXTBX_SearchElection.TextChanged += new System.EventHandler(this.TXTBX_SearchElection_TextChanged);
             // 
             // BTN_SearchCandidates
             // 
