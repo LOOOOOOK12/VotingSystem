@@ -77,6 +77,34 @@ namespace VotingSystem.DAL
 
         }
 
+        public DataTable ReadItemsTablePartylistMembers()
+        {
+            Connection con = new Connection();
+            if (ConnectionState.Closed == con.connect.State)
+            {
+                con.connect.Open();
+            }
+
+            string query = "SELECT C.Name AS Name, C.Position,  C.CandidatePic AS CandidatePic,C.Partylist_ID FROM Candidates C INNER JOIN Partylist P ON C.Partylist_ID = P.Partylist_ID WHERE C.Partylist_ID = P.Partylist_IsD";
+            SqlCommand cmd = new SqlCommand(query, con.connect);
+
+            try
+            {
+                using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                {
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+                    return dt;
+                }
+            }
+            catch
+            {
+                throw;
+            }
+
+        }
+
+
         //PANG SEARCH
         public DataTable SearchItemsTable(string searchTerm)
         {
