@@ -85,7 +85,7 @@ namespace VotingSystem.DAL
                 con.connect.Open();
             }
 
-            string query = "SELECT C.Name AS Name, C.Position,  C.CandidatePic AS CandidatePic,C.Partylist_ID FROM Candidates C INNER JOIN Partylist P ON C.Partylist_ID = P.Partylist_ID WHERE C.Partylist_ID = P.Partylist_IsD";
+            string query = "SELECT C.Name AS Name, C.Position,  C.CandidatePic AS CandidatePic,C.Partylist_ID FROM Candidates C INNER JOIN Partylist P ON C.Partylist_ID = P.Partylist_ID WHERE C.Partylist_ID = P.Partylist_ID";
             SqlCommand cmd = new SqlCommand(query, con.connect);
 
             try
