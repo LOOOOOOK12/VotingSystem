@@ -14,7 +14,7 @@ namespace VotingSystem.DAL
     {
         private string connectionString = @"Data Source=DESKTOP-SM9NF9V;Initial Catalog=DB_VotingSystem;Integrated Security=True"; // Replace with your actual connection string
 
-        public bool AddItemsToTable(int voteID,  string name, string partylistName, string position, string electionTitle, Image candidatePic, Image partylistPic)
+        public bool AddItemsToTable(int voteID, string name, string partylistName, string position, string electionTitle, Image candidatePic, Image partylistPic)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -64,7 +64,7 @@ namespace VotingSystem.DAL
             }
         }
 
-       public DataTable ReadItemsTable()
+        public DataTable ReadItemsTable()
 {
     using (SqlConnection connection = new SqlConnection(connectionString))
     {
