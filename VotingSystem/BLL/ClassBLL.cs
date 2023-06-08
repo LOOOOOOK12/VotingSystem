@@ -41,6 +41,22 @@ namespace VotingSystem.BLL
             }
         }
 
+        public DataTable GetItemsMembers()
+        {
+            try
+            {
+                ClassDAL objdal = new ClassDAL();
+                return objdal.ReadItemsTablePartylistMembers();
+            }
+            catch (Exception e)
+            {
+                DialogResult result = MessageBox.Show(e.Message.ToString());
+                return null;
+            }
+        }
+
+
+
         public DataTable SearchItems(string searchTerm)
         {
             try
