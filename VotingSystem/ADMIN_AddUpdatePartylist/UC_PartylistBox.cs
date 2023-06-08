@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VotingSystem.ADMIN_AddUpdatePartylist;
 using VotingSystem.DAL;
 
 namespace VotingSystem
@@ -74,6 +75,11 @@ namespace VotingSystem
             }
         }
 
+        private void ViewPartylistMembers() 
+        {
+            
+        }
+
         private void UpdateDataFromDatabase() 
         {
             using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-SM9NF9V;Initial Catalog=DB_VotingSystem;Integrated Security=True"))
@@ -106,6 +112,13 @@ namespace VotingSystem
         private void PartylistID_lbl_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FRM_ViewPartylistMembers viewPartylistMembers = new FRM_ViewPartylistMembers();
+
+            viewPartylistMembers.ShowDialog();
         }
     }
 }
