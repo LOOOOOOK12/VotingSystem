@@ -55,7 +55,7 @@ namespace VotingSystem
 
         private void BTN_Vote_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
