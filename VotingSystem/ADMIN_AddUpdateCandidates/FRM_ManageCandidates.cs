@@ -122,6 +122,45 @@ namespace VotingSystem
                 MessageBox.Show("No search results found.");
             }
         }
+
+        private void TXTBX_SearchCandidates_TextChanged(object sender, EventArgs e)
+        {
+            string searchCandidate = TXTBX_SearchCandidates.Text.Trim();
+
+
+            ClassBLL_Cadidates objBLLCandidates = new ClassBLL_Cadidates();
+            DataTable searchResult = objBLLCandidates.SearchItems(searchCandidate);
+
+            flowLayoutPanel2.Controls.Clear();
+
+            if (searchResult != null && searchResult.Rows.Count > 0)
+            {
+                foreach (DataRow row in searchResult.Rows)
+                {
+                    UC_Candidate CandidateItem = new UC_Candidate();
+
+                    MemoryStream ms = new MemoryStream((byte[])row["CandidatePic"]);
+                    CandidateItem.CandidatePic = new Bitmap(ms);
+
+                    CandidateItem.Candidate_ID = row["Candidate_ID"].ToString();
+                    CandidateItem.Name = row["Name"].ToString();
+                    CandidateItem.Course = row["Course"].ToString();
+                    CandidateItem.Position = row["Position"].ToString();
+                    CandidateItem.Partylist = row["PartylistName"].ToString();
+                    CandidateItem.ElectionTitle = row["ElectionTitle"].ToString();
+
+
+                    flowLayoutPanel2.Controls.Add(CandidateItem);
+
+                    CandidateItem.Click += new System.EventHandler(this.Refresh_btn_Click);
+                }
+            }
+            else
+            {
+                // Show a message or handle no search results
+                MessageBox.Show("No search results found.");
+            }
+        }
     }
     
 }
