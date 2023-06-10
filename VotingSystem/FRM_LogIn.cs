@@ -17,6 +17,8 @@ namespace VotingSystem
 
         SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-SM9NF9V;Initial Catalog=DB_VotingSystem;Integrated Security=True");
 
+        public static string Idnum;
+        
 
         public FRM_Login()
         {
@@ -37,7 +39,7 @@ namespace VotingSystem
         {
 
             //Log in ng admin
-            string Idnum = userNametxtbx.Text;
+            Idnum = userNametxtbx.Text;
             string password = Password_txtbx.Text;
 
             if (Idnum == "admin" && password == "admin")
@@ -66,6 +68,7 @@ namespace VotingSystem
                         // Valid login credentials
                         FRM_Voting Voting = new FRM_Voting();
                         this.Hide();
+                        
                         Voting.ShowDialog();
                     }
                     else
