@@ -36,6 +36,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.LBL_User = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -125,11 +127,33 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "Registered Voters";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(147, 136);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(182, 41);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Welcome!!";
+            // 
+            // LBL_User
+            // 
+            this.LBL_User.AutoSize = true;
+            this.LBL_User.Font = new System.Drawing.Font("Microsoft YaHei", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_User.Location = new System.Drawing.Point(189, 198);
+            this.LBL_User.Name = "LBL_User";
+            this.LBL_User.Size = new System.Drawing.Size(87, 41);
+            this.LBL_User.TabIndex = 11;
+            this.LBL_User.Text = "User";
+            // 
             // UC_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
+            this.Controls.Add(this.LBL_User);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Name = "UC_Home";
@@ -142,6 +166,7 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -155,5 +180,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LBL_User;
     }
 }
