@@ -35,6 +35,7 @@
             this.LBL_Name = new System.Windows.Forms.Label();
             this.LBL_Position = new System.Windows.Forms.Label();
             this.LBL_EletionTitle = new System.Windows.Forms.Label();
+            this.Timestamp = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PB_PartylistLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_CandidatePic)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +67,7 @@
             this.BTN_Vote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_Vote.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Vote.ForeColor = System.Drawing.Color.White;
-            this.BTN_Vote.Location = new System.Drawing.Point(57, 317);
+            this.BTN_Vote.Location = new System.Drawing.Point(57, 301);
             this.BTN_Vote.Name = "BTN_Vote";
             this.BTN_Vote.Size = new System.Drawing.Size(109, 33);
             this.BTN_Vote.TabIndex = 12;
@@ -118,11 +119,24 @@
             this.LBL_EletionTitle.Text = "Election Title";
             this.LBL_EletionTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // Timestamp
+            // 
+            this.Timestamp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Timestamp.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Timestamp.Location = new System.Drawing.Point(58, 346);
+            this.Timestamp.Name = "Timestamp";
+            this.Timestamp.Size = new System.Drawing.Size(109, 21);
+            this.Timestamp.TabIndex = 17;
+            this.Timestamp.Text = "Name\r\n";
+            this.Timestamp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Timestamp.Click += new System.EventHandler(this.label1_Click);
+            // 
             // UC_VotingBtn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.Timestamp);
             this.Controls.Add(this.LBL_EletionTitle);
             this.Controls.Add(this.LBL_Position);
             this.Controls.Add(this.LBL_Name);
@@ -146,5 +160,6 @@
         private System.Windows.Forms.Label LBL_Name;
         private System.Windows.Forms.Label LBL_Position;
         private System.Windows.Forms.Label LBL_EletionTitle;
+        private System.Windows.Forms.Label Timestamp;
     }
 }
