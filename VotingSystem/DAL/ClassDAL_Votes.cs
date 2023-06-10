@@ -14,7 +14,7 @@ namespace VotingSystem.DAL
     {
         private string connectionString = @"Data Source=DESKTOP-SM9NF9V;Initial Catalog=DB_VotingSystem;Integrated Security=True"; // Replace with your actual connection string
 
-        public bool AddItemsToTable(int voteID, string name, string partylistName, string position, string electionTitle, Image candidatePic, Image partylistPic)
+        public bool AddItemsToTable( string name, string position, string electionTitle, string partylistName, string timestamp)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -49,16 +49,15 @@ namespace VotingSystem.DAL
                 }
 
                 // Insert into Votes table
-                string insertVoteQuery = "INSERT INTO Votes (Vote_ID, Candidate_ID, Election_ID, Partylist_ID) VALUES (@Vote_ID, @Candidate_ID, @Election_ID, @Partylist_ID);";
+                string insertVoteQuery = "INSERT INTO Votes (Vote_ID, Candidate_ID, Election_ID, Partylist_ID, Timestamp) VALUES (@Vote_ID, @Candidate_ID, @Election_ID, @Partylist_ID, @Timestamp);";
                 using (SqlCommand insertVoteCommand = new SqlCommand(insertVoteQuery, connection))
                 {
-                    insertVoteCommand.Parameters.AddWithValue("@Vote_ID", voteID);
                     insertVoteCommand.Parameters.AddWithValue("@Candidate_ID", candidateID);
                     insertVoteCommand.Parameters.AddWithValue("@Election_ID", electionID);
                     insertVoteCommand.Parameters.AddWithValue("@Partylist_ID", partylistID);
+                    insertVoteCommand.Parameters.AddWithValue("@Timestamp", timestamp);
                     insertVoteCommand.ExecuteNonQuery();
                 }
-
 
                 return true;
             }
