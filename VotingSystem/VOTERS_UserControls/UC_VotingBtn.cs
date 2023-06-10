@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VotingSystem.BLL;
 
 namespace VotingSystem
 {
@@ -55,7 +56,22 @@ namespace VotingSystem
 
         private void BTN_Vote_Click(object sender, EventArgs e)
         {
-            
+            ClassBLL_Votes objBLLC = new ClassBLL_Votes();
+
+            if (objBLLC.SaveItems(LBL_Name.Text, LBL_PartylistName.Text, LBL_Position.Text, LBL_EletionTitle.Text, Timestamp.Text))
+            {
+                MessageBox.Show("Vote successfull");
+                MessageBox.Show("Record Successful!");
+            }
+            else
+            {
+                MessageBox.Show("Record Failed!");
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
