@@ -13,13 +13,16 @@ namespace VotingSystem
 {
     public partial class UC_Home : UserControl
     {
+       
+
         public UC_Home()
         {
             InitializeComponent();
         }
-
         private void UC_Home_Load(object sender, EventArgs e)
         {
+            LBL_User.Text = FRM_Login.Idnum;
+
             SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-SM9NF9V;Initial Catalog=DB_VotingSystem;Integrated Security=True");
 
             con.Open();
@@ -37,11 +40,14 @@ namespace VotingSystem
 
                 label4.Text = rowCount.ToString();
 
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
+
+       
     }
 }
