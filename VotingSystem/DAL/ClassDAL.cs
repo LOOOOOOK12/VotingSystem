@@ -85,7 +85,7 @@ namespace VotingSystem.DAL
                 con.connect.Open();
             }
 
-            string query = "SELECT C.Name AS Name, C.Position,  C.CandidatePic AS CandidatePic,C.Partylist_ID FROM Candidates C INNER JOIN Partylist P ON C.Partylist_ID = P.Partylist_ID WHERE C.Partylist_ID = P.Partylist_ID";
+            string query = "SELECT Name, Position, CandidatePic, Partylist_ID FROM Candidates WHERE Partylist_ID = Partylist_ID";
             SqlCommand cmd = new SqlCommand(query, con.connect);
 
             try
@@ -117,6 +117,36 @@ namespace VotingSystem.DAL
             string query = "SELECT * FROM Partylist WHERE PartylistName LIKE @SearchTerm";
             SqlCommand cmd = new SqlCommand(query, con.connect);
             cmd.Parameters.AddWithValue("@SearchTerm", "%" + searchTerm + "%");
+
+            try
+            {
+                using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                {
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+                    return dt;
+                }
+            }
+            catch
+            {
+                throw;
+            }
+
+
+        }
+
+        //Search ng members
+        public DataTable SearchItemsTablePartlistMem(string searchTermMembers)
+        {
+            Connection con = new Connection();
+            if (ConnectionState.Closed == con.connect.State)
+            {
+                con.connect.Open();
+            }
+
+            string query = "SELECT Name, Position, CandidatePic, Partylist_ID FROM Candidates WHERE Partylist_ID LIKE @SearchTerm";
+            SqlCommand cmd = new SqlCommand(query, con.connect);
+            cmd.Parameters.AddWithValue("@SearchTerm", "%" + searchTermMembers + "%");
 
             try
             {
