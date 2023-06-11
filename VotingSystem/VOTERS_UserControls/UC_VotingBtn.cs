@@ -58,7 +58,7 @@ namespace VotingSystem
         {
             ClassBLL_Votes objBLLC = new ClassBLL_Votes();
 
-            if (objBLLC.SaveItems(LBL_Name.Text, LBL_PartylistName.Text, LBL_Position.Text, LBL_EletionTitle.Text, Timestamp.Text))
+            if (objBLLC.SaveItems(LBL_Name.Text, LBL_PartylistName.Text, LBL_EletionTitle.Text))
             {
                 MessageBox.Show("Vote successfull");
                 MessageBox.Show("Record Successful!");
