@@ -71,6 +71,21 @@ namespace VotingSystem.BLL
             }
         }
 
+        public DataTable SearchItemsMembers(string searchTermMembers)
+        {
+            try
+            {
+                ClassDAL objdal = new ClassDAL();
+                return objdal.SearchItemsTablePartlistMem(searchTermMembers);
+            }
+            catch (Exception e)
+            {
+                DialogResult result = MessageBox.Show(e.Message.ToString());
+                return null;
+            }
+        }
+
+
         public bool UpdateItems( int PartylistID,Image img, string Partylistname)
         {
             try
