@@ -23,6 +23,7 @@ namespace VotingSystem.ADMIN_AddUpdatePartylist
         private void GenerateDynamicUserControl()
         {
             FL_Members.Controls.Clear();
+            
 
             ClassBLL objbll = new ClassBLL();
 
@@ -41,10 +42,8 @@ namespace VotingSystem.ADMIN_AddUpdatePartylist
                     partylistMembers.Name = row["Name"].ToString();
                     partylistMembers.Position = row["Position"].ToString();
 
-                  
                     FL_Members.Controls.Add(partylistMembers);
-
-                    partylistMembers.Click += new System.EventHandler(this.FRM_ViewPartylistMembers_Load);
+                   
                 }
             }
             else
@@ -54,6 +53,11 @@ namespace VotingSystem.ADMIN_AddUpdatePartylist
             }
         }
 
+        public void displayfieldPartylistMember(string partylistid)
+        {
+            label2.Text = partylistid;
+        }
+
         private void Back_btn_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -61,7 +65,85 @@ namespace VotingSystem.ADMIN_AddUpdatePartylist
 
         private void FRM_ViewPartylistMembers_Load(object sender, EventArgs e)
         {
-            GenerateDynamicUserControl();
+            
+
+
+            //GenerateDynamicUserControl();
+
+
+
+            //string members = label2.Text.Trim();
+
+            //FL_Members.Controls.Clear();
+
+
+            //ClassBLL objbll = new ClassBLL();
+
+            //DataTable dt = objbll.SearchItemsMembers(members);
+
+            //if (dt != null && dt.Rows.Count > 0)
+            //{
+            //    foreach (DataRow row in dt.Rows)
+            //    {
+            //        UC_PartylistMembers partylistMembers = new UC_PartylistMembers();
+
+            //        MemoryStream ms = new MemoryStream((byte[])row["CandidatePic"]);
+            //        partylistMembers.MemberPicture = new Bitmap(ms);
+
+            //        partylistMembers.PLID = row["Partylist_ID"].ToString();
+            //        partylistMembers.Name = row["Name"].ToString();
+            //        partylistMembers.Position = row["Position"].ToString();
+
+            //        FL_Members.Controls.Add(partylistMembers);
+
+            //    }
+            //}
+            //else
+            //{
+            //    // Show a message or handle no data available
+            //    MessageBox.Show("No data available.");
+            //}
+
+
+
+        }
+
+        private void Refresh_btn_Click(object sender, EventArgs e)
+        {
+            string searchTermsMembers = label2.Text;
+
+            FL_Members.Controls.Clear();
+
+
+            ClassBLL objbll = new ClassBLL();
+
+            DataTable dt = objbll.SearchItemsMembers(searchTermsMembers);
+
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                foreach (DataRow row in dt.Rows)
+                {
+                    UC_PartylistMembers partylistMembers = new UC_PartylistMembers();
+
+                    MemoryStream ms = new MemoryStream((byte[])row["CandidatePic"]);
+                    partylistMembers.MemberPicture = new Bitmap(ms);
+
+                    partylistMembers.PLID = row["Partylist_ID"].ToString();
+                    partylistMembers.Name = row["Name"].ToString();
+                    partylistMembers.Position = row["Position"].ToString();
+
+                    FL_Members.Controls.Add(partylistMembers);
+
+                    partylistMembers.Click += new System.EventHandler(this.Refresh_btn_Click);
+
+                }
+            }
+            else
+            {
+                // Show a message or handle no data available
+                MessageBox.Show("No data available.");
+            }
+           
         }
     }
 }
