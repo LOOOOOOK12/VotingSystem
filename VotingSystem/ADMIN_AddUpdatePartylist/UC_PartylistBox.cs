@@ -77,7 +77,16 @@ namespace VotingSystem
 
         private void ViewPartylistMembers() 
         {
-            
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-SM9NF9V;Initial Catalog=DB_VotingSystem;Integrated Security=True"))
+            {
+                connection.Open();
+                string query = "SELECT DISTINCT Name, Position, CandidatePic, Partylist_ID FROM Candidates WHERE Partylist_ID = Partylist_ID"; // Update with appropriate table and column names
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Partylist_ID", PartylistID);
+                command.ExecuteNonQuery();
+            }
+
+
         }
 
         private void UpdateDataFromDatabase() 
@@ -117,7 +126,7 @@ namespace VotingSystem
         private void button1_Click(object sender, EventArgs e)
         {
             FRM_ViewPartylistMembers viewPartylistMembers = new FRM_ViewPartylistMembers();
-
+            viewPartylistMembers.displayfieldPartylistMember(PartylistID);
             viewPartylistMembers.ShowDialog();
         }
     }
