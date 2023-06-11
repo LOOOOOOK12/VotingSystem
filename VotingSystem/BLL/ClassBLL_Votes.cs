@@ -13,12 +13,12 @@ namespace VotingSystem.BLL
     internal class ClassBLL_Votes
     {
 
-        public bool SaveItems(string name, string partylistName, string position, string electionTitle, string timestamp)
+        public bool SaveItems(string name, string partylistName, string electionTitle)
         {
             try
             {
                 ClassDAL_Votes objdalVotes = new ClassDAL_Votes();
-                return objdalVotes.AddItemsToTable(name, partylistName, position, electionTitle, timestamp);
+                return objdalVotes.AddItemsToTable(name, partylistName, electionTitle);
             }
             catch (Exception e)
             {
