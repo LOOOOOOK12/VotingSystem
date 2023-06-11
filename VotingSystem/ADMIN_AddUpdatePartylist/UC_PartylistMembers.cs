@@ -43,6 +43,7 @@ namespace VotingSystem.ADMIN_AddUpdateElection
         }
 
 
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
