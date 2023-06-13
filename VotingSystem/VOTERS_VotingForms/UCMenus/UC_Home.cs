@@ -21,7 +21,7 @@ namespace VotingSystem
         }
         private void UC_Home_Load(object sender, EventArgs e)
         {
-            LBL_User.Text = FRM_Login.Idnum;
+           
 
             SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-SM9NF9V;Initial Catalog=DB_VotingSystem;Integrated Security=True");
 
