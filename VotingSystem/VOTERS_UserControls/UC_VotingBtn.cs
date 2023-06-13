@@ -25,7 +25,7 @@ namespace VotingSystem
             set { LBL_EletionTitle.Text = value; }
         }
 
-        public string Name
+        public string CandidateName
         {
             get { return LBL_Name.Text; }
             set { LBL_Name.Text = value; }
@@ -56,9 +56,11 @@ namespace VotingSystem
 
         private void BTN_Vote_Click(object sender, EventArgs e)
         {
-            ClassBLL_Votes objBLLC = new ClassBLL_Votes();
+            ClassBLL_Votes objBLLVotes = new ClassBLL_Votes();
 
-            if (objBLLC.SaveItems(LBL_Name.Text, LBL_PartylistName.Text, LBL_EletionTitle.Text))
+            //string id = FRM_Login.ID;
+
+            if (objBLLVotes.SaveItems( LBL_Name.Text, LBL_PartylistName.Text, LBL_EletionTitle.Text))
             {
                 MessageBox.Show("Vote successfull");
                 MessageBox.Show("Record Successful!");
