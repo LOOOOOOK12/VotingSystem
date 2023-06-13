@@ -119,5 +119,10 @@ namespace VotingSystem
             elections.BringToFront();
             
         }
+
+        private void UC_Vote_Load(object sender, EventArgs e)
+        {
+            LBL_User.Text = FRM_Login.ID;
+        }
     }
 }
