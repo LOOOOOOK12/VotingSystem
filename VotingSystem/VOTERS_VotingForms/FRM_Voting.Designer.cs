@@ -49,6 +49,7 @@
             this.BTN_Home = new System.Windows.Forms.Button();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.VotingPanel = new System.Windows.Forms.Panel();
+            this.LBL_User = new System.Windows.Forms.Label();
             this.UC_HOME = new VotingSystem.UC_Home();
             this.uC_Candidates2 = new VotingSystem.UC_Candidates();
             this.UC_Vote = new VotingSystem.UC_Vote();
@@ -62,6 +63,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
+            this.panel1.Controls.Add(this.LBL_User);
             this.panel1.Controls.Add(this.ContainerPanel);
             this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.panel7);
@@ -123,11 +125,11 @@
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(334, 0);
+            this.label1.Location = new System.Drawing.Point(342, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(314, 122);
+            this.label1.Size = new System.Drawing.Size(213, 58);
             this.label1.TabIndex = 10;
-            this.label1.Text = "STI College Of Legazpi";
+            this.label1.Text = "Welcome!!";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
@@ -280,6 +282,17 @@
             this.VotingPanel.Size = new System.Drawing.Size(657, 388);
             this.VotingPanel.TabIndex = 5;
             // 
+            // LBL_User
+            // 
+            this.LBL_User.Font = new System.Drawing.Font("Microsoft YaHei", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_User.ForeColor = System.Drawing.Color.White;
+            this.LBL_User.Location = new System.Drawing.Point(342, 58);
+            this.LBL_User.Name = "LBL_User";
+            this.LBL_User.Size = new System.Drawing.Size(215, 64);
+            this.LBL_User.TabIndex = 13;
+            this.LBL_User.Text = "User";
+            this.LBL_User.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // UC_HOME
             // 
             this.UC_HOME.BackColor = System.Drawing.SystemColors.Menu;
@@ -305,6 +318,7 @@
             this.UC_Vote.Name = "UC_Vote";
             this.UC_Vote.Size = new System.Drawing.Size(657, 388);
             this.UC_Vote.TabIndex = 1;
+            this.UC_Vote.Load += new System.EventHandler(this.UC_Vote_Load);
             // 
             // uC_Candidates1
             // 
@@ -363,5 +377,6 @@
         private UC_Candidates uC_Candidates1;
         private UC_Candidates uC_Candidates2;
         private UC_Home UC_HOME;
+        private System.Windows.Forms.Label LBL_User;
     }
 }
