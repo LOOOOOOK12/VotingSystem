@@ -61,6 +61,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ADMIN_AddUpdateElection\FRM_ViewElectionParticipants.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN_AddUpdateElection\FRM_ViewElectionParticipants.Designer.cs">
+      <DependentUpon>FRM_ViewElectionParticipants.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN_AddUpdateElection\UC_ElectionMembers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ADMIN_AddUpdateElection\UC_ElectionMembers.Designer.cs">
+      <DependentUpon>UC_ElectionMembers.cs</DependentUpon>
+    </Compile>
     <Compile Include="ADMIN_AddUpdatePartylist\UC_PartylistMembers.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -234,6 +246,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ADMIN_AddUpdateElection\FRM_AddElection.resx">
       <DependentUpon>FRM_AddElection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN_AddUpdateElection\FRM_ViewElectionParticipants.resx">
+      <DependentUpon>FRM_ViewElectionParticipants.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN_AddUpdateElection\UC_ElectionMembers.resx">
+      <DependentUpon>UC_ElectionMembers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ADMIN_AddUpdatePartylist\UC_PartylistMembers.resx">
       <DependentUpon>UC_PartylistMembers.cs</DependentUpon>
