@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Back_btn = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.FL_Members = new System.Windows.Forms.FlowLayoutPanel();
             this.Refresh_btn = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.Back_btn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,18 +50,17 @@
             this.panel1.Size = new System.Drawing.Size(399, 90);
             this.panel1.TabIndex = 1;
             // 
-            // Back_btn
+            // label2
             // 
-            this.Back_btn.FlatAppearance.BorderSize = 0;
-            this.Back_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Back_btn.Image = global::VotingSystem.Properties.Resources.icons8_left_50;
-            this.Back_btn.Location = new System.Drawing.Point(353, 44);
-            this.Back_btn.Name = "Back_btn";
-            this.Back_btn.Size = new System.Drawing.Size(46, 36);
-            this.Back_btn.TabIndex = 9;
-            this.Back_btn.Text = " ";
-            this.Back_btn.UseVisualStyleBackColor = true;
-            this.Back_btn.Click += new System.EventHandler(this.Back_btn_Click);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(157, 44);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 38);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "PL ID";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -95,16 +94,18 @@
             this.Refresh_btn.UseVisualStyleBackColor = true;
             this.Refresh_btn.Click += new System.EventHandler(this.Refresh_btn_Click);
             // 
-            // label2
+            // Back_btn
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(157, 44);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 38);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "PL ID";
+            this.Back_btn.FlatAppearance.BorderSize = 0;
+            this.Back_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Back_btn.Image = global::VotingSystem.Properties.Resources.icons8_left_50;
+            this.Back_btn.Location = new System.Drawing.Point(353, 44);
+            this.Back_btn.Name = "Back_btn";
+            this.Back_btn.Size = new System.Drawing.Size(46, 36);
+            this.Back_btn.TabIndex = 9;
+            this.Back_btn.Text = " ";
+            this.Back_btn.UseVisualStyleBackColor = true;
+            this.Back_btn.Click += new System.EventHandler(this.Back_btn_Click);
             // 
             // FRM_ViewPartylistMembers
             // 

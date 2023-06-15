@@ -38,7 +38,7 @@
             // PB_Member
             // 
             this.PB_Member.Image = global::VotingSystem.Properties.Resources.icons8_male_user_96;
-            this.PB_Member.Location = new System.Drawing.Point(39, 21);
+            this.PB_Member.Location = new System.Drawing.Point(40, 21);
             this.PB_Member.Name = "PB_Member";
             this.PB_Member.Size = new System.Drawing.Size(97, 96);
             this.PB_Member.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -49,7 +49,7 @@
             // LBL_Name
             // 
             this.LBL_Name.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_Name.Location = new System.Drawing.Point(39, 183);
+            this.LBL_Name.Location = new System.Drawing.Point(40, 183);
             this.LBL_Name.Name = "LBL_Name";
             this.LBL_Name.Size = new System.Drawing.Size(97, 23);
             this.LBL_Name.TabIndex = 1;
@@ -59,7 +59,7 @@
             // LBL_Position
             // 
             this.LBL_Position.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_Position.Location = new System.Drawing.Point(39, 229);
+            this.LBL_Position.Location = new System.Drawing.Point(40, 229);
             this.LBL_Position.Name = "LBL_Position";
             this.LBL_Position.Size = new System.Drawing.Size(97, 23);
             this.LBL_Position.TabIndex = 2;
@@ -69,7 +69,7 @@
             // LBL_ID
             // 
             this.LBL_ID.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_ID.Location = new System.Drawing.Point(38, 133);
+            this.LBL_ID.Location = new System.Drawing.Point(39, 133);
             this.LBL_ID.Name = "LBL_ID";
             this.LBL_ID.Size = new System.Drawing.Size(97, 23);
             this.LBL_ID.TabIndex = 3;
@@ -86,7 +86,7 @@
             this.Controls.Add(this.LBL_Name);
             this.Controls.Add(this.PB_Member);
             this.Name = "UC_PartylistMembers";
-            this.Size = new System.Drawing.Size(174, 289);
+            this.Size = new System.Drawing.Size(177, 289);
             ((System.ComponentModel.ISupportInitialize)(this.PB_Member)).EndInit();
             this.ResumeLayout(false);
 
