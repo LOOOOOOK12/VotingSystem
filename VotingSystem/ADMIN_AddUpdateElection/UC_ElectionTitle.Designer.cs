@@ -33,6 +33,7 @@
             this.LBL_Description = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.LBL_ElectionID = new System.Windows.Forms.Label();
+            this.BTN_View = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_edit = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -78,6 +79,19 @@
             this.LBL_ElectionID.Size = new System.Drawing.Size(0, 19);
             this.LBL_ElectionID.TabIndex = 3;
             // 
+            // BTN_View
+            // 
+            this.BTN_View.BackgroundImage = global::VotingSystem.Properties.Resources.icons8_eye_48;
+            this.BTN_View.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BTN_View.FlatAppearance.BorderSize = 0;
+            this.BTN_View.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_View.Location = new System.Drawing.Point(636, 68);
+            this.BTN_View.Name = "BTN_View";
+            this.BTN_View.Size = new System.Drawing.Size(56, 60);
+            this.BTN_View.TabIndex = 22;
+            this.BTN_View.UseVisualStyleBackColor = true;
+            this.BTN_View.Click += new System.EventHandler(this.BTN_View_Click);
+            // 
             // btn_delete
             // 
             this.btn_delete.FlatAppearance.BorderSize = 0;
@@ -107,6 +121,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.BTN_View);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_edit);
             this.Controls.Add(this.LBL_ElectionID);
@@ -129,5 +144,6 @@
         private System.Windows.Forms.Label LBL_ElectionID;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_edit;
+        private System.Windows.Forms.Button BTN_View;
     }
 }

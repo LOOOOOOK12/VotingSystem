@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using VotingSystem.DAL;
 using System.Data.SqlClient;
+using VotingSystem.ADMIN_AddUpdateElection;
 
 namespace VotingSystem
 {
@@ -87,6 +88,13 @@ namespace VotingSystem
             FRM_UpdateElection updateElection = new FRM_UpdateElection();
             updateElection.displayfieldElection(ElectionID, ElectionTitle);
             updateElection.ShowDialog();
+        }
+
+        private void BTN_View_Click(object sender, EventArgs e)
+        {
+            FRM_ViewElectionParticipants viewElectionParticipants = new FRM_ViewElectionParticipants();
+            viewElectionParticipants.displayfieldElectionMember(ElectionID);
+            viewElectionParticipants.ShowDialog();
         }
     }
 }
