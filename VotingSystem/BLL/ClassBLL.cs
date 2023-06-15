@@ -56,7 +56,7 @@ namespace VotingSystem.BLL
         }
 
 
-
+        //PANG SEARCH
         public DataTable SearchItems(string searchTerm)
         {
             try
@@ -71,12 +71,28 @@ namespace VotingSystem.BLL
             }
         }
 
+        //PANGSERACH MEMBERS NG PARTYLIST
         public DataTable SearchItemsMembers(string searchTermMembers)
         {
             try
             {
                 ClassDAL objdal = new ClassDAL();
                 return objdal.SearchItemsTablePartlistMem(searchTermMembers);
+            }
+            catch (Exception e)
+            {
+                DialogResult result = MessageBox.Show(e.Message.ToString());
+                return null;
+            }
+        }
+
+        //PANG DISPLAY NG PARTYLIST SA ELECTIONS
+        public DataTable SearchItemsPL(string searchTermPL)
+        {
+            try
+            {
+                ClassDAL objdal = new ClassDAL();
+                return objdal.SearchItemsTablePartlistMem(searchTermPL);
             }
             catch (Exception e)
             {
