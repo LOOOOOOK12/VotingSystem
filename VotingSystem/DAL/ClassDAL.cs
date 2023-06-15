@@ -161,9 +161,36 @@ namespace VotingSystem.DAL
             {
                 throw;
             }
-
-
         }
+
+        //SEARCH PARTYLIST
+        public DataTable SearchItemsTablePartlists(string searchTermPL)
+        {
+            Connection con = new Connection();
+            if (ConnectionState.Closed == con.connect.State)
+            {
+                con.connect.Open();
+            }
+
+            string query = "SELECT Partylist_ID FROM Candidates WHERE Partylist_ID LIKE @SearchTerm";
+            SqlCommand cmd = new SqlCommand(query, con.connect);
+            cmd.Parameters.AddWithValue("@SearchTerm", "%" + searchTermPL + "%");
+
+            try
+            {
+                using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                {
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+                    return dt;
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
 
         //PANG UPDATE
         public bool UpdateItemInTable(int partylistID, string partylistName, Image partylistLogo)
