@@ -19,16 +19,7 @@ namespace VotingSystem.ADMIN_AddUpdateElection
 
         private FlowLayoutPanel FL_Elections;
 
-        //public string ElectionID
-        //{
-        //    get { return LBL_ElectionID.Text; }
-        //    set { LBL_ElectionID.Text = value; }
-        //}
-        //public string PLID
-        //{
-        //    get { return LBL_PLID.Text; }
-        //    set { LBL_PLID.Text = value; }
-        //}
+     
         public string PartyName
         {
             get { return LBL_PLName.Text; }
