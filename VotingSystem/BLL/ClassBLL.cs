@@ -87,12 +87,12 @@ namespace VotingSystem.BLL
         }
 
         //PANG DISPLAY NG PARTYLIST SA ELECTIONS
-        public DataTable SearchItemsPL(string searchTermPL)
+        public DataTable SearchItemsPLEletions(string searchTermPL)
         {
             try
             {
                 ClassDAL objdal = new ClassDAL();
-                return objdal.SearchItemsTablePartlistMem(searchTermPL);
+                return objdal.SearchItemsTablePartlistsElection(searchTermPL);
             }
             catch (Exception e)
             {

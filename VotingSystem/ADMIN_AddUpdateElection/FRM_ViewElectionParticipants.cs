@@ -45,7 +45,7 @@ namespace VotingSystem.ADMIN_AddUpdateElection
 
             ClassBLL objbll = new ClassBLL();
 
-            DataTable dt = objbll.SearchItemsPL(searchTermsPL);
+            DataTable dt = objbll.SearchItemsPLEletions(searchTermsPL);
 
             if (dt != null && dt.Rows.Count > 0)
             {
@@ -53,11 +53,12 @@ namespace VotingSystem.ADMIN_AddUpdateElection
                 {
                     UC_ElectionMembers ElectionMembers = new UC_ElectionMembers();
 
-                    //MemoryStream ms = new MemoryStream((byte[])row["CandidatePic"]);
-                    //partylistMembers.MemberPicture = new Bitmap(ms);
+                    MemoryStream ms = new MemoryStream((byte[])row["PartylistLogo"]);
+                    ElectionMembers.PartlistPicture = new Bitmap(ms);
 
-                    ElectionMembers.PLID = row["Partylist_ID"].ToString();
-                    //ElectionMembers.PartyName = row["Name"].ToString();
+                    //ElectionMembers.PLID = row["Partylist_ID"].ToString();
+                    //ElectionMembers.ElectionID = row["Election_ID"].ToString();
+                    ElectionMembers.PartyName = row["PartylistName"].ToString();
                    
 
                     FL_Elections.Controls.Add(ElectionMembers);
@@ -70,6 +71,7 @@ namespace VotingSystem.ADMIN_AddUpdateElection
             {
                 // Show a message or handle no data available
                 MessageBox.Show("No data available.");
+                Dispose();
             }
         }
 

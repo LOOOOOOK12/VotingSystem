@@ -52,7 +52,7 @@ namespace VotingSystem.ADMIN_AddUpdatePartylist
                     MemoryStream ms = new MemoryStream((byte[])row["CandidatePic"]);
                     partylistMembers.MemberPicture = new Bitmap(ms);
 
-                    partylistMembers.PLID = row["Partylist_ID"].ToString();
+                    //partylistMembers.PLID = row["Partylist_ID"].ToString();
                     partylistMembers.Name = row["Name"].ToString();
                     partylistMembers.Position = row["Position"].ToString();
 
@@ -66,6 +66,7 @@ namespace VotingSystem.ADMIN_AddUpdatePartylist
             {
                 // Show a message or handle no data available
                 MessageBox.Show("No data available.");
+                Dispose();
             }
         }
 

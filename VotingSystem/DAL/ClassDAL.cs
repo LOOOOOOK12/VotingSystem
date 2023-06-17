@@ -16,7 +16,6 @@ namespace VotingSystem.DAL
     internal class ClassDAL
     {
 
-
        //PANG ADD
         public bool AddItemsToTable(Image img, string Partylistname) 
         { 
@@ -135,7 +134,7 @@ namespace VotingSystem.DAL
 
         }
 
-        //Search ng members
+        //Search ng members ng partylist
         public DataTable SearchItemsTablePartlistMem(string searchTermMembers)
         {
             Connection con = new Connection();
@@ -163,8 +162,8 @@ namespace VotingSystem.DAL
             }
         }
 
-        //SEARCH PARTYLIST
-        public DataTable SearchItemsTablePartlists(string searchTermPL)
+        //SEARCH PARTYLIST na kasama sa election
+        public DataTable SearchItemsTablePartlistsElection(string searchTermPL)
         {
             Connection con = new Connection();
             if (ConnectionState.Closed == con.connect.State)
@@ -172,7 +171,7 @@ namespace VotingSystem.DAL
                 con.connect.Open();
             }
 
-            string query = "SELECT Partylist_ID FROM Candidates WHERE Partylist_ID LIKE @SearchTerm";
+            string query = "SELECT P.Partylist_ID AS Partylist_ID, P.PartylistLogo AS PartylistLogo, P.PartylistName AS PartylistName, Election_ID FROM Candidates C INNER JOIN Partylist P ON C.Partylist_ID = P.Partylist_ID WHERE Election_ID LIKE @SearchTerm";
             SqlCommand cmd = new SqlCommand(query, con.connect);
             cmd.Parameters.AddWithValue("@SearchTerm", "%" + searchTermPL + "%");
 

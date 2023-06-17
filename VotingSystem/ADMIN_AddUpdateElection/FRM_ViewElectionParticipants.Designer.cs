@@ -30,10 +30,10 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.FL_Elections = new System.Windows.Forms.FlowLayoutPanel();
             this.Refresh_btn = new System.Windows.Forms.Button();
             this.Back_btn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.FL_Elections = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,25 +61,6 @@
             this.label2.Text = "Election ID";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(137, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 38);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Members";
-            // 
-            // FL_Elections
-            // 
-            this.FL_Elections.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FL_Elections.Location = new System.Drawing.Point(0, 90);
-            this.FL_Elections.Name = "FL_Elections";
-            this.FL_Elections.Size = new System.Drawing.Size(399, 270);
-            this.FL_Elections.TabIndex = 3;
-            this.FL_Elections.Paint += new System.Windows.Forms.PaintEventHandler(this.FL_Elections_Paint);
-            // 
             // Refresh_btn
             // 
             this.Refresh_btn.FlatAppearance.BorderSize = 0;
@@ -106,6 +87,27 @@
             this.Back_btn.UseVisualStyleBackColor = true;
             this.Back_btn.Click += new System.EventHandler(this.Back_btn_Click);
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(137, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(132, 38);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Members";
+            // 
+            // FL_Elections
+            // 
+            this.FL_Elections.AutoScroll = true;
+            this.FL_Elections.BackColor = System.Drawing.SystemColors.Menu;
+            this.FL_Elections.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FL_Elections.Location = new System.Drawing.Point(0, 90);
+            this.FL_Elections.Name = "FL_Elections";
+            this.FL_Elections.Size = new System.Drawing.Size(399, 270);
+            this.FL_Elections.TabIndex = 3;
+            this.FL_Elections.Paint += new System.Windows.Forms.PaintEventHandler(this.FL_Elections_Paint);
+            // 
             // FRM_ViewElectionParticipants
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -115,6 +117,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FRM_ViewElectionParticipants";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRM_ViewElectionParticipants";
             this.Load += new System.EventHandler(this.FRM_ViewElectionParticipants_Load);
             this.panel1.ResumeLayout(false);
