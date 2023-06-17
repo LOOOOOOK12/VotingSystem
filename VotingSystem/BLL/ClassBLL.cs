@@ -86,7 +86,7 @@ namespace VotingSystem.BLL
             }
         }
 
-        //PANG DISPLAY NG PARTYLIST SA ELECTIONS
+        //PANG DISPLAY NG PARTYLIST SA KASALI SA ELECTIONS
         public DataTable SearchItemsPLEletions(string searchTermPL)
         {
             try
