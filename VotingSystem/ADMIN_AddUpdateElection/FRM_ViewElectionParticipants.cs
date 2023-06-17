@@ -56,8 +56,7 @@ namespace VotingSystem.ADMIN_AddUpdateElection
                     MemoryStream ms = new MemoryStream((byte[])row["PartylistLogo"]);
                     ElectionMembers.PartlistPicture = new Bitmap(ms);
 
-                    //ElectionMembers.PLID = row["Partylist_ID"].ToString();
-                    //ElectionMembers.ElectionID = row["Election_ID"].ToString();
+                    
                     ElectionMembers.PartyName = row["PartylistName"].ToString();
                    
 
