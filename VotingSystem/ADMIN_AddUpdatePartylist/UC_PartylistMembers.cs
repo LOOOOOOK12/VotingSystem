@@ -19,11 +19,6 @@ namespace VotingSystem.ADMIN_AddUpdateElection
 
         private FlowLayoutPanel FL_Members;
         
-        //public string PLID 
-        //{
-        //    get { return LBL_ID.Text; }
-        //    set { LBL_ID.Text = value; }
-        //}
         public string Name
         {
             get { return LBL_Name.Text; }
