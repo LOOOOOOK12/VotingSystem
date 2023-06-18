@@ -146,27 +146,57 @@ namespace VotingSystem.DAL
         }
     }
 }
+
+        public DataTable SearchItemsTablePartlistsElection(string searchTermMembers)
+        {
+            Connection con = new Connection();
+            if (ConnectionState.Closed == con.connect.State)
+            {
+                con.connect.Open();
+            }
+
+            string query = "SELECT C.Name AS Name, C.Position,C.Course AS Course, C.Candidate_ID AS Candidate_ID, P.PartylistName AS PartylistName, P.PartylistLogo AS PartylistLogo, C.CandidatePic AS CandidatePic, E.ElectionTitle AS ElectionTitle " +
+                       "FROM Candidates C " +
+                       "INNER JOIN Partylist P ON C.Partylist_ID = P.Partylist_ID " +
+                       "INNER JOIN Election E ON C.Election_ID = E.Election_ID WHERE ElectionTitle = @SearchTerm;";
+            SqlCommand cmd = new SqlCommand(query, con.connect);
+            cmd.Parameters.AddWithValue("@SearchTerm", "%" + searchTermMembers + "%");
+
+            try
+            {
+                using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                {
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+                    return dt;
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
     }
 
-    ////PANG SEARCH
-    //public DataTable SearchItemsTable(string search)
+    ////pang search
+    //public datatable searchitemstable(string search)
     //    {
-    //        Connection con = new Connection();
-    //        if (ConnectionState.Closed == con.connect.State)
+    //        connection con = new connection();
+    //        if (connectionstate.closed == con.connect.state)
     //        {
-    //            con.connect.Open();
+    //            con.connect.open();
     //        }
 
-    //        string query = "SELECT * FROM Candidates WHERE Firstname LIKE @Search OR Lastname LIKE @Search OR Middlename LIKE @Search OR Partylist LIKE @Search OR Position LIKE @Search";
-    //        SqlCommand cmd = new SqlCommand(query, con.connect);
-    //        cmd.Parameters.AddWithValue("@Search", "%" + search + "%");
+    //        string query = "select * from candidates where firstname like @search or lastname like @search or middlename like @search or partylist like @search or position like @search";
+    //        sqlcommand cmd = new sqlcommand(query, con.connect);
+    //        cmd.parameters.addwithvalue("@search", "%" + search + "%");
 
     //        try
     //        {
-    //            using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+    //            using (sqldataadapter sda = new sqldataadapter(cmd))
     //            {
-    //                DataTable dt = new DataTable();
-    //                sda.Fill(dt);
+    //                datatable dt = new datatable();
+    //                sda.fill(dt);
     //                return dt;
     //            }
     //        }

@@ -26,9 +26,16 @@ namespace VotingSystem.VOTERS_UserControls
             set { LBL_ElectionTitle.Text = value; }
         }
 
+        public string ElectionID
+        {
+            get { return LBL_ElectionID.Text; }
+            set { LBL_ElectionID.Text = value; }
+        }
+
         private void BTN_View_Click(object sender, EventArgs e)
         {
             FRM_VotingForm votingForm = new FRM_VotingForm();
+            votingForm.displayfieldPartylistMember(ViewElection);
             votingForm.ShowDialog();
         }
 

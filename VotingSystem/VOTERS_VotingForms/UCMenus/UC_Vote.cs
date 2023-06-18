@@ -42,7 +42,7 @@ namespace VotingSystem
                             listitems[i] = new UC_ElectionsView();
 
 
-                           
+                            listitems[i].ElectionID = row["Election_ID"].ToString();
                             listitems[i].ViewElection = row["ElectionTitle"].ToString();
                            
 

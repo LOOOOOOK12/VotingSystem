@@ -40,6 +40,23 @@ namespace VotingSystem.BLL
                 return null;
             }
         }
+
+        public DataTable SearchParticipants(string searchParticipants)
+        {
+            try
+            {
+                ClassDAL_Votes objDALVotes = new ClassDAL_Votes();
+                return objDALVotes.SearchItemsTablePartlistsElection(searchParticipants);
+            }
+            catch (Exception e)
+            {
+                DialogResult result = MessageBox.Show(e.Message.ToString());
+                return null;
+            }
+        }
+
+
+
     }
 
     //public DataTable SearchItems(string search)

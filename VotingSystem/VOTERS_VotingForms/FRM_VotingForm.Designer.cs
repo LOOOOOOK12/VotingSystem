@@ -33,21 +33,21 @@
             this.ContainerPanel = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.BTN_Minimize = new System.Windows.Forms.Button();
             this.Back_btn = new System.Windows.Forms.Button();
             this.FL_Voting = new System.Windows.Forms.FlowLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.Back_btn);
             this.panel1.Controls.Add(this.ContainerPanel);
             this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.panel7);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.BTN_Minimize);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -75,17 +75,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(200, 100);
             this.panel7.TabIndex = 8;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(207, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(276, 58);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Please Vote";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // BTN_Minimize
             // 
@@ -122,6 +111,17 @@
             this.FL_Voting.Size = new System.Drawing.Size(679, 333);
             this.FL_Voting.TabIndex = 5;
             // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(57, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(543, 84);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "ID";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FRM_VotingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -145,9 +145,9 @@
         private System.Windows.Forms.Panel ContainerPanel;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BTN_Minimize;
         private System.Windows.Forms.Button Back_btn;
         private System.Windows.Forms.FlowLayoutPanel FL_Voting;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -174,6 +174,38 @@ namespace VotingSystem.DAL
             }
         }
 
+        //PANG SEARCH NG PARTICIPANTS SA SPECIFIC NA ELECTION TITLE
+        public DataTable SearchItemsTableElectionsMembers(string search)
+        {
+            Connection con = new Connection();
+            if (ConnectionState.Closed == con.connect.State)
+            {
+                con.connect.Open();
+            }
+
+            string query = "SELECT C.Name AS Name, C.Position, P.PartylistName AS PartylistName, P.PartylistLogo AS PartylistLogo, C.CandidatePic AS CandidatePic, E.ElectionTitle AS ElectionTitle " +
+                        "FROM Candidates C " +
+                        "INNER JOIN Partylist P ON C.Partylist_ID = P.Partylist_ID " +
+                        "INNER JOIN Election E ON C.Election_ID = E.Election_ID WHERE ElectionTitle LIKE @Search;";
+
+            SqlCommand cmd = new SqlCommand(query, con.connect);
+            cmd.Parameters.AddWithValue("@Search", "%" + search + "%");
+
+            try
+            {
+                using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                {
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+                    return dt;
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
 
 
         //PANG UPDATE

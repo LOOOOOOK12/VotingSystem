@@ -55,7 +55,7 @@ namespace VotingSystem.BLL
         }
 
 
-
+        //PANG SEARCH NG CADIDATES
         public DataTable SearchItems(string search)
         {
             try
@@ -70,6 +70,22 @@ namespace VotingSystem.BLL
             }
         }
 
+        //SEARCH FOR ELECTION PARTICIPANT
+        public DataTable SearchItemsElectionP(string search)
+        {
+            try
+            {
+                ClassDAL_Candidates objDALC = new ClassDAL_Candidates();
+                return objDALC.SearchItemsTableElectionsMembers(search);
+            }
+            catch (Exception e)
+            {
+                DialogResult result = MessageBox.Show(e.Message.ToString());
+                return null;
+            }
+        }
+
+        //PANG UPDATE
         public bool UpdateItems(int candidateID, string name, string Course, string Position, Image CandidatePic, string partylistname, string electiontitle)
         {
             try
