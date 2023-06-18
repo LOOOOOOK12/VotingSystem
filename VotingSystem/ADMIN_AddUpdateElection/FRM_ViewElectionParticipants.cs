@@ -21,9 +21,9 @@ namespace VotingSystem.ADMIN_AddUpdateElection
 
 
 
-        public void displayfieldElectionMember(string electionid)
+        public void displayfieldElectionMember(string election_id)
         {
-            label2.Text = electionid;
+            label2.Text = election_id;
         }
 
         private void Back_btn_Click(object sender, EventArgs e)
