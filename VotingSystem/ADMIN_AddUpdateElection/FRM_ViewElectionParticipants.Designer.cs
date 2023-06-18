@@ -52,7 +52,7 @@
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(123, 44);
+            this.label2.Location = new System.Drawing.Point(119, 47);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(167, 38);
             this.label2.TabIndex = 12;
@@ -80,7 +80,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 38);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Members";
+            this.label1.Text = "Partylists";
             // 
             // FL_Elections
             // 
