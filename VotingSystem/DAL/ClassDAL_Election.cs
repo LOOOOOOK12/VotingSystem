@@ -65,6 +65,8 @@ namespace VotingSystem.DAL
             }
         }
 
+
+
         //PANG SEARCH
         public DataTable SearchItemsTable(string search)
         {
