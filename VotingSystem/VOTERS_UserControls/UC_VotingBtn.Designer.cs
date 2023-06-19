@@ -35,7 +35,7 @@
             this.LBL_Name = new System.Windows.Forms.Label();
             this.LBL_Position = new System.Windows.Forms.Label();
             this.LBL_EletionTitle = new System.Windows.Forms.Label();
-            this.Timestamp = new System.Windows.Forms.Label();
+            this.LBL_Voter = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PB_PartylistLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_CandidatePic)).BeginInit();
             this.SuspendLayout();
@@ -119,24 +119,24 @@
             this.LBL_EletionTitle.Text = "Election Title";
             this.LBL_EletionTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Timestamp
+            // LBL_Voter
             // 
-            this.Timestamp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Timestamp.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Timestamp.Location = new System.Drawing.Point(60, 347);
-            this.Timestamp.Name = "Timestamp";
-            this.Timestamp.Size = new System.Drawing.Size(109, 21);
-            this.Timestamp.TabIndex = 17;
-            this.Timestamp.Text = "Timestamp";
-            this.Timestamp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Timestamp.Click += new System.EventHandler(this.label1_Click);
+            this.LBL_Voter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LBL_Voter.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_Voter.Location = new System.Drawing.Point(60, 347);
+            this.LBL_Voter.Name = "LBL_Voter";
+            this.LBL_Voter.Size = new System.Drawing.Size(109, 21);
+            this.LBL_Voter.TabIndex = 17;
+            this.LBL_Voter.Text = "Timestamp";
+            this.LBL_Voter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LBL_Voter.Click += new System.EventHandler(this.label1_Click);
             // 
             // UC_VotingBtn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.Timestamp);
+            this.Controls.Add(this.LBL_Voter);
             this.Controls.Add(this.LBL_EletionTitle);
             this.Controls.Add(this.LBL_Position);
             this.Controls.Add(this.LBL_Name);
@@ -146,6 +146,7 @@
             this.Controls.Add(this.PB_CandidatePic);
             this.Name = "UC_VotingBtn";
             this.Size = new System.Drawing.Size(210, 381);
+            this.Load += new System.EventHandler(this.UC_VotingBtn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PB_PartylistLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_CandidatePic)).EndInit();
             this.ResumeLayout(false);
@@ -160,6 +161,6 @@
         private System.Windows.Forms.Label LBL_Name;
         private System.Windows.Forms.Label LBL_Position;
         private System.Windows.Forms.Label LBL_EletionTitle;
-        private System.Windows.Forms.Label Timestamp;
+        private System.Windows.Forms.Label LBL_Voter;
     }
 }
