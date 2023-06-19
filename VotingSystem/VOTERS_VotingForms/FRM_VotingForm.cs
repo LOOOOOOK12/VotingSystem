@@ -25,6 +25,13 @@ namespace VotingSystem.VOTERS_VotingForms
             label2.Text = electionTitle;
         }
 
+        public void displayfieldVoterName(string voterName)
+        {
+            LBL_Voter.Text = voterName;
+        }
+
+
+
         //private void GenerateDynamicUserControl()
         //{
 
@@ -102,12 +109,12 @@ namespace VotingSystem.VOTERS_VotingForms
 
                             listitems[i].PartylistLogo = new Bitmap(ms2);
                             listitems[i].CandidatePicture = new Bitmap(ms);
-                            listitems[i].CandidateName = row["Name"].ToString();
-                            listitems[i].PosName = row["Position"].ToString();
                             listitems[i].ElectionTitle = row["ElectionTitle"].ToString();
-                            listitems[i].Pname = row["PartylistName"].ToString();
-
-
+                            listitems[i].CandidateName = row["Name"].ToString();
+                            listitems[i].PartylistName = row["PartylistName"].ToString();
+                            listitems[i].PosName = row["Position"].ToString();
+                            
+                           
                             FL_Voting.Controls.Add(listitems[i]);
 
                             listitems[i].Click += new System.EventHandler(this.FRM_VotingForm_Load);
