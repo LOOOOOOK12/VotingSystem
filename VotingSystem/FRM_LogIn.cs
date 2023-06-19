@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+using VotingSystem.VOTERS_VotingForms;
 
 namespace VotingSystem
 {
@@ -17,7 +17,7 @@ namespace VotingSystem
 
         SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-SM9NF9V;Initial Catalog=DB_VotingSystem;Integrated Security=True");
 
-        public static string ID;
+
         
 
         public FRM_Login()
@@ -39,7 +39,7 @@ namespace VotingSystem
         {
 
             //Log in ng admin
-            ID = userNametxtbx.Text;
+            string ID = userNametxtbx.Text;
             string password = Password_txtbx.Text;
 
             if (ID == "admin" && password == "admin")
@@ -66,9 +66,15 @@ namespace VotingSystem
                     if (reader.HasRows)
                     {
                         // Valid login credentials
-                        FRM_Voting Voting = new FRM_Voting();
-                        this.Hide();
                         
+                        FRM_Voting Voting = new FRM_Voting();
+                        
+
+                        this.Hide();
+
+                        Voting.displayfieldVoter(ID);
+                  
+
                         Voting.ShowDialog();
                     }
                     else
@@ -113,5 +119,8 @@ namespace VotingSystem
                 Application.Exit();
             }
         }
+
+
+
     }
 }
