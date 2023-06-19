@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,10 +14,13 @@ namespace VotingSystem
 {
     public partial class FRM_Voting : Form
     {
+
         public FRM_Voting()
         {
             InitializeComponent();
         }
+
+        private string voterNameVariable;
 
         private void BTN_Voters_Click(object sender, EventArgs e)
         {
@@ -122,7 +126,15 @@ namespace VotingSystem
 
         private void UC_Vote_Load(object sender, EventArgs e)
         {
-            LBL_User.Text = FRM_Login.ID;
+            
         }
+
+        public void displayfieldVoter(string voterName)
+        {
+            voterNameVariable = voterName;
+            LBL_User.Text = voterName;
+        }
+
+
     }
 }
