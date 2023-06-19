@@ -36,6 +36,7 @@ namespace VotingSystem.VOTERS_UserControls
         {
             FRM_VotingForm votingForm = new FRM_VotingForm();
             votingForm.displayfieldPartylistMember(ViewElection);
+
             votingForm.ShowDialog();
         }
 
