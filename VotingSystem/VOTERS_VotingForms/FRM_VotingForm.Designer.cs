@@ -30,19 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_VotingForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Back_btn = new System.Windows.Forms.Button();
             this.ContainerPanel = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.BTN_Minimize = new System.Windows.Forms.Button();
-            this.Back_btn = new System.Windows.Forms.Button();
             this.FL_Voting = new System.Windows.Forms.FlowLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.LBL_Voter = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
+            this.panel1.Controls.Add(this.LBL_Voter);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.Back_btn);
             this.panel1.Controls.Add(this.ContainerPanel);
@@ -54,6 +56,30 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(679, 96);
             this.panel1.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(232, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(368, 93);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "ID";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Back_btn
+            // 
+            this.Back_btn.FlatAppearance.BorderSize = 0;
+            this.Back_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Back_btn.Image = global::VotingSystem.Properties.Resources.icons8_left_50;
+            this.Back_btn.Location = new System.Drawing.Point(630, 60);
+            this.Back_btn.Name = "Back_btn";
+            this.Back_btn.Size = new System.Drawing.Size(46, 36);
+            this.Back_btn.TabIndex = 11;
+            this.Back_btn.Text = " ";
+            this.Back_btn.UseVisualStyleBackColor = true;
+            this.Back_btn.Click += new System.EventHandler(this.Back_btn_Click);
             // 
             // ContainerPanel
             // 
@@ -88,19 +114,6 @@
             this.BTN_Minimize.Text = " ";
             this.BTN_Minimize.UseVisualStyleBackColor = true;
             // 
-            // Back_btn
-            // 
-            this.Back_btn.FlatAppearance.BorderSize = 0;
-            this.Back_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Back_btn.Image = global::VotingSystem.Properties.Resources.icons8_left_50;
-            this.Back_btn.Location = new System.Drawing.Point(630, 60);
-            this.Back_btn.Name = "Back_btn";
-            this.Back_btn.Size = new System.Drawing.Size(46, 36);
-            this.Back_btn.TabIndex = 11;
-            this.Back_btn.Text = " ";
-            this.Back_btn.UseVisualStyleBackColor = true;
-            this.Back_btn.Click += new System.EventHandler(this.Back_btn_Click);
-            // 
             // FL_Voting
             // 
             this.FL_Voting.AutoScroll = true;
@@ -111,16 +124,16 @@
             this.FL_Voting.Size = new System.Drawing.Size(679, 333);
             this.FL_Voting.TabIndex = 5;
             // 
-            // label2
+            // LBL_Voter
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(57, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(543, 84);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "ID";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LBL_Voter.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_Voter.ForeColor = System.Drawing.Color.White;
+            this.LBL_Voter.Location = new System.Drawing.Point(12, 3);
+            this.LBL_Voter.Name = "LBL_Voter";
+            this.LBL_Voter.Size = new System.Drawing.Size(164, 93);
+            this.LBL_Voter.TabIndex = 13;
+            this.LBL_Voter.Text = "Voter";
+            this.LBL_Voter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FRM_VotingForm
             // 
@@ -149,5 +162,6 @@
         private System.Windows.Forms.Button Back_btn;
         private System.Windows.Forms.FlowLayoutPanel FL_Voting;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label LBL_Voter;
     }
 }
