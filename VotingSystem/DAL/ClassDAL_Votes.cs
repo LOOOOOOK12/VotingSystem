@@ -15,7 +15,7 @@ namespace VotingSystem.DAL
     {
         private string connectionString = @"Data Source=DESKTOP-SM9NF9V;Initial Catalog=DB_VotingSystem;Integrated Security=True"; 
 
-        public bool AddItemsToTable( string name, string electionTitle, string partylistName)
+        public bool AddItemsToTable( string voters,string name, string electionTitle, string partylist)
         {
 
             Connection con = new Connection();
@@ -25,82 +25,108 @@ namespace VotingSystem.DAL
             }
 
             try
-            {       // Get the foreign key ID from Voters table
-                    //        int votersID;
-                    //        string selectVotersIDQuery = "SELECT votersID FROM Voters WHERE ID = @ID;";
-                    //        using (SqlCommand selectVotersIDCommand = new SqlCommand(selectVotersIDQuery, con.connect))
-                    //        {
-                    //            selectVotersIDCommand.Parameters.AddWithValue("@ID", voters);
-                    //            votersID = (int)selectVotersIDCommand.ExecuteScalar();
-                    //        }
+            {       
 
 
-                // Get the foreign key ID from Candidates table
-                int candidateID;
-                string selectCandidateIDQuery = "SELECT Candidate_ID FROM Candidates WHERE Name = @Name;";
+                //VOTERS
+                string votersQuery = "SELECT votersID FROM Voters WHERE ID = @ID";
+                int votersId;
 
-                using (SqlCommand selectCandidateIDCommand = new SqlCommand(selectCandidateIDQuery, con.connect))
+                using (SqlCommand votersCommand = new SqlCommand(votersQuery, con.connect))
                 {
-                    selectCandidateIDCommand.Parameters.AddWithValue("@Name", name.Trim());
-
-                    object result = selectCandidateIDCommand.ExecuteScalar();
+                    votersCommand.Parameters.AddWithValue("@ID", voters.Trim());
+                    votersId = (int)votersCommand.ExecuteScalar();
+                    object result = votersCommand.ExecuteScalar();
 
                     if (result != null && result != DBNull.Value)
                     {
-                        candidateID = Convert.ToInt32(result);
+                        votersId = (int)result;
                     }
                     else
                     {
-                        // Handle the scenario when no matching candidate is found or the value is null.
-                        // You can choose to assign a default value, throw an exception, or handle it based on your specific requirements.
-                        // Example:
-                        candidateID = -1; // Assigning a default value of -1 when the candidate ID is not found.
+                        // Handle the case where no row was found
+                        // You can choose to throw an exception, assign a default value, or take other appropriate action
+                        // For example, you can assign a value of -1 to indicate no matching row found
+                        votersId = -1;
                     }
                 }
 
-                // Get the foreign key ID from Elections table
-                int electionID;
-                string selectElectionIDQuery = "SELECT Election_ID FROM Election WHERE ElectionTitle = @ElectionTitle;";
+                //CANDIDATES
+                string candidatesQuery = "SELECT Candidate_ID FROM Candidates WHERE Name = @Name";
+                int candidateId;
 
-                using (SqlCommand selectElectionIDCommand = new SqlCommand(selectElectionIDQuery, con.connect))
+                using (SqlCommand candidatesCommand = new SqlCommand(candidatesQuery, con.connect))
                 {
-                    selectElectionIDCommand.Parameters.AddWithValue("@ElectionTitle", electionTitle.Trim());
-
-                    object result = selectElectionIDCommand.ExecuteScalar();
+                    candidatesCommand.Parameters.AddWithValue("@Name", name.Trim());
+                    candidateId = (int)candidatesCommand.ExecuteScalar();
+                    object result = candidatesCommand.ExecuteScalar();
 
                     if (result != null && result != DBNull.Value)
                     {
-                        electionID = Convert.ToInt32(result);
+                        candidateId = (int)result;
                     }
                     else
                     {
-                        // Handle the scenario when no matching election is found or the value is null.
-                        // You can choose to assign a default value, throw an exception, or handle it based on your specific requirements.
-                        // Example:
-                        electionID = -1; // Assigning a default value of -1 when the election ID is not found.
+                        // Handle the case where no row was found
+                        // You can choose to throw an exception, assign a default value, or take other appropriate action
+                        // For example, you can assign a value of -1 to indicate no matching row found
+                        candidateId = -1;
                     }
+
                 }
 
-
-                // Get the foreign key ID from Partylist table
+                
                 string partylistQuery = "SELECT Partylist_ID FROM Partylist WHERE PartylistName = @PartylistName";
-                    int partylistID;
+                int partylistId;
 
-                    using (SqlCommand partylistCommand = new SqlCommand(partylistQuery, con.connect))
+                using (SqlCommand partylistCommand = new SqlCommand(partylistQuery, con.connect))
+                {
+                    partylistCommand.Parameters.AddWithValue("@PartylistName",partylist);
+                    object result = partylistCommand.ExecuteScalar();
+
+                    if (result != null && result != DBNull.Value)
                     {
-                        partylistCommand.Parameters.AddWithValue("@PartylistName", partylistName.Trim());
-                        partylistID = (int)partylistCommand.ExecuteScalar();
+                        partylistId = (int)result;
                     }
+                    else
+                    {
+                        // Handle the case where no row was found
+                        // You can choose to throw an exception, assign a default value, or take other appropriate action
+                        // For example, you can assign a value of -1 to indicate no matching row found
+                        partylistId = -1;
+                    }
+                }
+
+                // Retrieve the Election_ID from the Elections table
+                int electionId;
+                using (SqlCommand electionCommand = new SqlCommand("SELECT Election_ID FROM Election WHERE ElectionTitle = @ElectionTitle;", con.connect))
+                {
+                    electionCommand.Parameters.AddWithValue("@ElectionTitle", electionTitle.Trim());
+                    object result = electionCommand.ExecuteScalar();
+
+                    if (result != null && result != DBNull.Value)
+                    {
+                        electionId = (int)result;
+                    }
+                    else
+                    {
+                        // Handle the case where no row was found
+                        // You can choose to throw an exception, assign a default value, or take other appropriate action
+                        // For example, you can assign a value of -1 to indicate no matching row found
+                        electionId = -1;
+                    }
+                }
 
 
                 // Insert into Votes table
-                    string insertVoteQuery = "INSERT INTO Votes ( Candidate_ID, Election_ID, Partylist_ID) VALUES ( @Candidate_ID, @Election_ID, @Partylist_ID);";
+                string insertVoteQuery = "INSERT INTO Votes (Voters_ID,Candidate_ID, Election_ID, Partylist_ID) VALUES ( @Voters_ID, @Candidate_ID, @Election_ID, @Partylist_ID);";
                     using (SqlCommand insertVoteCommand = new SqlCommand(insertVoteQuery, con.connect))
                     {
-                        /*insertVoteCommand.Parameters.AddWithValue("@Voters_ID", votersID)*/;
-                        insertVoteCommand.Parameters.AddWithValue("@Candidate_ID", candidateID);
-                        insertVoteCommand.Parameters.AddWithValue("@Election_ID", electionID);
-                        insertVoteCommand.Parameters.AddWithValue("@Partylist_ID", partylistID);
+                        insertVoteCommand.Parameters.AddWithValue("@Voters_ID", votersId);
+                        insertVoteCommand.Parameters.AddWithValue("@Candidate_ID", candidateId);
+                        insertVoteCommand.Parameters.AddWithValue("@Partylist_ID", partylistId);
+                        insertVoteCommand.Parameters.AddWithValue("@Election_ID", electionId);
+                        
                         //insertVoteCommand.Parameters.AddWithValue("@Timestamp", timestamp);
                         insertVoteCommand.ExecuteNonQuery();
                     }
