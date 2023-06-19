@@ -25,13 +25,13 @@ namespace VotingSystem.DAL
                 con.connect.Open();
             }
 
-            string query = "INSERT INTO Partylist(PartylistName,PartylistLogo) VALUES (@PartylistName,@PartylistLogo)";
+            string query = "INSERT INTO Partylist(PartylistName,PartylistLogo) VALUES (@PartylistName, @PartylistLogo)";
 
             try
             {
                 using (SqlCommand cmd = new SqlCommand(query, con.connect))
                 {
-                    cmd.Parameters.AddWithValue("@PartylistName", Partylistname.Trim());
+                    cmd.Parameters.AddWithValue("@PartylistName", Partylistname);
 
                     //converting image to binary to store to database
                     MemoryStream ms = new MemoryStream();
@@ -171,7 +171,7 @@ namespace VotingSystem.DAL
                 con.connect.Open();
             }
 
-            string query = "SELECT P.Partylist_ID AS Partylist_ID, P.PartylistLogo AS PartylistLogo, P.PartylistName AS PartylistName, Election_ID FROM Candidates C INNER JOIN Partylist P ON C.Partylist_ID = P.Partylist_ID WHERE Election_ID LIKE @SearchTerm";
+            string query = "SELECT DISTINCT P.Partylist_ID AS Partylist_ID, P.PartylistLogo AS PartylistLogo, P.PartylistName AS PartylistName, Election_ID FROM Candidates C INNER JOIN Partylist P ON C.Partylist_ID = P.Partylist_ID WHERE Election_ID LIKE @SearchTerm";
             SqlCommand cmd = new SqlCommand(query, con.connect);
             cmd.Parameters.AddWithValue("@SearchTerm", "%" + searchTermPL + "%");
 
