@@ -34,16 +34,8 @@
             this.Time = new System.Windows.Forms.Label();
             this.Date = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.BTN_Minimize = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Sidepanel = new System.Windows.Forms.Panel();
-            this.BTN_LogOut = new System.Windows.Forms.Button();
-            this.BTN_Voters = new System.Windows.Forms.Button();
-            this.BTN_Election = new System.Windows.Forms.Button();
-            this.BTN_Candidate = new System.Windows.Forms.Button();
-            this.BTN_Partylist = new System.Windows.Forms.Button();
-            this.BTN_Home = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -53,13 +45,22 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.FL_Count = new System.Windows.Forms.FlowLayoutPanel();
+            this.BTN_LogOut = new System.Windows.Forms.Button();
+            this.BTN_Voters = new System.Windows.Forms.Button();
+            this.BTN_Election = new System.Windows.Forms.Button();
+            this.BTN_Candidate = new System.Windows.Forms.Button();
+            this.BTN_Partylist = new System.Windows.Forms.Button();
+            this.BTN_Home = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BTN_Minimize = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -110,29 +111,6 @@
             this.label1.Text = "STI College Of Legazpi";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(178, 122);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
-            // BTN_Minimize
-            // 
-            this.BTN_Minimize.FlatAppearance.BorderSize = 0;
-            this.BTN_Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Minimize.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Minimize.Image")));
-            this.BTN_Minimize.Location = new System.Drawing.Point(794, 0);
-            this.BTN_Minimize.Name = "BTN_Minimize";
-            this.BTN_Minimize.Size = new System.Drawing.Size(41, 36);
-            this.BTN_Minimize.TabIndex = 8;
-            this.BTN_Minimize.Text = " ";
-            this.BTN_Minimize.UseVisualStyleBackColor = true;
-            this.BTN_Minimize.Click += new System.EventHandler(this.BTN_Minimize_Click);
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(0)))));
@@ -152,106 +130,10 @@
             // Sidepanel
             // 
             this.Sidepanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
-            this.Sidepanel.Location = new System.Drawing.Point(0, 45);
+            this.Sidepanel.Location = new System.Drawing.Point(3, 3);
             this.Sidepanel.Name = "Sidepanel";
             this.Sidepanel.Size = new System.Drawing.Size(10, 40);
             this.Sidepanel.TabIndex = 10;
-            // 
-            // BTN_LogOut
-            // 
-            this.BTN_LogOut.FlatAppearance.BorderSize = 0;
-            this.BTN_LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_LogOut.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_LogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
-            this.BTN_LogOut.Image = ((System.Drawing.Image)(resources.GetObject("BTN_LogOut.Image")));
-            this.BTN_LogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_LogOut.Location = new System.Drawing.Point(12, 278);
-            this.BTN_LogOut.Name = "BTN_LogOut";
-            this.BTN_LogOut.Size = new System.Drawing.Size(166, 40);
-            this.BTN_LogOut.TabIndex = 9;
-            this.BTN_LogOut.Text = "Log out";
-            this.BTN_LogOut.UseVisualStyleBackColor = true;
-            this.BTN_LogOut.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // BTN_Voters
-            // 
-            this.BTN_Voters.FlatAppearance.BorderSize = 0;
-            this.BTN_Voters.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Voters.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Voters.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
-            this.BTN_Voters.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Voters.Image")));
-            this.BTN_Voters.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Voters.Location = new System.Drawing.Point(12, 186);
-            this.BTN_Voters.Name = "BTN_Voters";
-            this.BTN_Voters.Size = new System.Drawing.Size(166, 40);
-            this.BTN_Voters.TabIndex = 8;
-            this.BTN_Voters.Text = "Voters";
-            this.BTN_Voters.UseVisualStyleBackColor = true;
-            this.BTN_Voters.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // BTN_Election
-            // 
-            this.BTN_Election.FlatAppearance.BorderSize = 0;
-            this.BTN_Election.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Election.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Election.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
-            this.BTN_Election.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Election.Image")));
-            this.BTN_Election.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Election.Location = new System.Drawing.Point(12, 232);
-            this.BTN_Election.Name = "BTN_Election";
-            this.BTN_Election.Size = new System.Drawing.Size(166, 40);
-            this.BTN_Election.TabIndex = 7;
-            this.BTN_Election.Text = "Elections";
-            this.BTN_Election.UseVisualStyleBackColor = true;
-            this.BTN_Election.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // BTN_Candidate
-            // 
-            this.BTN_Candidate.FlatAppearance.BorderSize = 0;
-            this.BTN_Candidate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Candidate.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Candidate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
-            this.BTN_Candidate.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Candidate.Image")));
-            this.BTN_Candidate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Candidate.Location = new System.Drawing.Point(12, 94);
-            this.BTN_Candidate.Name = "BTN_Candidate";
-            this.BTN_Candidate.Size = new System.Drawing.Size(166, 40);
-            this.BTN_Candidate.TabIndex = 6;
-            this.BTN_Candidate.Text = "Candidate";
-            this.BTN_Candidate.UseVisualStyleBackColor = true;
-            this.BTN_Candidate.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // BTN_Partylist
-            // 
-            this.BTN_Partylist.FlatAppearance.BorderSize = 0;
-            this.BTN_Partylist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Partylist.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Partylist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
-            this.BTN_Partylist.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Partylist.Image")));
-            this.BTN_Partylist.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Partylist.Location = new System.Drawing.Point(12, 140);
-            this.BTN_Partylist.Name = "BTN_Partylist";
-            this.BTN_Partylist.Size = new System.Drawing.Size(166, 40);
-            this.BTN_Partylist.TabIndex = 5;
-            this.BTN_Partylist.Text = "Partylist";
-            this.BTN_Partylist.UseVisualStyleBackColor = true;
-            this.BTN_Partylist.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // BTN_Home
-            // 
-            this.BTN_Home.FlatAppearance.BorderSize = 0;
-            this.BTN_Home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_Home.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Home.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
-            this.BTN_Home.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Home.Image")));
-            this.BTN_Home.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTN_Home.Location = new System.Drawing.Point(12, 45);
-            this.BTN_Home.Name = "BTN_Home";
-            this.BTN_Home.Size = new System.Drawing.Size(166, 40);
-            this.BTN_Home.TabIndex = 4;
-            this.BTN_Home.Text = "Home";
-            this.BTN_Home.UseVisualStyleBackColor = true;
-            this.BTN_Home.Click += new System.EventHandler(this.BTN_Home_Click);
             // 
             // timer1
             // 
@@ -262,7 +144,7 @@
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.panel4);
-            this.panel3.Location = new System.Drawing.Point(293, 216);
+            this.panel3.Location = new System.Drawing.Point(649, 324);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(174, 174);
             this.panel3.TabIndex = 4;
@@ -274,8 +156,9 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
             this.label4.Location = new System.Drawing.Point(0, 39);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(174, 135);
+            this.label4.Size = new System.Drawing.Size(174, 138);
             this.label4.TabIndex = 14;
+            this.label4.Text = "COUNT";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
@@ -306,7 +189,7 @@
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.panel6);
-            this.panel5.Location = new System.Drawing.Point(582, 216);
+            this.panel5.Location = new System.Drawing.Point(649, 128);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(174, 174);
             this.panel5.TabIndex = 5;
@@ -343,12 +226,140 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "Voters Voted";
             // 
+            // FL_Count
+            // 
+            this.FL_Count.BackColor = System.Drawing.Color.White;
+            this.FL_Count.Location = new System.Drawing.Point(184, 128);
+            this.FL_Count.Name = "FL_Count";
+            this.FL_Count.Size = new System.Drawing.Size(459, 373);
+            this.FL_Count.TabIndex = 6;
+            // 
+            // BTN_LogOut
+            // 
+            this.BTN_LogOut.FlatAppearance.BorderSize = 0;
+            this.BTN_LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_LogOut.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_LogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
+            this.BTN_LogOut.Image = ((System.Drawing.Image)(resources.GetObject("BTN_LogOut.Image")));
+            this.BTN_LogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_LogOut.Location = new System.Drawing.Point(12, 233);
+            this.BTN_LogOut.Name = "BTN_LogOut";
+            this.BTN_LogOut.Size = new System.Drawing.Size(166, 40);
+            this.BTN_LogOut.TabIndex = 9;
+            this.BTN_LogOut.Text = "Log out";
+            this.BTN_LogOut.UseVisualStyleBackColor = true;
+            this.BTN_LogOut.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // BTN_Voters
+            // 
+            this.BTN_Voters.FlatAppearance.BorderSize = 0;
+            this.BTN_Voters.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Voters.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Voters.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
+            this.BTN_Voters.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Voters.Image")));
+            this.BTN_Voters.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Voters.Location = new System.Drawing.Point(12, 141);
+            this.BTN_Voters.Name = "BTN_Voters";
+            this.BTN_Voters.Size = new System.Drawing.Size(166, 40);
+            this.BTN_Voters.TabIndex = 8;
+            this.BTN_Voters.Text = "Voters";
+            this.BTN_Voters.UseVisualStyleBackColor = true;
+            this.BTN_Voters.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // BTN_Election
+            // 
+            this.BTN_Election.FlatAppearance.BorderSize = 0;
+            this.BTN_Election.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Election.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Election.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
+            this.BTN_Election.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Election.Image")));
+            this.BTN_Election.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Election.Location = new System.Drawing.Point(12, 187);
+            this.BTN_Election.Name = "BTN_Election";
+            this.BTN_Election.Size = new System.Drawing.Size(166, 40);
+            this.BTN_Election.TabIndex = 7;
+            this.BTN_Election.Text = "Elections";
+            this.BTN_Election.UseVisualStyleBackColor = true;
+            this.BTN_Election.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // BTN_Candidate
+            // 
+            this.BTN_Candidate.FlatAppearance.BorderSize = 0;
+            this.BTN_Candidate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Candidate.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Candidate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
+            this.BTN_Candidate.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Candidate.Image")));
+            this.BTN_Candidate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Candidate.Location = new System.Drawing.Point(12, 49);
+            this.BTN_Candidate.Name = "BTN_Candidate";
+            this.BTN_Candidate.Size = new System.Drawing.Size(166, 40);
+            this.BTN_Candidate.TabIndex = 6;
+            this.BTN_Candidate.Text = "Candidate";
+            this.BTN_Candidate.UseVisualStyleBackColor = true;
+            this.BTN_Candidate.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // BTN_Partylist
+            // 
+            this.BTN_Partylist.FlatAppearance.BorderSize = 0;
+            this.BTN_Partylist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Partylist.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Partylist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
+            this.BTN_Partylist.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Partylist.Image")));
+            this.BTN_Partylist.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Partylist.Location = new System.Drawing.Point(12, 95);
+            this.BTN_Partylist.Name = "BTN_Partylist";
+            this.BTN_Partylist.Size = new System.Drawing.Size(166, 40);
+            this.BTN_Partylist.TabIndex = 5;
+            this.BTN_Partylist.Text = "Partylist";
+            this.BTN_Partylist.UseVisualStyleBackColor = true;
+            this.BTN_Partylist.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // BTN_Home
+            // 
+            this.BTN_Home.FlatAppearance.BorderSize = 0;
+            this.BTN_Home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Home.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Home.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
+            this.BTN_Home.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Home.Image")));
+            this.BTN_Home.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTN_Home.Location = new System.Drawing.Point(12, 0);
+            this.BTN_Home.Name = "BTN_Home";
+            this.BTN_Home.Size = new System.Drawing.Size(166, 40);
+            this.BTN_Home.TabIndex = 4;
+            this.BTN_Home.Text = "Home";
+            this.BTN_Home.UseVisualStyleBackColor = true;
+            this.BTN_Home.Click += new System.EventHandler(this.BTN_Home_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(178, 122);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // BTN_Minimize
+            // 
+            this.BTN_Minimize.FlatAppearance.BorderSize = 0;
+            this.BTN_Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_Minimize.Image = ((System.Drawing.Image)(resources.GetObject("BTN_Minimize.Image")));
+            this.BTN_Minimize.Location = new System.Drawing.Point(794, 0);
+            this.BTN_Minimize.Name = "BTN_Minimize";
+            this.BTN_Minimize.Size = new System.Drawing.Size(41, 36);
+            this.BTN_Minimize.TabIndex = 8;
+            this.BTN_Minimize.Text = " ";
+            this.BTN_Minimize.UseVisualStyleBackColor = true;
+            this.BTN_Minimize.Click += new System.EventHandler(this.BTN_Minimize_Click);
+            // 
             // FRM_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(835, 510);
+            this.Controls.Add(this.FL_Count);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -360,7 +371,6 @@
             this.Load += new System.EventHandler(this.FRM_Home_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -368,6 +378,7 @@
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -397,5 +408,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel Sidepanel;
+        private System.Windows.Forms.FlowLayoutPanel FL_Count;
     }
 }
