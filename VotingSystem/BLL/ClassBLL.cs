@@ -101,6 +101,8 @@ namespace VotingSystem.BLL
             }
         }
 
+       
+
 
         public bool UpdateItems( int PartylistID,Image img, string Partylistname)
         {
