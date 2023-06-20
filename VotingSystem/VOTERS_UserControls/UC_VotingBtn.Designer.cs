@@ -127,7 +127,7 @@
             this.LBL_Voter.Name = "LBL_Voter";
             this.LBL_Voter.Size = new System.Drawing.Size(109, 21);
             this.LBL_Voter.TabIndex = 17;
-            this.LBL_Voter.Text = "Timestamp";
+            this.LBL_Voter.Text = "Voter Name";
             this.LBL_Voter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LBL_Voter.Click += new System.EventHandler(this.label1_Click);
             // 
