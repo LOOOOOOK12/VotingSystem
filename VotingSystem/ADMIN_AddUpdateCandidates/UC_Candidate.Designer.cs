@@ -53,7 +53,7 @@
             this.LBL_Candidate_ID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
             this.LBL_Candidate_ID.Location = new System.Drawing.Point(141, 33);
             this.LBL_Candidate_ID.Name = "LBL_Candidate_ID";
-            this.LBL_Candidate_ID.Size = new System.Drawing.Size(85, 21);
+            this.LBL_Candidate_ID.Size = new System.Drawing.Size(84, 21);
             this.LBL_Candidate_ID.TabIndex = 23;
             this.LBL_Candidate_ID.Click += new System.EventHandler(this.LBL_Candidate_ID_Click);
             // 
@@ -61,16 +61,17 @@
             // 
             this.LBL_Name.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
-            this.LBL_Name.Location = new System.Drawing.Point(231, 47);
+            this.LBL_Name.Location = new System.Drawing.Point(231, 45);
             this.LBL_Name.Name = "LBL_Name";
             this.LBL_Name.Size = new System.Drawing.Size(143, 40);
             this.LBL_Name.TabIndex = 22;
+            this.LBL_Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_PartylistName
             // 
             this.lbl_PartylistName.AutoSize = true;
             this.lbl_PartylistName.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_PartylistName.Location = new System.Drawing.Point(232, 28);
+            this.lbl_PartylistName.Location = new System.Drawing.Point(279, 25);
             this.lbl_PartylistName.Name = "lbl_PartylistName";
             this.lbl_PartylistName.Size = new System.Drawing.Size(46, 17);
             this.lbl_PartylistName.TabIndex = 21;
@@ -92,7 +93,7 @@
             this.LBL_Position.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
             this.LBL_Position.Location = new System.Drawing.Point(380, 111);
             this.LBL_Position.Name = "LBL_Position";
-            this.LBL_Position.Size = new System.Drawing.Size(265, 19);
+            this.LBL_Position.Size = new System.Drawing.Size(250, 19);
             this.LBL_Position.TabIndex = 35;
             // 
             // label3
@@ -111,7 +112,7 @@
             this.LBL_Partylist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
             this.LBL_Partylist.Location = new System.Drawing.Point(380, 66);
             this.LBL_Partylist.Name = "LBL_Partylist";
-            this.LBL_Partylist.Size = new System.Drawing.Size(265, 19);
+            this.LBL_Partylist.Size = new System.Drawing.Size(250, 19);
             this.LBL_Partylist.TabIndex = 33;
             // 
             // label6
@@ -130,7 +131,7 @@
             this.LBL_Course.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
             this.LBL_Course.Location = new System.Drawing.Point(380, 26);
             this.LBL_Course.Name = "LBL_Course";
-            this.LBL_Course.Size = new System.Drawing.Size(265, 19);
+            this.LBL_Course.Size = new System.Drawing.Size(250, 19);
             this.LBL_Course.TabIndex = 31;
             // 
             // label8
@@ -180,11 +181,11 @@
             // 
             // LBL_Election
             // 
-            this.LBL_Election.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_Election.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_Election.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
             this.LBL_Election.Location = new System.Drawing.Point(144, 94);
             this.LBL_Election.Name = "LBL_Election";
-            this.LBL_Election.Size = new System.Drawing.Size(182, 36);
+            this.LBL_Election.Size = new System.Drawing.Size(230, 36);
             this.LBL_Election.TabIndex = 38;
             // 
             // label2
