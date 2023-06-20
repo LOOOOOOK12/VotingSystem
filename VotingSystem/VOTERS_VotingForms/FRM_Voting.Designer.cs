@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Voting));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.LBL_User = new System.Windows.Forms.Label();
             this.ContainerPanel = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -53,7 +54,6 @@
             this.uC_Candidates2 = new VotingSystem.UC_Candidates();
             this.UC_Vote = new VotingSystem.UC_Vote();
             this.uC_Candidates1 = new VotingSystem.UC_Candidates();
-            this.LBL_User = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -77,6 +77,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(835, 122);
             this.panel1.TabIndex = 3;
+            // 
+            // LBL_User
+            // 
+            this.LBL_User.Font = new System.Drawing.Font("Microsoft YaHei", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_User.ForeColor = System.Drawing.Color.White;
+            this.LBL_User.Location = new System.Drawing.Point(337, 61);
+            this.LBL_User.Name = "LBL_User";
+            this.LBL_User.Size = new System.Drawing.Size(213, 58);
+            this.LBL_User.TabIndex = 13;
+            this.LBL_User.Text = "User";
+            this.LBL_User.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LBL_User.Click += new System.EventHandler(this.LBL_User_Click);
             // 
             // ContainerPanel
             // 
@@ -317,17 +329,6 @@
             this.uC_Candidates1.Name = "uC_Candidates1";
             this.uC_Candidates1.Size = new System.Drawing.Size(657, 388);
             this.uC_Candidates1.TabIndex = 0;
-            // 
-            // LBL_User
-            // 
-            this.LBL_User.Font = new System.Drawing.Font("Microsoft YaHei", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_User.ForeColor = System.Drawing.Color.White;
-            this.LBL_User.Location = new System.Drawing.Point(337, 61);
-            this.LBL_User.Name = "LBL_User";
-            this.LBL_User.Size = new System.Drawing.Size(213, 58);
-            this.LBL_User.TabIndex = 13;
-            this.LBL_User.Text = "User";
-            this.LBL_User.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FRM_Voting
             // 
