@@ -27,25 +27,34 @@ namespace VotingSystem
 
             con.Open();
             SqlCommand cmd = con.CreateCommand();
+            SqlCommand cmdd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
 
             string query = "SELECT COUNT(votersID) FROM Voters";
 
+            string votedQuery = "SELECT COUNT (Vote_ID) FROM Votes";
+
             try
             {
                 cmd = new SqlCommand(query, con);
+                cmdd = new SqlCommand(votedQuery,con);
                 Int32 rowCount = Convert.ToInt32(cmd.ExecuteScalar());
+                Int32 votes = Convert.ToInt32(cmdd.ExecuteScalar());
+                cmdd.Dispose();
                 cmd.Dispose();
                 con.Close();
 
                 label4.Text = rowCount.ToString();
-
+                label5.Text = votes.ToString();
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+
+
+           
         }
 
        
