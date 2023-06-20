@@ -41,7 +41,7 @@
             // LBL_ElectionTitle
             // 
             this.LBL_ElectionTitle.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_ElectionTitle.ForeColor = System.Drawing.Color.Black;
+            this.LBL_ElectionTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
             this.LBL_ElectionTitle.Location = new System.Drawing.Point(185, 13);
             this.LBL_ElectionTitle.Name = "LBL_ElectionTitle";
             this.LBL_ElectionTitle.Size = new System.Drawing.Size(406, 105);
@@ -53,6 +53,7 @@
             // LBL_Description
             // 
             this.LBL_Description.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_Description.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
             this.LBL_Description.Location = new System.Drawing.Point(266, 132);
             this.LBL_Description.Name = "LBL_Description";
             this.LBL_Description.Size = new System.Drawing.Size(239, 76);
@@ -74,6 +75,7 @@
             // 
             this.LBL_ElectionID.AutoSize = true;
             this.LBL_ElectionID.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_ElectionID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(188)))));
             this.LBL_ElectionID.Location = new System.Drawing.Point(97, 99);
             this.LBL_ElectionID.Name = "LBL_ElectionID";
             this.LBL_ElectionID.Size = new System.Drawing.Size(0, 19);
