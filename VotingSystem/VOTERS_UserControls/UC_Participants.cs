@@ -53,5 +53,15 @@ namespace VotingSystem
             get { return PB_PartylistLogo.Image; }
             set { PB_PartylistLogo.Image = value; }
         }
+
+        private void LBL_Partylist_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LBL_Name_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
