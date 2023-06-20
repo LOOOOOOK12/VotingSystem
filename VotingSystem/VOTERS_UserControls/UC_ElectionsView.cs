@@ -20,6 +20,8 @@ namespace VotingSystem.VOTERS_UserControls
 
         private FlowLayoutPanel FL_Vote;
 
+        private string voterNAME;
+
         public string ViewElection 
         {
             get { return LBL_ElectionTitle.Text; }
@@ -36,7 +38,7 @@ namespace VotingSystem.VOTERS_UserControls
         {
             FRM_VotingForm votingForm = new FRM_VotingForm();
             votingForm.displayfieldPartylistMember(ViewElection);
-
+            votingForm.displayfieldVoterName(voterNAME);
             votingForm.ShowDialog();
         }
 
