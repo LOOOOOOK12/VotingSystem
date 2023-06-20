@@ -20,7 +20,11 @@ namespace VotingSystem
             InitializeComponent();
         }
 
-        private string voterNameVariable;
+        
+        public string VoterName {
+               get { return LBL_User.Text;}
+               set { LBL_User.Text = value;}
+        }
 
         private void BTN_Voters_Click(object sender, EventArgs e)
         {
@@ -131,10 +135,13 @@ namespace VotingSystem
 
         public void displayfieldVoter(string voterName)
         {
-            voterNameVariable = voterName;
-            LBL_User.Text = voterName;
+            VoterName = voterName;
+
         }
 
+        private void LBL_User_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
