@@ -174,6 +174,12 @@
     <Compile Include="ADMIN_VotersHistory\FRM_Voters.Designer.cs">
       <DependentUpon>FRM_Voters.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_CountVotes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_CountVotes.Designer.cs">
+      <DependentUpon>UC_CountVotes.cs</DependentUpon>
+    </Compile>
     <Compile Include="VOTERS_UserControls\UC_ElectionsView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -303,6 +309,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ADMIN_VotersHistory\FRM_Voters.resx">
       <DependentUpon>FRM_Voters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_CountVotes.resx">
+      <DependentUpon>UC_CountVotes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VOTERS_UserControls\UC_ElectionsView.resx">
       <DependentUpon>UC_ElectionsView.cs</DependentUpon>
