@@ -15,15 +15,16 @@ namespace VotingSystem
     {
         public UC_VotingBtn()
         {
+            FRM_Voting fRM_Voting = new FRM_Voting();
             InitializeComponent();
         }
 
-       
-
+        
         private FlowLayoutPanel FL_Vote;
 
-        public string votername;
-       
+        
+        
+
         public string ElectionTitle
         {
             get { return LBL_EletionTitle.Text; }
@@ -59,18 +60,20 @@ namespace VotingSystem
             set { PB_PartylistLogo.Image = value; }
         }
 
+        public string VoterName
+        {
+            get { return LBL_Voter.Text; }
+            set { LBL_Voter.Text = value; }
+        }
+
+
 
 
         private void BTN_Vote_Click(object sender, EventArgs e)
         {
             ClassBLL_Votes objBLLVotes = new ClassBLL_Votes();
 
-            FRM_Voting name = new FRM_Voting();
-
-            name.displayfieldVoter(votername);
-           
-
-            if (objBLLVotes.SaveItems(votername,LBL_Name.Text, LBL_PartylistName.Text, LBL_EletionTitle.Text))
+            if (objBLLVotes.SaveItems(LBL_Name.Text, LBL_PartylistName.Text, LBL_EletionTitle.Text))
             {
                 MessageBox.Show("Vote successfull");
                 MessageBox.Show("Record Successful!");
@@ -83,7 +86,7 @@ namespace VotingSystem
 
         private void label1_Click(object sender, EventArgs e)
         {
-
+           
         }
 
         private void UC_VotingBtn_Load(object sender, EventArgs e)
