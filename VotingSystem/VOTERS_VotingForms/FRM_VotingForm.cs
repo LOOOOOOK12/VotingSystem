@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Reflection.Emit;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -25,9 +26,15 @@ namespace VotingSystem.VOTERS_VotingForms
             label2.Text = electionTitle;
         }
 
-        public void displayfieldVoterName(string voterName)
+        public string VOTERNAME
         {
-            LBL_Voter.Text = voterName;
+            get { return LBL_Voter.Text; }
+            set { LBL_Voter.Text = value; }
+        }
+
+        public void displayfieldVoterName(string VoterName)
+        {
+            VOTERNAME = VoterName;
         }
 
 
@@ -83,6 +90,8 @@ namespace VotingSystem.VOTERS_VotingForms
 
             string searchTermsParticipants = label2.Text;
 
+            string votername = LBL_Voter.Text;
+
             FL_Voting.Controls.Clear();
 
             ClassBLL_Cadidates objBLLC = new ClassBLL_Cadidates();
@@ -113,6 +122,7 @@ namespace VotingSystem.VOTERS_VotingForms
                             listitems[i].CandidateName = row["Name"].ToString();
                             listitems[i].PartylistName = row["PartylistName"].ToString();
                             listitems[i].PosName = row["Position"].ToString();
+                            //listitems[i].VoterName = votername.ToString();
                             
                            
                             FL_Voting.Controls.Add(listitems[i]);
