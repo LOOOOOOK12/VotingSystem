@@ -13,12 +13,13 @@ namespace VotingSystem.BLL
     internal class ClassBLL_Votes
     {
 
-        public bool SaveItems(string voters, string name, string partylist, string electionTitle)
+        //string voter
+        public bool SaveItems( string name, string partylist, string electionTitle)
         {
             try
             {
                 ClassDAL_Votes objdalVotes = new ClassDAL_Votes();
-                return objdalVotes.AddItemsToTable(voters,name,electionTitle,partylist);
+                return objdalVotes.AddItemsToTable(name,electionTitle,partylist);
             }
             catch (Exception e)
             {
@@ -47,6 +48,21 @@ namespace VotingSystem.BLL
             {
                 ClassDAL_Votes objDALVotes = new ClassDAL_Votes();
                 return objDALVotes.SearchItemsTablePartlistsElection(searchParticipants);
+            }
+            catch (Exception e)
+            {
+                DialogResult result = MessageBox.Show(e.Message.ToString());
+                return null;
+            }
+        }
+
+        //PANG DISPLAY NG COUNTED VOTES SA PARTYLIST
+        public DataTable SearchCount(string searchTermCount)
+        {
+            try
+            {
+                ClassDAL_Votes objdal = new ClassDAL_Votes();
+                return objdal.SearchNumberofVotes(searchTermCount);
             }
             catch (Exception e)
             {
